@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Api.cs" />
+    <Compile Include="MutableApi.cs" />
     <Compile Include="ApiModule.cs" />
     <Compile Include="ApiResource.cs" />
     <Compile Include="Area.cs" />
@@ -62,7 +62,7 @@
     <Compile Include="Builder\TravelPointFilterChain.cs" />
     <Compile Include="Builder\TypeSet.cs" />
     <Compile Include="Color.cs" />
-    <Compile Include="Direct\FastTravelData.cs" />
+    <Compile Include="Direct\IFastTravelData.cs" />
     <Compile Include="Direct\IActiveSpell.cs" />
     <Compile Include="Direct\ICharacterRecord.cs" />
     <Compile Include="Direct\ICropState.cs" />
@@ -201,7 +201,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Script\AbstractScript.cs" />
     <Compile Include="Script\IScriptEngine.cs" />
-    <Compile Include="Script\IStateScript.cs" />
+    <Compile Include="Script\AbstractStateScript.cs" />
     <Compile Include="Script\StateScript.cs" />
     <Compile Include="SerializationWrapper.cs" />
   </ItemGroup>

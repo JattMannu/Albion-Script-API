@@ -8,14 +8,8 @@ namespace Ennui.Api.Script
     /// <summary>
 	/// Provides a way for users to extend functionality of the bot.
 	/// </summary>
-	public abstract class AbstractScript
+	public abstract class AbstractScript : ApiResource
     {
-        public IApi Api
-        {
-            get;
-            set;
-        }
-
         /// <summary>
         /// Called when this script is ran within a script handler.
         /// </summary>

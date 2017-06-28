@@ -15,7 +15,7 @@ namespace Ennui.Api.Method
 		/// Checks if the banking gui is currently open
 		/// </summary>
 		/// <value><c>true</c> if the banking gui is currently open; otherwise, <c>false</c>.</value>
-		bool IsOpen { get; }
+        bool IsOpen { get; }
 
         /// <summary>
         /// Deposit the specified items into the bank.
