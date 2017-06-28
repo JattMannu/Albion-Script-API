@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Albion Script API")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Ennui AO Script API")]
+[assembly: AssemblyDescription("An interface that allows you to write scripts for Ennui's Albion Online bot")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Albion Script API")]
+[assembly: AssemblyCompany("Ennui LLC")]
+[assembly: AssemblyProduct("AO")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
