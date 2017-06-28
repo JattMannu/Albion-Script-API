@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EBCA6C05-EBF8-4A13-92D0-203B07FB9EC2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ennui.Api</RootNamespace>
+    <AssemblyName>Albion Script API</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Api.cs" />
+    <Compile Include="ApiModule.cs" />
+    <Compile Include="ApiResource.cs" />
+    <Compile Include="Area.cs" />
+    <Compile Include="Builder\ActiveSpellFilterChain.cs" />
+    <Compile Include="Builder\BankBuildingFilterChain.cs" />
+    <Compile Include="Builder\ConcreteEntityFilterChain.cs" />
+    <Compile Include="Builder\EntityFilterChain.cs" />
+    <Compile Include="Builder\Filter.cs" />
+    <Compile Include="Builder\FilterChain.cs" />
+    <Compile Include="Builder\HarvestableFilterChain.cs" />
+    <Compile Include="Builder\LocatableFilterChain.cs" />
+    <Compile Include="Builder\MobFilterChain.cs" />
+    <Compile Include="Builder\PlayerFilterChain.cs" />
+    <Compile Include="Builder\RemotePlayerFilterChain.cs" />
+    <Compile Include="Builder\RepairBuildingFilterChain.cs" />
+    <Compile Include="Builder\SimulationFilterChain.cs" />
+    <Compile Include="Builder\SpellFilterChain.cs" />
+    <Compile Include="Builder\TravelPointFilterChain.cs" />
+    <Compile Include="Builder\TypeSet.cs" />
+    <Compile Include="Color.cs" />
+    <Compile Include="Direct\FastTravelData.cs" />
+    <Compile Include="Direct\IActiveSpell.cs" />
+    <Compile Include="Direct\ICharacterRecord.cs" />
+    <Compile Include="Direct\ICropState.cs" />
+    <Compile Include="Direct\IFieldCodec.cs" />
+    <Compile Include="Direct\ILocalInputHandler.cs" />
+    <Compile Include="Direct\IPlacementGhost.cs" />
+    <Compile Include="Direct\Object\IBankBuildingObject.cs" />
+    <Compile Include="Direct\Object\IBuildingObject.cs" />
+    <Compile Include="Direct\ICastSpellEventHandler.cs" />
+    <Compile Include="Direct\ICollisionGrid.cs" />
+    <Compile Include="Direct\IEffectApplicator.cs" />
+    <Compile Include="Direct\IHarvestable.cs" />
+    <Compile Include="Direct\IItemContainer.cs" />
+    <Compile Include="Direct\IItemContainerProxy.cs" />
+    <Compile Include="Direct\IItemContainerTracker.cs" />
+    <Compile Include="Direct\IItemStack.cs" />
+    <Compile Include="Direct\ILandscape.cs" />
+    <Compile Include="Direct\IMapCluster.cs" />
+    <Compile Include="Direct\IObjectConfig.cs" />
+    <Compile Include="Direct\IPlaceableObject.cs" />
+    <Compile Include="Direct\IPlaceItemEventHandler.cs" />
+    <Compile Include="Direct\IScenePosition.cs" />
+    <Compile Include="Direct\ISpell.cs" />
+    <Compile Include="Direct\INanoTime.cs" />
+    <Compile Include="Direct\Object\IEntityObject.cs" />
+    <Compile Include="Direct\Object\IFarmableObject.cs" />
+    <Compile Include="Direct\Object\IHarvestableObject.cs" />
+    <Compile Include="Direct\Object\ILocalPlayerObject.cs" />
+    <Compile Include="Direct\Object\IMobObject.cs" />
+    <Compile Include="Direct\Object\IMountObject.cs" />
+    <Compile Include="Direct\Object\IMovingObject.cs" />
+    <Compile Include="Direct\Object\IPlayerObject.cs" />
+    <Compile Include="Direct\Object\IRemotePlayerObject.cs" />
+    <Compile Include="Direct\Object\IRepairBuildingObject.cs" />
+    <Compile Include="Direct\Object\ISilverObject.cs" />
+    <Compile Include="Direct\Object\ISimulationObject.cs" />
+    <Compile Include="Direct\Object\ITravelPointObject.cs" />
+    <Compile Include="Direct\Object\IWorldObject.cs" />
+    <Compile Include="Direct\View\IBuildingView.cs" />
+    <Compile Include="Direct\View\IEntityObjectView.cs" />
+    <Compile Include="Direct\View\IHarvestableObjectView.cs" />
+    <Compile Include="Direct\View\ILocalPlayerCharacterView.cs" />
+    <Compile Include="Direct\View\IMovingObjectView.cs" />
+    <Compile Include="Direct\View\IPlayerCharacterView.cs" />
+    <Compile Include="Direct\View\ISimulationObjectView.cs" />
+    <Compile Include="Direct\View\IWorldObjectView.cs" />
+    <Compile Include="Direct\Xml\IXmlAbstractBuilding.cs" />
+    <Compile Include="Direct\Xml\IXmlAndDrop.cs" />
+    <Compile Include="Direct\Xml\IXmlDrop.cs" />
+    <Compile Include="Direct\Xml\IXmlExtendedSpellConfig.cs" />
+    <Compile Include="Direct\Xml\IXmlHarvestableDrop.cs" />
+    <Compile Include="Direct\Xml\IXmlItemConfig.cs" />
+    <Compile Include="Direct\Xml\IXmlItemDrop.cs" />
+    <Compile Include="Direct\Xml\IXmlItemProxy.cs" />
+    <Compile Include="Direct\Xml\IXmlMob.cs" />
+    <Compile Include="Direct\Xml\IXmlSpellConfig.cs" />
+    <Compile Include="Direct\Xml\XmlUiSpellConfig.cs" />
+    <Compile Include="Font.cs" />
+    <Compile Include="GraphicContext.cs" />
+    <Compile Include="Gui\IButton.cs" />
+    <Compile Include="Gui\ICheckBox.cs" />
+    <Compile Include="Gui\IComboBox.cs" />
+    <Compile Include="Gui\IComponent.cs" />
+    <Compile Include="Gui\IInputField.cs" />
+    <Compile Include="Gui\ILabel.cs" />
+    <Compile Include="Gui\IPanel.cs" />
+    <Compile Include="Gui\IRoot.cs" />
+    <Compile Include="Gui\IScrollPanel.cs" />
+    <Compile Include="Gui\IScrollViewport.cs" />
+    <Compile Include="Gui\ISlider.cs" />
+    <Compile Include="IApi.cs" />
+    <Compile Include="IApiModule.cs" />
+    <Compile Include="IApiResource.cs" />
+    <Compile Include="IArea.cs" />
+    <Compile Include="Image.cs" />
+    <Compile Include="IPacketListener.cs" />
+    <Compile Include="Direct\IStateQueue.cs" />
+    <Compile Include="Direct\ITimestampProperty.cs" />
+    <Compile Include="Method\ICodecs.cs" />
+    <Compile Include="Vector2.cs" />
+    <Compile Include="Vector2f.cs" />
+    <Compile Include="Vector2i.cs" />
+    <Compile Include="Vector3f.cs" />
+    <Compile Include="Locatable.cs" />
+    <Compile Include="LogLevel.cs" />
+    <Compile Include="Meta\ActionState.cs" />
+    <Compile Include="Meta\Channel.cs" />
+    <Compile Include="Meta\CharacterSpellSlot.cs" />
+    <Compile Include="Meta\ClusterType.cs" />
+    <Compile Include="Meta\EquipmentSlot.cs" />
+    <Compile Include="Meta\GameState.cs" />
+    <Compile Include="Meta\GuildRole.cs" />
+    <Compile Include="Meta\MovementState.cs" />
+    <Compile Include="Meta\PacketOpcode.cs" />
+    <Compile Include="Meta\ResourceType.cs" />
+    <Compile Include="Meta\SpellAnimation.cs" />
+    <Compile Include="Meta\SpellCategory.cs" />
+    <Compile Include="Meta\SpellStackingRule.cs" />
+    <Compile Include="Meta\SpellTarget.cs" />
+    <Compile Include="Method\IBanking.cs" />
+    <Compile Include="IGraph.cs" />
+    <Compile Include="ITimer.cs" />
+    <Compile Include="Vector3.cs" />
+    <Compile Include="Method\IBot.cs" />
+    <Compile Include="Method\IBotResources.cs" />
+    <Compile Include="Method\ICharacterInfoWindow.cs" />
+    <Compile Include="Method\ICharacterSelectWindow.cs" />
+    <Compile Include="Method\IChat.cs" />
+    <Compile Include="Method\ICollision.cs" />
+    <Compile Include="Method\ICraftingWindow.cs" />
+    <Compile Include="Method\IEntities.cs" />
+    <Compile Include="Method\IEquipment.cs" />
+    <Compile Include="Method\IFactories.cs" />
+    <Compile Include="Method\IFarmableWindow.cs" />
+    <Compile Include="Method\IFastTravelWindow.cs" />
+    <Compile Include="Method\IFiles.cs" />
+    <Compile Include="Method\IGame.cs" />
+    <Compile Include="Method\IHotkeys.cs" />
+    <Compile Include="Method\IInput.cs" />
+    <Compile Include="Method\IInventory.cs" />
+    <Compile Include="Method\IItemContainerUtils.cs" />
+    <Compile Include="Method\ILogging.cs" />
+    <Compile Include="Method\ILoginErrorWindow.cs" />
+    <Compile Include="Method\ILoginWindow.cs" />
+    <Compile Include="Method\IMovement.cs" />
+    <Compile Include="Method\INet.cs" />
+    <Compile Include="Method\IObjects.cs" />
+    <Compile Include="Method\IPaySilverWindow.cs" />
+    <Compile Include="Method\IPlayers.cs" />
+    <Compile Include="Method\IRendering.cs" />
+    <Compile Include="Method\IRepairWindow.cs" />
+    <Compile Include="Method\ISerialization.cs" />
+    <Compile Include="Method\IUI.cs" />
+    <Compile Include="Method\IViews.cs" />
+    <Compile Include="PacketWrapper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Script\AbstractScript.cs" />
+    <Compile Include="Script\IScriptEngine.cs" />
+    <Compile Include="Script\IStateScript.cs" />
+    <Compile Include="Script\StateScript.cs" />
+    <Compile Include="SerializationWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
