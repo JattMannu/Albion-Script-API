@@ -35,7 +35,7 @@ namespace Ennui.Api.Script
         /// <summary>
         /// Initializes a new instance of the <see cref="StateScript"/> class.
         /// </summary>
-        public StateScript(IScriptEngine se)
+        public StateScript(IApi api, IScriptEngine se) : base(api)
         {
             this.scriptEngine = se;
         }

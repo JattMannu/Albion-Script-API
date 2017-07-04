@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Ennui.Api.Method
+namespace Ennui.Api
 {
-    public interface IUI : IApiModule
+    public class IApiExtensions
     {
-        void ShowMessageOk(string msg);
     }
 }

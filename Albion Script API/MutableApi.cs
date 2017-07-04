@@ -14,6 +14,7 @@ namespace Ennui.Api
         public ICharacterInfoWindow CharacterInfoWindow { get; set; }
         public ICharacterSelectWindow CharacterSelectWindow { get; set; }
         public IChat Chat { get; set; }
+        public ICodecs Codecs { get; set; }
         public ICollision Collision { get; set; }
         public ICraftingWindow CraftingWindow { get; set; }
         public IEntities Entities { get; set; }

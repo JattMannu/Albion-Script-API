@@ -10,6 +10,10 @@ namespace Ennui.Api.Script
 	/// </summary>
 	public abstract class AbstractScript : ApiResource
     {
+        public AbstractScript(IApi api) : base(api)
+        {
+        }
+
         /// <summary>
         /// Called when this script is ran within a script handler.
         /// </summary>

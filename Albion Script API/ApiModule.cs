@@ -8,5 +8,10 @@ namespace Ennui.Api
     public abstract class ApiModule : IApiModule
     {
         public IApi Api { get; set; }
+
+        public ApiModule(IApi api)
+        {
+            this.Api = api;
+        }
     }
 }

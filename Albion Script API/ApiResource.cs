@@ -8,5 +8,10 @@ namespace Ennui.Api
     public class ApiResource : IApiResource
     {
         public IApi Api { get; set; }
+
+        public ApiResource(IApi api)
+        {
+            this.Api = api;
+        }
     }
 }

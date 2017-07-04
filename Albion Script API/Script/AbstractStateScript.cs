@@ -10,6 +10,10 @@ namespace Ennui.Api.Script
 	/// </summary>
 	public abstract class AbstractStateScript : AbstractScript
     {
+        public AbstractStateScript(IApi api) : base(api)
+        {
+        }
+
         /// <summary>
         /// Switches to a different state.
         /// </summary>
