@@ -11,5 +11,7 @@ namespace Ennui.Api.Method
         IScenePosition CreateScenePosition(float x, float y);
 
         Font CreateFont(string name, int size, int flags = 0);
+
+        
     }
 }

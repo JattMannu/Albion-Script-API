@@ -14,6 +14,11 @@ namespace Ennui.Api.Script
         {
         }
 
+        public AbstractScript() : base(null)
+        {
+
+        }
+
         /// <summary>
         /// Called when this script is ran within a script handler.
         /// </summary>

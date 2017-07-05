@@ -40,6 +40,11 @@ namespace Ennui.Api.Script
             this.scriptEngine = se;
         }
 
+        public StateScript(IScriptEngine se) : base(null)
+        {
+            this.scriptEngine = se;
+        }
+
         /// <summary>
         /// Retrieves this script's parent.
         /// </summary>

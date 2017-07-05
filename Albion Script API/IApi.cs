@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 
 using Ennui.Api.Method;
+using Ennui.Api.Script;
 
 namespace Ennui.Api
 {
@@ -42,5 +43,8 @@ namespace Ennui.Api
         ISerialization Serialization { get; set; }
         IUI UI { get; set; }
         IViews Views { get; set; }
+
+        IScriptLoader ScriptLoader { get; set; }
+        IScriptEngine ScriptEngine { get; set; }
     }
 }

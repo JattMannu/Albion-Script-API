@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IApiExtensions.cs" />
+    <Compile Include="MapArea.cs" />
     <Compile Include="MutableApi.cs" />
     <Compile Include="ApiModule.cs" />
     <Compile Include="ApiResource.cs" />
@@ -143,6 +144,7 @@
     <Compile Include="Direct\IStateQueue.cs" />
     <Compile Include="Direct\ITimestampProperty.cs" />
     <Compile Include="Method\ICodecs.cs" />
+    <Compile Include="Script\IScriptLoader.cs" />
     <Compile Include="Vector2.cs" />
     <Compile Include="Vector2f.cs" />
     <Compile Include="Vector2i.cs" />

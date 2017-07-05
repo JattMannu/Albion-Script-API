@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Ennui.Api.Method;
+using Ennui.Api.Script;
 
 namespace Ennui.Api
 {
@@ -41,5 +42,8 @@ namespace Ennui.Api
         public ISerialization Serialization { get; set; }
         public IUI UI { get; set; }
         public IViews Views { get; set; }
+
+        public IScriptLoader ScriptLoader { get; set; }
+        public IScriptEngine ScriptEngine { get; set; }
     }
 }
