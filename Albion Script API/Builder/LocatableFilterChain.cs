@@ -30,7 +30,7 @@ namespace Ennui.Api.Builder
 
 		public T Closest(Vector3<float> center)
 		{
-			return api.Game.Sync<T>(() =>
+			return Api.Game.Sync<T>(() =>
 			{
 				T closest = default(T);
 				var closestDistance = int.MaxValue;

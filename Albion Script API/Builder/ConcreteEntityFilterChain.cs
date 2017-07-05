@@ -14,7 +14,7 @@ namespace Ennui.Api.Builder
 		
 		public override ConcreteEntityFilterChain Create(List<IEntityObject> elements)
 		{
-			return new ConcreteEntityFilterChain(api, elements);
+			return new ConcreteEntityFilterChain(Api, elements);
 		}
 	}
 }

@@ -12,7 +12,7 @@ namespace Ennui.Api.Builder
 
 		public override TravelPointFilterChain Create(List<ITravelPointObject> elements)
 		{
-			return new TravelPointFilterChain(api, elements);
+			return new TravelPointFilterChain(Api, elements);
 		}
 	}
 }

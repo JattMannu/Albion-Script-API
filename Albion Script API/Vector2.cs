@@ -19,7 +19,7 @@ namespace Ennui.Api
         /// <inheritdoc/>
 		public override string ToString()
         {
-            return "[Vector2i - " + X + ", " + Y + "]";
+            return "[Vector2 - " + X + ", " + Y + "]";
         }
 
         /// <inheritdoc/>
@@ -34,19 +34,50 @@ namespace Ennui.Api
             if (obj == null)
                 return false;
 
-            var p = (Vector2<T>) obj;
+            var p = (Vector2<T>)obj;
             return (X.Equals(p.X)) && (Y.Equals(p.Y));
         }
 
         /// <inheritdoc/>
-        public bool Equals(Vector2<T> other)
+        public bool Equals(Vector2<T> b)
         {
-            return Equals((object)other);
+            if (ReferenceEquals(this, b))
+            {
+                return true;
+            }
+
+            if (ReferenceEquals(this, null))
+            {
+                return false;
+            }
+            if (ReferenceEquals(b, null))
+            {
+                return false;
+            }
+
+            if (System.Object.ReferenceEquals(this, b))
+                return true;
+
+            return this.X.Equals(b.X) && this.Y.Equals(b.Y);
         }
 
         /// <inheritdoc/>
         public static bool operator ==(Vector2<T> a, Vector2<T> b)
         {
+            if (ReferenceEquals(a, b))
+            {
+                return true;
+            }
+
+            if (ReferenceEquals(a, null))
+            {
+                return false;
+            }
+            if (ReferenceEquals(b, null))
+            {
+                return false;
+            }
+
             if (System.Object.ReferenceEquals(a, b))
                 return true;
 

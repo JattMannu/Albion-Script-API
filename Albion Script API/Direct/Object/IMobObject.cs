@@ -74,7 +74,7 @@ namespace Ennui.Api.Direct.Object
 
         public HarvestableDropFilterChain FilterByHighestTier()
         {
-            return api.Game.Sync< HarvestableDropFilterChain>(() =>
+            return Api.Game.Sync< HarvestableDropFilterChain>(() =>
             {
                 var highest = 0;
                 foreach (var obj in AsList)
@@ -264,7 +264,7 @@ namespace Ennui.Api.Direct.Object
 
         public override HarvestableDropFilterChain Create(List<MobHarvestableDrop> elements)
         {
-            return new HarvestableDropFilterChain(api, elements);
+            return new HarvestableDropFilterChain(Api, elements);
         }
     }
 

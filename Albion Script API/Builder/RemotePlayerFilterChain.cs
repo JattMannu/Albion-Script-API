@@ -32,7 +32,7 @@ namespace Ennui.Api.Builder
 
 		public override RemotePlayerFilterChain Create(List<IRemotePlayerObject> elements)
 		{
-			return new RemotePlayerFilterChain(api, elements);
+			return new RemotePlayerFilterChain(Api, elements);
 		}
 
 	}

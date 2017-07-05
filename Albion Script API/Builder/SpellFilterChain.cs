@@ -44,14 +44,14 @@ namespace Ennui.Api.Builder
 
 		public override SpellFilterChain Create(List<ISpell> elements)
 		{
-			return new SpellFilterChain(api, elements);
+			return new SpellFilterChain(Api, elements);
 		}
 
 		public class NullFilter : Filter<ISpell>
 		{
 			public bool Ignore(ISpell t)
 			{
-                if (!t.InUse)
+                if (t == null || !t.InUse)
                     return true;
 
                 return t == null;
@@ -62,7 +62,7 @@ namespace Ennui.Api.Builder
 		{
 			public bool Ignore(ISpell t)
 			{
-                if (!t.InUse)
+                if (t == null || !t.InUse)
                     return true;
 
                 return !t.IsReadyToCast;
@@ -80,7 +80,7 @@ namespace Ennui.Api.Builder
 
 			public bool Ignore(ISpell t)
 			{
-                if (!t.InUse)
+                if (t == null || !t.InUse)
                     return true;
 
                 return t.Category != this.category;
@@ -98,7 +98,7 @@ namespace Ennui.Api.Builder
 
 			public bool Ignore(ISpell t)
 			{
-                if (!t.InUse)
+                if (t == null || !t.InUse)
                     return true;
 
                 return t.Target != this.target;
@@ -116,7 +116,7 @@ namespace Ennui.Api.Builder
 
 			public bool Ignore(ISpell t)
 			{
-                if (!t.InUse)
+                if (t == null || !t.InUse)
                     return true;
 
                 var name = t.Name;
@@ -142,7 +142,7 @@ namespace Ennui.Api.Builder
 
 			public bool Ignore(ISpell t)
 			{
-                if (!t.InUse)
+                if (t == null || !t.InUse)
                     return true; 
 
 				var name = t.Name;

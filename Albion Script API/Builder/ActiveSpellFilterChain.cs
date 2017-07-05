@@ -23,7 +23,7 @@ namespace Ennui.Api.Builder
 
 		public override ActiveSpellFilterChain Create(List<IActiveSpell> elements)
 		{
-			return new ActiveSpellFilterChain(api, elements);
+			return new ActiveSpellFilterChain(Api, elements);
 		}
 
 		public class ExcludeWithoutNameFilter : Filter<IActiveSpell>

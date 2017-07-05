@@ -74,7 +74,7 @@ namespace Ennui.Api.Builder
 
 		public HarvestableFilterChain FilterByHighestTier()
 		{
-			return api.Game.Sync<HarvestableFilterChain>(() =>
+			return Api.Game.Sync<HarvestableFilterChain>(() =>
 			{
 				var highest = 0;
 				foreach (var obj in AsList)
@@ -272,7 +272,7 @@ namespace Ennui.Api.Builder
 
 		public override HarvestableFilterChain Create(List<IHarvestableObject> elements)
 		{
-			return new HarvestableFilterChain(api, elements);
+			return new HarvestableFilterChain(Api, elements);
 		}
     }
 }

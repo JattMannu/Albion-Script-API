@@ -3,19 +3,18 @@ using Ennui.Api.Method;
 
 namespace Ennui.Api.Builder
 {
-	public abstract class FilterChain<T, R> where R : FilterChain<T, R>
+	public abstract class FilterChain<T, R> : ApiResource where R : FilterChain<T, R>
 	{
-        protected IApi api;
 		private List<T> list;
 
-		public FilterChain(IApi api, List<T> list)
+		public FilterChain(IApi api, List<T> list) : base(api)
 		{
 			this.list = list;
 		}
 
 		public R Filter(Filter<T> filter)
 		{
-			return api.Game.Sync<R>(() =>
+			return Api.Game.Sync<R>(() =>
 			{
 				var tmp = new List<T>();
 				foreach (T t in list)

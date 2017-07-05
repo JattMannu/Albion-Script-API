@@ -35,7 +35,7 @@ namespace Ennui.Api.Builder
 
 		public override MobFilterChain Create(List<IMobObject> elements)
 		{
-			return new MobFilterChain(api, elements);
+			return new MobFilterChain(Api, elements);
 		}
 
 	}

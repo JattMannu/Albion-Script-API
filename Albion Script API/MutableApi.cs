@@ -45,5 +45,11 @@ namespace Ennui.Api
 
         public IScriptLoader ScriptLoader { get; set; }
         public IScriptEngine ScriptEngine { get; set; }
+
+        public MutableApi() { }
+        public MutableApi(IApi api)
+        {
+            this.Set(api);
+        }
     }
 }

@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Ennui.Api.Method;
 
 namespace Ennui.Api.Script
 {
     /// <summary>
 	/// Provides a way for users to extend functionality of the bot.
+    /// 
+    /// 'well why the fuck is this an api?' because it provides an api
 	/// </summary>
 	public abstract class AbstractScript : ApiResource
     {
