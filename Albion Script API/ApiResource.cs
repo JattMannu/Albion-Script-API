@@ -12,7 +12,10 @@ namespace Ennui.Api
         public ApiResource(IApi api)
         {
             this.Api = api;
-            this.Set(api);
+            if (api != null)
+            {
+                this.Set(api);
+            }
         }
     }
 }

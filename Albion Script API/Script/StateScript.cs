@@ -10,6 +10,15 @@ namespace Ennui.Api.Script
 	/// </summary>
 	public class StateScript : AbstractStateScript
     {
+        public StateScript(IApi api) : base(api)
+        {
+        }
+
+        public StateScript() : base(null)
+        {
+
+        }
+
         /// <summary>
         /// Allows us to hook into the loop execution of this script.
         /// </summary>
@@ -40,7 +49,7 @@ namespace Ennui.Api.Script
             this.scriptEngine = se;
         }
 
-        public StateScript(IScriptEngine se) : base(null)
+        public StateScript(IScriptEngine se)
         {
             this.scriptEngine = se;
         }
@@ -62,6 +71,8 @@ namespace Ennui.Api.Script
         /// <param name="script">The script belonging to the state.</param>
         public void AddState(string key, StateScript script)
         {
+            script.Api = Api;
+            script.Set(Api);
             script.parent = this;
             states.Add(key, script);
         }

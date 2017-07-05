@@ -14,6 +14,11 @@ namespace Ennui.Api.Script
         {
         }
 
+        public AbstractStateScript() : base(null)
+        {
+
+        }
+
         /// <summary>
         /// Switches to a different state.
         /// </summary>
