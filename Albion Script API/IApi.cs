@@ -26,6 +26,7 @@ namespace Ennui.Api
         IFastTravelWindow FastTravelWindow { get; set; }
         IFiles Files { get; set; }
         IGame Game { get; set; }
+        IGraphs Graphs { get; set; }
         IHotkeys Hotkeys { get; set; }
         IInput Input { get; set; }
         IInventory Inventory { get; set; }

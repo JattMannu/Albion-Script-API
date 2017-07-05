@@ -44,6 +44,7 @@
     <Compile Include="IApiExtensions.cs" />
     <Compile Include="LocalScript.cs" />
     <Compile Include="MapArea.cs" />
+    <Compile Include="Method\IGraphs.cs" />
     <Compile Include="MutableApi.cs" />
     <Compile Include="ApiModule.cs" />
     <Compile Include="ApiResource.cs" />
@@ -167,7 +168,6 @@
     <Compile Include="Meta\SpellStackingRule.cs" />
     <Compile Include="Meta\SpellTarget.cs" />
     <Compile Include="Method\IBanking.cs" />
-    <Compile Include="IGraph.cs" />
     <Compile Include="ITimer.cs" />
     <Compile Include="Vector3.cs" />
     <Compile Include="Method\IBot.cs" />
@@ -208,6 +208,10 @@
     <Compile Include="Script\AbstractStateScript.cs" />
     <Compile Include="Script\StateScript.cs" />
     <Compile Include="SerializationWrapper.cs" />
+    <Compile Include="Vert\IGraph.cs" />
+    <Compile Include="Vert\IGraphEdge.cs" />
+    <Compile Include="Vert\ITerritory.cs" />
+    <Compile Include="Vert\IVertex.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Direct\UI\" />

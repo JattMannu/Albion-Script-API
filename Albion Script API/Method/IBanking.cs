@@ -46,5 +46,12 @@ namespace Ennui.Api.Method
         /// <returns><c>true</c>, if the items were withdrawn, <c>false</c> otherwise.</returns>
         /// <param name="substrings">Substrings.</param>
         bool WithdrawItemsWithSubstring(params string[] substrings);
+
+        /// <summary>
+        /// Checks if the inventory has any item with one of the provided names in their name.
+        /// </summary>
+        /// <param name="names">The names to match items against</param>
+        /// <returns>If the inventory has any items with one of the provided names in them</returns>
+        bool HasItemContainingName(params string[] names);
     }
 }
