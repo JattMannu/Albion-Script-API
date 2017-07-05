@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IApiExtensions.cs" />
+    <Compile Include="LocalScript.cs" />
     <Compile Include="MapArea.cs" />
     <Compile Include="MutableApi.cs" />
     <Compile Include="ApiModule.cs" />
