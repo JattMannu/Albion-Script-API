@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Ennui.Api.Method;
+﻿using Ennui.Api.Method;
 using Ennui.Api.Script;
+using Ennui.Api.Gui;
 
 namespace Ennui.Api
 {
@@ -44,6 +40,8 @@ namespace Ennui.Api
         ISerialization Serialization { get; set; }
         IUI UI { get; set; }
         IViews Views { get; set; }
+
+        IGuiScene GuiScene { get; set; }
 
         IScriptLoader ScriptLoader { get; set; }
         IScriptEngine ScriptEngine { get; set; }

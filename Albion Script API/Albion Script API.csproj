@@ -133,7 +133,7 @@
     <Compile Include="Gui\IInputField.cs" />
     <Compile Include="Gui\ILabel.cs" />
     <Compile Include="Gui\IPanel.cs" />
-    <Compile Include="Gui\IRoot.cs" />
+    <Compile Include="Gui\IGuiScene.cs" />
     <Compile Include="Gui\IScrollPanel.cs" />
     <Compile Include="Gui\IScrollViewport.cs" />
     <Compile Include="Gui\ISlider.cs" />

@@ -44,6 +44,8 @@ namespace Ennui.Api
             from.UI = to.UI;
             from.Views = to.Views;
 
+            from.GuiScene = to.GuiScene;
+
             from.ScriptLoader = to.ScriptLoader;
             from.ScriptEngine = to.ScriptEngine;
         }

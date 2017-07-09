@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Ennui.Api.Gui
 {
-    public interface IScrollPanel
+    public interface IScrollPanel : IComponent
     {
     }
 }
