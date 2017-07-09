@@ -10,16 +10,16 @@ namespace Ennui.Api.Builder
 
 		}
 
-		public R ExcludeWithIds(params int[] ids)
+		public R ExcludeWithIds(params long[] ids)
 		{
 			return Filter(new ExludeWithIdsFilter<T>(ids));
 		}
 
 		public class ExludeWithIdsFilter<T> : Filter<T> where T : ISimulationObject
 		{
-			private int[] ids;
+			private long[] ids;
 
-			public ExludeWithIdsFilter(params int[] ids)
+			public ExludeWithIdsFilter(params long[] ids)
 			{
 				this.ids = ids;
 			}
