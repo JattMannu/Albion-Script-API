@@ -8,5 +8,6 @@ namespace Ennui.Api.Method
     public interface IUI : IApiModule
     {
         void ShowMessageOk(string msg);
+        bool InputEnabled { set; }
     }
 }
