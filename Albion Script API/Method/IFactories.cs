@@ -16,6 +16,7 @@ namespace Ennui.Api.Method
         IInputField CreateGuiInputField();
         IPanel CreateGuiPanel();
         ICheckBox CreateGuiCheckBox();
-        ILabel CreateLabel();
+        ILabel CreateGuiLabel();
+        IButton CreateGuiButton();
     }
 }
