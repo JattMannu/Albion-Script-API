@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GeneralUtils.cs" />
     <Compile Include="IApiExtensions.cs" />
     <Compile Include="LocalScript.cs" />
     <Compile Include="MapArea.cs" />
@@ -146,7 +147,11 @@
     <Compile Include="Direct\IStateQueue.cs" />
     <Compile Include="Direct\ITimestampProperty.cs" />
     <Compile Include="Method\ICodecs.cs" />
+    <Compile Include="RandomUtils.cs" />
+    <Compile Include="Rectangle.cs" />
     <Compile Include="Script\IScriptLoader.cs" />
+    <Compile Include="Time.cs" />
+    <Compile Include="Timer.cs" />
     <Compile Include="Vector2.cs" />
     <Compile Include="Vector2f.cs" />
     <Compile Include="Vector2i.cs" />
