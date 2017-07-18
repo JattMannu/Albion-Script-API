@@ -218,8 +218,6 @@
     <Compile Include="Vert\ITerritory.cs" />
     <Compile Include="Vert\IVertex.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Direct\UI\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
