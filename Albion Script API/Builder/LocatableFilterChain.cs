@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Ennui.Api.Method;
+using Ennui.Api.Direct.Object;
 
 namespace Ennui.Api.Builder
 {
@@ -36,7 +37,17 @@ namespace Ennui.Api.Builder
 				var closestDistance = int.MaxValue;
 				foreach (T t in AsList)
 				{
+                    if (t == null)
+                        continue;
+
+                    var sim = t as ISimulationObject;
+                    if (sim != null && !sim.IsValid)
+                        continue;
+
 					var loc = t.Location;
+                    if (loc == null)
+                        continue;
+
 					var dist = 0;
 					dist += (int) Math.Abs(center.X - loc.X);
 					dist += (int) Math.Abs(center.Y - loc.Y);
