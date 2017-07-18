@@ -31,11 +31,26 @@ namespace Ennui.Api.Method
         /// </summary>
         /// <param name="zoom">The new zoom value.</param>
         void SetZoom(float zoom);
-
-
+        
         /// <summary>
         /// Disables the fog applied to the game's camera.
         /// </summary>
         bool DisableFog();
+
+        /// <summary>
+        /// Draws a line from the start vector, to the end vector.
+        /// </summary>
+        /// <param name="color">The color to draw the line in,</param>
+        /// <param name="start">The start of the line.</param>
+        /// <param name="end">The end of the line.</param>
+        void DrawLine(Color color, Vector2<float> start, Vector2<float> end);
+
+        /// <summary>
+        /// Fills a square area from start to end.
+        /// </summary>
+        /// <param name="color">The color to draw the area in,</param>
+        /// <param name="start">The start of the area.</param>
+        /// <param name="end">The end of the area.</param>
+        void FillSquare(Color color, Vector2<float> start, Vector2<float> end);
     }
 }
