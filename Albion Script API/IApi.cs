@@ -4,6 +4,9 @@ using Ennui.Api.Gui;
 
 namespace Ennui.Api
 {
+    /// <summary>
+    /// Provides services related to botting.
+    /// </summary>
     public interface IApi
     {
         IBanking Banking { get; set; }
