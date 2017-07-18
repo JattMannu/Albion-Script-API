@@ -118,5 +118,12 @@ namespace Ennui.Api.Method
         /// </summary>
         /// <returns><c>true</c>, if the object was placed, <c>false</c> otherwise.</returns>
         bool PlaceObject();
+
+        /// <summary>
+        /// Converts a 3d coordinate to 2d screen space.
+        /// </summary>
+        /// <param name="pos">The 3d coordinate to project.</param>
+        /// <returns><c>null</c> If the 3d point isn't visible, otherwise the projected point.</returns>
+        Vector2<float> ProjectToScreen(Vector3<float> pos);
     }
 }
