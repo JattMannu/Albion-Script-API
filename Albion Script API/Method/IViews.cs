@@ -15,6 +15,7 @@ namespace Ennui.Api.Method
         /// <summary>
 		/// Gets the view for the local player.
 		/// </summary>
+        /// <return>The local player's character view.</return>
 		/// <value>The view of the local player.</value>
 		ILocalPlayerCharacterView LocalView { get; }
 
@@ -22,7 +23,7 @@ namespace Ennui.Api.Method
         /// Retrieves the view attached to the provided object
         /// </summary>
         /// <returns>The view attached to the provided object.</returns>
-        /// <param name="obj">Object.</param>
+        /// <param name="obj">The simulation object to resolve the view for.</param>
         ISimulationObjectView ViewFor(ISimulationObject obj);
     }
 }
