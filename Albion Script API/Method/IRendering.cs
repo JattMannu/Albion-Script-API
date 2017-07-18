@@ -52,5 +52,15 @@ namespace Ennui.Api.Method
         /// <param name="start">The start of the area.</param>
         /// <param name="end">The end of the area.</param>
         void FillSquare(Color color, Vector2<float> start, Vector2<float> end);
+
+        /// <summary>
+        /// Draws a filled polygon.
+        /// </summary>
+        /// <param name="color">The color to draw the polygon with.</param>
+        /// <param name="one">The first point.</param>
+        /// <param name="two">The second point.</param>
+        /// <param name="three">The third point.</param>
+        /// <param name="four">The fourth point.</param>
+        void FillPolygon(Color color, Vector2<float> one, Vector2<float> two, Vector2<float> three, Vector2<float> four);
     }
 }
