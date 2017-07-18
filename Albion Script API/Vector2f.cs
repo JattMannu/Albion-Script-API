@@ -5,15 +5,15 @@ using System.Text;
 
 namespace Ennui.Api
 {
+    /// <summary>
+    /// A concrete vector2 implementation that uses floating point numbers internally.
+    /// </summary>
     public class Vector2f : Vector2<float>
     {
         private float x;
         private float y;
 
-        public Vector2f()
-        {
-            this.x = this.y = 0.0f;
-        }
+        public Vector2f() : this(0.0f, 0.0f) { }
 
         public Vector2f(float x, float y)
         {
@@ -21,22 +21,27 @@ namespace Ennui.Api
             this.y = y;
         }
 
+        /// <inheritdoc/>
         public override float X => x;
 
+        /// <inheritdoc/>
         public override float Y => y;
 
+        /// <inheritdoc/>
         public override Vector2<float> Translate(float x, float y)
         {
             Vector2<float> safe = this;
             return new Vector2f(safe.X + x, safe.Y + y);
         }
 
+        /// <inheritdoc/>
         public override float SimpleDistance(Vector2<float> other)
         {
             var v = Distance(other);
             return v.X + v.Y;
         }
 
+        /// <inheritdoc/>
         public override Vector2<float> Distance(Vector2<float> other)
         {
             var s1 = this;

@@ -5,15 +5,15 @@ using System.Text;
 
 namespace Ennui.Api
 {
+    /// <summary>
+    /// A concrete vector2 implementation that uses 32 bit integers internally.
+    /// </summary>
     public class Vector2i : Vector2<int>
     {
         private int x;
         private int y;
 
-        public Vector2i()
-        {
-            this.x = this.y = 0;
-        }
+        public Vector2i() : this(0, 0) { }
 
         public Vector2i(int x, int y)
         {
@@ -21,22 +21,27 @@ namespace Ennui.Api
             this.y = y;
         }
 
+        /// <inheritdoc/>
         public override int X => x;
 
+        /// <inheritdoc/>
         public override int Y => y;
 
+        /// <inheritdoc/>
         public override Vector2<int> Translate(int x, int y)
         {
             Vector2<int> safe = this;
             return new Vector2i(safe.X + x, safe.Y + y);
         }
 
+        /// <inheritdoc/>
         public override int SimpleDistance(Vector2<int> other)
         {
             var v = Distance(other);
             return v.X + v.Y;
         }
 
+        /// <inheritdoc/>
         public override Vector2<int> Distance(Vector2<int> other)
         {
             var s1 = this;

@@ -5,15 +5,42 @@ using System.Text;
 
 namespace Ennui.Api
 {
+    /// <summary>
+    /// Represents a 2d coordinate.
+    /// </summary>
+    /// <typeparam name="T">The type of number to use internally.</typeparam>
     public abstract class Vector2<T>
     {
+        /// <summary>
+        /// The 2d coordinate's x axis
+        /// </summary>
         public abstract T X { get; }
+
+        /// <summary>
+        /// The 2d coordinate's y axis
+        /// </summary>
         public abstract T Y { get; }
 
+        /// <summary>
+        /// Creates a new vector2 that's offset by the provided amount.
+        /// </summary>
+        /// <param name="x">The amount to offset on the x axis.</param>
+        /// <param name="y">The amount to offset on the y axis.</param>
+        /// <returns>The new, translated vector2.</returns>
         public abstract Vector2<T> Translate(T x, T y);
 
+        /// <summary>
+        /// Calculates the total distance from this vector2, and the provided vector2.
+        /// </summary>
+        /// <param name="other">The vector2 to calculate the distance from.</param>
+        /// <returns>The distance from the other vector2.</returns>
         public abstract T SimpleDistance(Vector2<T> other);
 
+        /// <summary>
+        /// Calculates the actual distance from this vector2, and the provided vector2
+        /// </summary>
+        /// <param name="other">The vector2 to calculate the distance from.</param>
+        /// <returns>The distance from the other vector2.</returns>
         public abstract Vector2<T> Distance(Vector2<T> other);
 
         /// <inheritdoc/>
@@ -55,8 +82,10 @@ namespace Ennui.Api
                 return false;
             }
 
-            if (System.Object.ReferenceEquals(this, b))
+            if (object.ReferenceEquals(this, b))
+            {
                 return true;
+            }
 
             return this.X.Equals(b.X) && this.Y.Equals(b.Y);
         }
@@ -78,8 +107,10 @@ namespace Ennui.Api
                 return false;
             }
 
-            if (System.Object.ReferenceEquals(a, b))
+            if (object.ReferenceEquals(a, b))
+            {
                 return true;
+            }
 
             return a.X.Equals(b.X) && a.Y.Equals(b.Y);
         }
