@@ -12,5 +12,10 @@ namespace Ennui.Api.Method
     {
         /// <summary><c>true</c> if the character info window is currently open; otherwise, <c>false</c>.</summary>
         bool IsOpen { get; }
+
+        /// <summary>
+        /// Forces this window open.
+        /// </summary>
+        void Open();
     }
 }
