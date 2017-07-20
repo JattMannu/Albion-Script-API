@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Ennui.Api.Direct.Object
 {
-    public interface ITeleportStoneObject
+    public interface ITeleportStoneObject : IWorldObject
     {
     }
 }
