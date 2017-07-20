@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Direct\Object\IHellgateObject.cs" />
     <Compile Include="GeneralUtils.cs" />
     <Compile Include="IApiExtensions.cs" />
     <Compile Include="LocalScript.cs" />
