@@ -47,6 +47,7 @@
     <Compile Include="IApiExtensions.cs" />
     <Compile Include="LocalScript.cs" />
     <Compile Include="MapArea.cs" />
+    <Compile Include="Method\IGoldMarketWindow.cs" />
     <Compile Include="Method\IGraphs.cs" />
     <Compile Include="MutableApi.cs" />
     <Compile Include="ApiModule.cs" />

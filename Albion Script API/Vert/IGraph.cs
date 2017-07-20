@@ -25,11 +25,18 @@ namespace Ennui.Api.Vert
         /// </summary>
         string DisplayName { get; set; }
 
+        /// <summary>
+        /// All of the vertices scattered around the map.
+        /// </summary>
         List<IVertex> Vertices { get; set; }
+
+        /// <summary>
+        /// A list of edges to other graphs.
+        /// </summary>
         List<IGraphEdge> WebEdges { get; set; }
 
         /// <summary>
-        /// A list of <see cref="T:Ennui.Api.Vert.ITerritory"/>  within thie graph.
+        /// A list of terrirories within the map.
         /// </summary>
         List<ITerritory> Territories { get; set; }
 

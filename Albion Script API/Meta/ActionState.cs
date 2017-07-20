@@ -1,8 +1,7 @@
 ﻿namespace Ennui.Api.Meta
 {
 	/// <summary>
-	/// Represents the possible action states that an entity
-	/// can be performing.
+	/// Represents the possible action states that an entity can perform.
 	/// </summary>
 	public enum ActionState
 	{
