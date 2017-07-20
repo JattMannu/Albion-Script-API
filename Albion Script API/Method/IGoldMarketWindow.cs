@@ -33,11 +33,11 @@ namespace Ennui.Api.Method
         /// <summary>
         /// Buys the amount of entered gold.
         /// </summary>
-        void BuyGold();
+        bool BuyGold();
 
         /// <summary>
         /// Sells the amount of entered gold.
         /// </summary>
-        void SellGold();
+        bool SellGold();
     }
 }
