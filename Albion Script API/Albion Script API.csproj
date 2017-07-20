@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Direct\Object\IExitObject.cs" />
     <Compile Include="Direct\Object\IHellgateObject.cs" />
     <Compile Include="Direct\Object\ISpellEffectAreaObject.cs" />
     <Compile Include="Direct\Object\ITeleportStoneObject.cs" />
@@ -47,6 +48,7 @@
     <Compile Include="IApiExtensions.cs" />
     <Compile Include="LocalScript.cs" />
     <Compile Include="MapArea.cs" />
+    <Compile Include="Meta\HarvestableSetupState.cs" />
     <Compile Include="Method\IGoldMarketWindow.cs" />
     <Compile Include="Method\IGraphs.cs" />
     <Compile Include="MutableApi.cs" />
