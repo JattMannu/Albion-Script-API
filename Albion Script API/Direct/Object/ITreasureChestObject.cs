@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Ennui.Api.Direct.Object
 {
-    public interface ITreasureChestObject : ISimulationObject
+    public interface ITreasureChestObject : IWorldObject
     {
         IItemContainerProxy GetItemContainerProxy();
     }
