@@ -40,7 +40,7 @@ namespace Ennui.Api.Direct.Object
         /// <summary>
         /// Retrieves all of the local player's Spells.
         /// </summary>
-        /// <value>Thobjocal player's Spells.</value>
+        /// <summary>Thobjocal player's Spells.</value>
         ISpell[] Spells { get; }
 
         /// <summary>

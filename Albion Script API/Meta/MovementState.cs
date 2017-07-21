@@ -3,16 +3,16 @@
 namespace Ennui.Api.Meta
 {
 	/// <summary>
-	/// Represents the possible movement states that an entity can have.
+	/// Represents all possible movement states.
 	/// </summary>
 	public enum MovementState
 	{
 		/// <summary>
-		/// Represents an entity that is not moving.
+		/// Represents being idle.
 		/// </summary>
 		Idle = 0,
 		/// <summary>
-		/// Represents an entity that is moving normally.
+		/// Represents normal movement.
 		/// </summary>
 		Moving = 1,
 	}

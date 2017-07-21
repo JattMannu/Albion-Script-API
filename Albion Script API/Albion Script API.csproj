@@ -35,16 +35,22 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Direct\IBoundCluster.cs" />
+    <Compile Include="Direct\Object\IExitObject.cs" />
+    <Compile Include="Direct\Object\IHellgateObject.cs" />
+    <Compile Include="Direct\Object\ISpellEffectAreaObject.cs" />
+    <Compile Include="Direct\Object\ITeleportStoneObject.cs" />
+    <Compile Include="Direct\Object\ITreasureChestObject.cs" />
     <Compile Include="GeneralUtils.cs" />
     <Compile Include="IApiExtensions.cs" />
     <Compile Include="LocalScript.cs" />
     <Compile Include="MapArea.cs" />
+    <Compile Include="Meta\HarvestableSetupState.cs" />
+    <Compile Include="Method\IGoldMarketWindow.cs" />
     <Compile Include="Method\IGraphs.cs" />
     <Compile Include="MutableApi.cs" />
     <Compile Include="ApiModule.cs" />
