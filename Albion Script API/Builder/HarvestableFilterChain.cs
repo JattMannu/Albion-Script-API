@@ -15,7 +15,7 @@ namespace Ennui.Api.Builder
         public HarvestableFilterChain(IApi api, List<IHarvestableObject> list) : base(api, list)
         {
         }
-
+        
 		/// <summary>
 		/// Finds the closest harvestable to the center position, sorted by the order of the provide
 		/// type sets.
@@ -36,6 +36,11 @@ namespace Ennui.Api.Builder
 			}
 			return null;
 		}
+
+        public HarvestableFilterChain FilterBySetupState(HarvestableSetupState state)
+        {
+            return Filter(new SetupStateFilter(state));
+        }
 
 		/// <summary>
 		/// Filters by resource tier.
@@ -98,6 +103,21 @@ namespace Ennui.Api.Builder
 		{
 			return Filter(new EffectiveTypeSetFilter(types));
 		}
+
+        public class SetupStateFilter : Filter<IHarvestableObject>
+        {
+            private HarvestableSetupState state;
+
+            public SetupStateFilter(HarvestableSetupState state)
+            {
+                this.state = state;
+            }
+
+            public bool Ignore(IHarvestableObject t)
+            {
+                return t.SetupState != state;
+            }
+        }
 
         public class ExactTierFilter : Filter<IHarvestableObject>
         {
