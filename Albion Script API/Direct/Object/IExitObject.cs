@@ -2,5 +2,6 @@
 {
     public interface IExitObject : IWorldObject
     {
+        IBoundCluster BoundCluster { get; }
     }
 }

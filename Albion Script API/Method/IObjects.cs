@@ -126,5 +126,10 @@ namespace Ennui.Api.Method
         /// All spell effect areas within the scene.
         /// </summary>
         List<ISpellEffectAreaObject> SpellEffectAreas { get; }
+
+        /// <summary>
+        /// All exits within the scene.
+        /// </summary>
+        List<IExitObject> Exits { get; }
     }
 }
