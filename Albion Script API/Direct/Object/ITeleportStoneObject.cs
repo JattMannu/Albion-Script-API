@@ -6,9 +6,9 @@ using System.Text;
 namespace Ennui.Api.Direct.Object
 {
     /// <summary>
-    /// Represents a travlel point object within the scene.
+    /// Represents a teleport stone within the scene.
     /// </summary>
-    public interface ITravelPointObject : IWorldObject
+    public interface ITeleportStoneObject : IWorldObject
     {
     }
 }

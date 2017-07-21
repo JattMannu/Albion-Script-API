@@ -7,14 +7,14 @@ using System.Text;
 namespace Ennui.Api.Direct.Object
 {
     /// <summary>
-	/// Represents a world object within the game scene.
+	/// Represents an object within the game scene.
 	/// </summary>
 	public interface IWorldObject : ISimulationObject
     {
         IWorldObjectView WorldView { get; }
 
         /// <summary>
-        /// Clicks on this world object using the local player's character view.
+        /// Clicks on this object.
         /// </summary>
         bool Click();
     }

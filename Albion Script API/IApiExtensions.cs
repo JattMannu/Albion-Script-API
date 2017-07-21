@@ -25,6 +25,7 @@ namespace Ennui.Api
             from.FastTravelWindow = to.FastTravelWindow;
             from.Files = to.Files;
             from.Game = to.Game;
+            from.GoldMarketWindow = to.GoldMarketWindow;
             from.Graphs = to.Graphs;
             from.Hotkeys = to.Hotkeys;
             from.Input = to.Input;

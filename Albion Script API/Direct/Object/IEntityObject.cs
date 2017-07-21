@@ -14,63 +14,63 @@ namespace Ennui.Api.Direct.Object
 	public interface IEntityObject : IMovingObject
     {
         /// <summary>
-        /// Retrieves this entity's view.
+        /// This entity's view.
         /// </summary>
-        /// <value>This entity's view.</value>
         IEntityObjectView EntityView { get; }
 
         /// <summary>
-        /// Retrieves this entity's name.
+        /// This entity's name.
         /// </summary>
-        /// <value>This entity's name.</value>
         string Name { get; }
 
+        /// <summary>
+        /// This entity's health property.
+        /// </summary>
         ITimestampProperty HealthProperty { get; }
-
+        
         /// <summary>
-        /// Retrieves this entity's current health.
+        /// This entity's current health.
         /// </summary>
-        /// <value>This entity's current health.</value>
         float CurrentHealth { get; }
-
+        
         /// <summary>
-        /// Retrieves this entity's maximum health.
+        /// This entity's max health.
         /// </summary>
-        /// <value>This entity's max health.</value>
         float MaxHealth { get; }
 
         /// <summary>
-        /// Retrieve's this entity's current health percentage.
+        /// This entity's health percentage.
         /// </summary>
-        /// <value>This entity's health percentage.</value>
         float HealthPercentage { get; }
 
+        /// <summary>
+        /// This entity's energy property.
+        /// </summary>
         ITimestampProperty EnergyProperty { get; }
 
         /// <summary>
-        /// Retrieves this entity's current energy.
+        /// This entity's current energy.
         /// </summary>
-        /// <value>This entity's current energy.</value>
         float CurrentEnergy { get; }
-
+        
         /// <summary>
-        /// Retrieves this entity's maximum energy.
+        /// This entity's max energy.
         /// </summary>
-        /// <value>This entity's max energy.</value>
         float MaxEnergy { get; }
-
+        
         /// <summary>
-        /// Retrieves this entity's maximum load
+        /// This entity's max load.
         /// </summary>
-        /// <value>This entity's max load.</value>
         float MaxCarryWeight { get; }
-
+        
         /// <summary>
-        /// Retrieves this entity's movement speed.
+        /// This entity's movement speed.
         /// </summary>
-        /// <value>This entity's movement speed.</value>
         float MovementSpeed { get; }
 
+        /// <summary>
+        /// This entity's action state queue.
+        /// </summary>
         IStateQueue ActionStateQueue { get; }
 
         /// <summary>
@@ -80,57 +80,53 @@ namespace Ennui.Api.Direct.Object
         ActionState CurrentActionState { get; }
 
         /// <summary>
-        /// Checks if this entity is currently harvesting anything.
+        /// <c>true</c> if this entity is harvesting; otherwise, <c>false</c>.
         /// </summary>
-        /// <value><c>true</c> if this entity is harvesting; otherwise, <c>false</c>.</value>
         bool IsHarvesting { get; }
 
+        /// <summary>
+        /// This entity's movement state queue.
+        /// </summary>
         IStateQueue MovementStateQueue { get; }
 
-        /// <summary>
-        /// Retrieves this entity's movement state.
-        /// </summary>
-        /// <value>This entity's movement state.</value>
+        /// <summary>This entity's movement state.</summary>
         MovementState CurrentMovementState { get; }
 
         /// <summary>
-        /// Checks if this entity is currently moving
+        /// <c>true</c> if this entity is moving; otherwise, <c>false</c>.
         /// </summary>
-        /// <value><c>true</c> if this entity is moving; otherwise, <c>false</c>.</value>
         bool IsMoving { get; }
 
-        IEffectApplicator EffectApplicator { get; }
-
         /// <summary>
-        /// Retrieves the list of effects currently applied to this entity.
+        /// This entity's effect applicator.
         /// </summary>
-        /// <value>The list of effects currently applied to this entity.</value>
+        IEffectApplicator EffectApplicator { get; }
+        
+        /// <summary>
+        /// The list of effects currently applied to this entity.
+        /// </summary>
         List<IActiveSpell> Effects { get; }
 
         ActiveSpellFilterChain EffectChain { get; }
 
         /// <summary>
-        /// Retrieves the unique id of the entity that this entity has targeted.
+        /// The unique id of the entity that this entity has targeted.
         /// </summary>
-        /// <value>The unique id of the entity that this entity has targeted.</value>
         long AttackTargetId { get; }
-
+        
         /// <summary>
-        /// Retrieves the entity that this entity has targeted.
+        /// The entity that this entity has targeted.
         /// </summary>
-        /// <value>The entity that this entity has targeted.</value>
         IEntityObject AttackTarget { get; }
-
+        
         /// <summary>
-        /// Checks if this entity is under attack by another entity.
+        /// <c>true</c> if this entity is under attack; otherwise, <c>false</c>.
         /// </summary>
-        /// <value><c>true</c> if this entity is under attack; otherwise, <c>false</c>.</value>
         bool IsUnderAttack { get; }
-
+        
         /// <summary>
-        /// Retrieves a list of entities that are attacking this entity.
+        /// A list of entities that are attacking this entity.
         /// </summary>
-        /// <value>A list of entities that are attacking this entity.</value>
         List<IEntityObject> UnderAttackBy { get; }
 
         /// <summary>
@@ -139,13 +135,15 @@ namespace Ennui.Api.Direct.Object
         /// <returns>The event handler of the provided type.</returns>
         /// <param name="t">The type of the event handler to grab.</param>
         object GetEventHandler(Type t);
-
+        
         /// <summary>
-        /// Retrieves the event handler that handles spell casting for this entity.
+        /// The event handler that handles spell casting for this entity.
         /// </summary>
-        /// <value>The event handler that handles spell casting for this entity.</value>
         ICastSpellEventHandler CastSpellEventHandler { get; }
 
+        /// <summary>
+        /// The event handler that handles item placement for this entity.
+        /// </summary>
         IPlaceItemEventHandler PlaceItemEventHandler { get; }
 
         /// <summary>
@@ -156,18 +154,13 @@ namespace Ennui.Api.Direct.Object
         bool IsReadyToCast(CharacterSpellSlot slot);
 
         /// <summary>
-        /// Gets or sets the last known position for this entity. 
-        /// 
-        /// This value is where the server had us pinpointed in the scene on the last update. By changing this, and forcing
-        /// a movement update, we can actually teleport.
+        /// The last known position.
         /// </summary>
-        /// <value>The last known position.</value>
         Vector3<float> LastKnownPosition { get; }
 
         /// <summary>
-        /// Retrieves this entity's internal xml config object.
+        /// This entity's internal xml config object.
         /// </summary>
-        /// <value>This entity's internal xml config object.</value>
         object XmlConfig { get; }
     }
 }

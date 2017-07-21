@@ -20,15 +20,13 @@ namespace Ennui.Api.Method
     public interface IObjects : IApiModule
     {
         /// <summary>
-		/// A map containing a lookup from object id -> object instances.
-		/// </summary>
-		/// <value>The object map.</value>
-		 IDictionary ObjectMap { get; }
+        /// A map containing all objects, using the object ids as keys
+        /// </summary>
+        IDictionary ObjectMap { get; }
 
         /// <summary>
-        /// A map containing a lookup from object id -> object instances.
+        /// A map containing all wrapped objects, using the object ids as keys
         /// </summary>
-        /// <value>The object map.</value>
         Dictionary<long, object> ConvObjectMap { get; }
 
         /// <summary>
@@ -39,9 +37,8 @@ namespace Ennui.Api.Method
         bool ContainsObject(long id);
 
         /// <summary>
-        /// The number of objects currently loaded in the scene.
+        /// The total amount of objects within the scene.
         /// </summary>
-        /// <value>The object count.</value>
         int ObjectCount { get; }
 
         /// <summary>
@@ -58,72 +55,76 @@ namespace Ennui.Api.Method
         /// </summary>
         /// <returns>The SimulationObject with the provided unique id.</returns>
         /// <param name="id">The unique id of the SimulationObject to retrieve.</param>
-         ISimulationObject ForId(long id);
+        ISimulationObject ForId(long id);
 
         /// <summary>
-        /// Gets all harvestables.
+        /// All harvestables within the scene.
         /// </summary>
-        /// <value>A list of every harvestable within the currently loaded map region.</value>
-         List<IHarvestableObject> AllHarvestables { get; }
+        List<IHarvestableObject> AllHarvestables { get; }
 
         /// <summary>
-        /// Retrieves all harvestables, and adds them to a filter chain.
+        /// A chain containing all harvestables within the scene.
         /// </summary>
-        /// <value>A filter chain containing all harvestables within the currently loaded map region.</value>
-       HarvestableFilterChain HarvestableChain { get; }
+        HarvestableFilterChain HarvestableChain { get; }
 
         /// <summary>
-        /// Gets all buildings.
+        /// All buildings within the scene.
         /// </summary>
-        /// <value>A list of every building within the currently loaded map region.</value>
         List<IBuildingObject> AllBuildings { get; }
 
         /// <summary>
-        /// Gets all bank buildings.
+        /// All bank buildings within the scene.
         /// </summary>
-        /// <value>A list of every bank building within the currently loaded map region.</value>
-       List<IBankBuildingObject> BankBuildings { get; }
+        List<IBankBuildingObject> BankBuildings { get; }
 
         /// <summary>
-        /// Retrieves all bank buildings, and adds them to a filter chain.
+        /// A chain containing all bank buildings within the scene.
         /// </summary>
-        /// <value>A filter chain containing all bank buildings within the currently loaded map region.</value>
         BankBuildingFilterChain BankChain { get; }
 
         /// <summary>
-        /// Gets all repair buildings.
+        /// All repair buildings within the scene.
         /// </summary>
-        /// <value>A list of every repair building within the currently loaded map region.</value>
-         List<IRepairBuildingObject> RepairBuildings { get; }
+        List<IRepairBuildingObject> RepairBuildings { get; }
 
         /// <summary>
-        /// Retrieves all repair buildings, and adds them to a filter chain.
+        /// A chain containing all repair buildings within the scene.
         /// </summary>
-        /// <value>A filter chain containing all repair buildings within the currently loaded map region.</value>
         RepairBuildingFilterChain RepairChain { get; }
 
         /// <summary>
-        /// Gets all farmables.
+        /// All farmables within the scene.
         /// </summary>
-        /// <value>A list of every farmable within the currently loaded map region.</value>
         List<IFarmableObject> Farmables { get; }
 
         /// <summary>
-        /// Gets all travel points.
+        /// All travel points within the scene.
         /// </summary>
-        /// <value>A list of every travel point within the currently loaded map region.</value>
         List<ITravelPointObject> TravelPoints { get; }
 
         /// <summary>
-        /// Retrieves all travel points, and adds them to a filter chain.
+        /// A chain containing all travel points within the scene.
         /// </summary>
-        /// <value>A filter chain containing all travel points within the currently loaded map region.</value>
         TravelPointFilterChain TravelPointChain { get; }
 
         /// <summary>
-        /// Gets all silver objects.
+        /// All silver within the scene.
         /// </summary>
-        /// <value>A list of every silver object within the currently loaded map region.</value>
         List<ISilverObject> AllSilver { get; }
+
+        /// <summary>
+        /// All hellgates within the scene.
+        /// </summary>
+        List<IHellgateObject> Hellgates { get; }
+
+        /// <summary>
+        /// All teleport stones within the scene.
+        /// </summary>
+        List<ITeleportStoneObject> TeleportStones { get; }
+
+        /// <summary>
+        /// All spell effect areas within the scene.
+        /// </summary>
+        List<ISpellEffectAreaObject> SpellEffectAreas { get; }
     }
 }

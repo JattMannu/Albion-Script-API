@@ -17,10 +17,4 @@ namespace Ennui.Api.Method
         /// <param name="level">The level to log the message at.</param> 
         void Log(string message, LogLevel level = LogLevel.Trace);
     }
-
-    class Message
-    {
-        public string Text;
-        public LogLevel logLevel;
-    }
 }

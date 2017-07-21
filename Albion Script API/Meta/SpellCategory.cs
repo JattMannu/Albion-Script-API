@@ -5,26 +5,29 @@
 	/// </summary>
 	public enum SpellCategory
 	{
-		None,
-		Heal,
-		CrowdControl,
-		Damage,
-		Buff,
-		Debuff,
-		Instant,
-		Cheat,
-		MatchBonus,
-		CrimeDebuff,
+        None,
+        Heal,
+        CrowdControl,
+        Damage,
+        Buff,
+        Debuff,
+        Instant,
+        Cheat,
+        MatchBonus,
+        CrimeDebuff,
         CrimeProtectionBuff,
-		FocusFire,
-		HealingSickness,
-		DiminishingReturn,
-		MountBuff,
-		FurnitureBuff,
-		FoodBuff,
-		MovementBuff,
-		TerritoryBuff,
+        FocusFire,
+        HealingSickness,
+        DiminishingReturn,
+        MountBuff,
+        FurnitureBuff,
+        FoodBuff,
+        MovementBuff,
+        TerritoryBuff,
         ForcedMovement,
-	}
+        HellBuff,
+        BuffDamageshield,
+        PortalBuff
+    }
 }
 
