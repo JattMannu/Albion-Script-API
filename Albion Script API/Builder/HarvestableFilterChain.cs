@@ -37,9 +37,14 @@ namespace Ennui.Api.Builder
 			return null;
 		}
 
-        public HarvestableFilterChain FilterBySetupState(HarvestableSetupState state)
+        public HarvestableFilterChain FilterWithSetupState(HarvestableSetupState state)
         {
-            return Filter(new SetupStateFilter(state));
+            return Filter(new WithSetupStateFilter(state));
+        }
+
+        public HarvestableFilterChain FilterWithoutSetupState(HarvestableSetupState state)
+        {
+            return Filter(new WithoutSetupStateFilter(state));
         }
 
 		/// <summary>
@@ -104,11 +109,26 @@ namespace Ennui.Api.Builder
 			return Filter(new EffectiveTypeSetFilter(types));
 		}
 
-        public class SetupStateFilter : Filter<IHarvestableObject>
+        public class WithSetupStateFilter : Filter<IHarvestableObject>
         {
             private HarvestableSetupState state;
 
-            public SetupStateFilter(HarvestableSetupState state)
+            public WithSetupStateFilter(HarvestableSetupState state)
+            {
+                this.state = state;
+            }
+
+            public bool Ignore(IHarvestableObject t)
+            {
+                return t.SetupState == state;
+            }
+        }
+
+        public class WithoutSetupStateFilter : Filter<IHarvestableObject>
+        {
+            private HarvestableSetupState state;
+
+            public WithoutSetupStateFilter(HarvestableSetupState state)
             {
                 this.state = state;
             }
