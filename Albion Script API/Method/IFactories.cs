@@ -30,6 +30,13 @@ namespace Ennui.Api.Method
         Font CreateFont(string name, int size, int flags = 0);
 
         /// <summary>
+        /// Creates an image.
+        /// </summary>
+        /// <param name="base64">The image encoded as a base64 string.</param>
+        /// <returns>The newly created image</returns>
+        Image ImageFromBase64(string base64);
+
+        /// <summary>
         /// Creates a new input field.
         /// </summary>
         /// <returns>The new input field.</returns>
