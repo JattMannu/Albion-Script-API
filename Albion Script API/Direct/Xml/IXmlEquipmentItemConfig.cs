@@ -8,6 +8,6 @@ namespace Ennui.Api.Direct.Xml
 {
     public interface IXmlEquipmentItemConfig : IXmlItemConfig
     {
-        float GetState(PlayerAttribute attribute);
+        float GetStat(PlayerAttribute attribute);
     }
 }
