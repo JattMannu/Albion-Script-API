@@ -42,6 +42,6 @@ namespace Ennui.Api.Method
         /// <param name="flags">The clipping flags.</param>
         /// <param name="start">The starting point.</param>
         /// <param name="end">The ending point.</param>
-        bool IsStraightPathClear(FixedArrayWrapper<byte> flags, Vector2<int> start, Vector2<int> end);
+        bool IsStraightPathClear(bool[,] flags, Vector2<int> start, Vector2<int> end);
     }
 }

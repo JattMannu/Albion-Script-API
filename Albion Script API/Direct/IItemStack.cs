@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ennui.Api.Direct.Xml;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,6 +8,8 @@ namespace Ennui.Api.Direct
 {
     public interface IItemStack
     {
+        IXmlItemConfig ItemXmlConfig { get; }
+
         int Amount { get; }
         long UniqueId { get; }
         string UniqueName { get; }

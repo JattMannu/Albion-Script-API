@@ -39,7 +39,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FixedArrayWrapper.cs" />
     <Compile Include="Direct\IBoundCluster.cs" />
     <Compile Include="Direct\Object\IExitObject.cs" />
     <Compile Include="Direct\Object\IHellgateObject.cs" />

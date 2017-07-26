@@ -51,7 +51,9 @@ namespace Ennui.Api.Direct
         /// to a 2d grid.
         /// </summary>
         /// <value>The game's clipping flags in a 2d grid.</value>
-        FixedArrayWrapper<byte> GridFlags { get; }
+        byte[,] GridFlags { get; }
+
+        bool[,] ToClearance(byte[,] flags);
 
         /// <summary>
         /// Retrieves the clipping flag at the provided 2d coordinate from a 1d array.
