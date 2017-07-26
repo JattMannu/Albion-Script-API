@@ -54,15 +54,6 @@ namespace Ennui.Api.Direct
         FixedArrayWrapper<byte> GridFlags { get; }
 
         /// <summary>
-        /// Grabs the flags, and converts them so that they can be used for clearance based clipping.
-        /// 
-        /// This is meant for the local player, so the clearance is only checked up to a depth of 2.
-        /// </summary>
-        /// <returns>The clipping flags, usable as is for 2 depth clearance clipping.</returns>
-        /// <param name="flags">The flags to convert.</param>
-        void ToClearance(FixedArrayWrapper<byte> flags);
-
-        /// <summary>
         /// Retrieves the clipping flag at the provided 2d coordinate from a 1d array.
         /// </summary>
         /// <returns>The clipping flag at the provided 2d coordinate.</returns>
