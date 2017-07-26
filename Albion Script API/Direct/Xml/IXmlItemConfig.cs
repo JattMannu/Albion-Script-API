@@ -21,5 +21,10 @@ namespace Ennui.Api.Direct.Xml
         /// </summary>
         /// <value>The weight of the item.</value>
         float Weight { get; }
+
+        /// <summary>
+        /// The config containing information about this item when worn as equipment.
+        /// </summary>
+        IXmlEquipmentItemConfig EquipmentConfig { get; }
     }
 }
