@@ -51,7 +51,7 @@ namespace Ennui.Api.Direct
         /// to a 2d grid.
         /// </summary>
         /// <value>The game's clipping flags in a 2d grid.</value>
-        byte[,] GridFlags { get; }
+        FixedArrayWrapper<byte> GridFlags { get; }
 
         /// <summary>
         /// Grabs the flags, and converts them so that they can be used for clearance based clipping.
@@ -60,7 +60,7 @@ namespace Ennui.Api.Direct
         /// </summary>
         /// <returns>The clipping flags, usable as is for 2 depth clearance clipping.</returns>
         /// <param name="flags">The flags to convert.</param>
-        bool[,] ToClearance(byte[,] flags);
+        void ToClearance(FixedArrayWrapper<byte> flags);
 
         /// <summary>
         /// Retrieves the clipping flag at the provided 2d coordinate from a 1d array.
