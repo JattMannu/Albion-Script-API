@@ -23,6 +23,11 @@ namespace Ennui.Api.Direct.Xml
         float Weight { get; }
 
         /// <summary>
+        /// If this item config has an associated equipment config.
+        /// </summary>
+        bool HasEquipmentConfig { get; }
+
+        /// <summary>
         /// The config containing information about this item when worn as equipment.
         /// </summary>
         IXmlEquipmentItemConfig EquipmentConfig { get; }
