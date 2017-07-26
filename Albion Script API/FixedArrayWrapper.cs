@@ -7,25 +7,25 @@ namespace Ennui.Api
 {
     public class FixedArrayWrapper<T>
     {
-        private T[] values;
-        private int width;
-        private int height;
+        public T[] Values;
+        public int Width;
+        public int Height;
 
         public FixedArrayWrapper(T[] values, int width, int height)
         {
-            this.values = values;
-            this.width = width;
-            this.height = height;
+            this.Values = values;
+            this.Width = width;
+            this.Height = height;
         }
 
         public void Set(int x, int y, T val)
         {
-            values[(((y * width) + x) * 2) + 1] = val;
+            Values[(((y * Width) + x) * 2) + 1] = val;
         }
 
         public T Get(int x, int y)
         {
-            return values[(((y * width) + x) * 2) + 1];
+            return Values[(((y * Width) + x) * 2) + 1];
         }
     }
 }
