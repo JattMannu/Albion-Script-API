@@ -131,5 +131,10 @@ namespace Ennui.Api.Method
         /// All exits within the scene.
         /// </summary>
         List<IExitObject> Exits { get; }
+
+        /// <summary>
+        /// All expedition agents within the scene.
+        /// </summary>
+        List<IExpeditionAgentObject> ExpeditionAgents { get; }
     }
 }

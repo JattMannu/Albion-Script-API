@@ -40,20 +40,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Direct\IBoundCluster.cs" />
+    <Compile Include="Direct\IExpeditionContext.cs" />
     <Compile Include="Direct\Object\IExitObject.cs" />
+    <Compile Include="Direct\Object\IExpeditionAgentObject.cs" />
     <Compile Include="Direct\Object\IHellgateObject.cs" />
     <Compile Include="Direct\Object\ISpellEffectAreaObject.cs" />
     <Compile Include="Direct\Object\ITeleportStoneObject.cs" />
     <Compile Include="Direct\Object\ITreasureChestObject.cs" />
     <Compile Include="Direct\Xml\IXmlEquipmentItemConfig.cs" />
+    <Compile Include="Direct\Xml\IXmlExpedition.cs" />
     <Compile Include="GeneralUtils.cs" />
     <Compile Include="IApiExtensions.cs" />
     <Compile Include="LocalScript.cs" />
     <Compile Include="MapArea.cs" />
     <Compile Include="Meta\EquipmentStat.cs" />
+    <Compile Include="Meta\ExpeditionGroup.cs" />
     <Compile Include="Meta\HarvestableSetupState.cs" />
     <Compile Include="Meta\InternalPlayerAttribute.cs" />
     <Compile Include="Meta\PlayerAttribute.cs" />
+    <Compile Include="Method\IExpeditionWindow.cs" />
     <Compile Include="Method\IGoldMarketWindow.cs" />
     <Compile Include="Method\IGraphs.cs" />
     <Compile Include="MutableApi.cs" />

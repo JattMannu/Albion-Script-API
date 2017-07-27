@@ -53,6 +53,11 @@ namespace Ennui.Api.Direct
         /// <value>The game's clipping flags in a 2d grid.</value>
         byte[,] GridFlags { get; }
 
+        /// <summary>
+        /// Coverts the flags into a set of collision flags, where true means a size of 2 or greater.
+        /// </summary>
+        /// <param name="flags">The clipping flags used by the game.</param>
+        /// <returns>Clearance flags.</returns>
         bool[,] ToClearance(byte[,] flags);
 
         /// <summary>

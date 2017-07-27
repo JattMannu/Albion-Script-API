@@ -20,6 +20,7 @@ namespace Ennui.Api
             from.CraftingWindow = to.CraftingWindow;
             from.Entities = to.Entities;
             from.Equipment = to.Equipment;
+            from.ExpeditionWindow = to.ExpeditionWindow;
             from.Factories = to.Factories;
             from.FarmableWindow = to.FarmableWindow;
             from.FastTravelWindow = to.FastTravelWindow;

@@ -21,6 +21,7 @@ namespace Ennui.Api
         public ICraftingWindow CraftingWindow { get; set; }
         public IEntities Entities { get; set; }
         public IEquipment Equipment { get; set; }
+        public IExpeditionWindow ExpeditionWindow { get; set; }
         public IFactories Factories { get; set; }
         public IFarmableWindow FarmableWindow { get; set; }
         public IFastTravelWindow FastTravelWindow { get; set; }
