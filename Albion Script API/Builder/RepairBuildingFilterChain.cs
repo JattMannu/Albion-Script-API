@@ -10,7 +10,7 @@ namespace Ennui.Api.Builder
 
 		}
 
-		public override RepairBuildingFilterChain Create(List<IRepairBuildingObject> elements)
+        protected override RepairBuildingFilterChain Create(List<IRepairBuildingObject> elements)
 		{
 			return new RepairBuildingFilterChain(Api, elements);
 		}

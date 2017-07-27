@@ -42,7 +42,7 @@ namespace Ennui.Api.Builder
 			return Filter(new ExcludeWithNameFilter(names));
 		}
 
-		public override SpellFilterChain Create(List<ISpell> elements)
+        protected override SpellFilterChain Create(List<ISpell> elements)
 		{
 			return new SpellFilterChain(Api, elements);
 		}

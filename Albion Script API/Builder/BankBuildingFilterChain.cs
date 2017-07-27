@@ -10,7 +10,7 @@ namespace Ennui.Api.Builder
 
 		}
 
-		public override BankBuildingFilterChain Create(List<IBankBuildingObject> elements)
+        protected override BankBuildingFilterChain Create(List<IBankBuildingObject> elements)
 		{
 			return new BankBuildingFilterChain(Api, elements);
 		}

@@ -156,10 +156,6 @@ namespace Ennui.Api.Direct.Object
         /// Gets or sets this local player's current move destination.
         /// </summary>
         /// <value>This local player's current move destination.</value>
-        Vector3<float> MoveDestination
-        {
-            get;
-            set;
-        }
+        Vector3<float> MoveDestination { get; set; }
     }
 }

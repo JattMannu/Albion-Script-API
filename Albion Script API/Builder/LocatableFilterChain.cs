@@ -5,6 +5,11 @@ using Ennui.Api.Direct.Object;
 
 namespace Ennui.Api.Builder
 {
+    /// <summary>
+    /// Provides filtering for locatables.
+    /// </summary>
+    /// <typeparam name="T">The type of locatable to filter. You know you can't just have one type of locatable.</typeparam>
+    /// <typeparam name="R">The type of chain to return for chained method calls.</typeparam>
 	public abstract class LocatableFilterChain<T, R> : FilterChain<T, R> where T : Locatable where R : FilterChain<T, R>
 	{
 		public LocatableFilterChain(IApi api, List<T> list) : base(api, list)
@@ -12,26 +17,46 @@ namespace Ennui.Api.Builder
 
 		}
 
+        /// <summary>
+        /// Filters out all values that have one of the provided locations.
+        /// </summary>
+        /// <param name="locs">The locations to filter out.</param>
+        /// <returns>The filtered values in a new chain.</returns>
 		public R ExcludeByLocation(params Vector3<float>[] locs)
 		{
 			if (locs == null || locs.Length ==  0) return Create(AsList);
 			return Filter(new ExcludeLocationFilter(locs));
 		}
 
+        /// <summary>
+        /// Filters out all values that are in one of the provided areas.
+        /// </summary>
+        /// <param name="areas">The areas to filter with.</param>
+        /// <returns>The filtered values in a new chain.</returns>
 		public R ExcludeByArea(params IArea<float>[] areas)
 		{
 			if (areas == null || areas.Length == 0) return Create(AsList);
 			return Filter(new ExcludeAreaFilter(areas));
 		}
 
-		public R FilterByArea(params IArea<float>[] areas)
+        /// <summary>
+        /// Filters out all values that aren't in any of the provided areas.
+        /// </summary>
+        /// <param name="areas">The areas to filter with.</param>
+        /// <returns>The filtered values in a new chain.</returns>
+		public R IncludeByArea(params IArea<float>[] areas)
 		{
-			return Filter(new AreaFilter(areas));
+			return Filter(new ExludeWithoutAreaFilter(areas));
 		}
 
+        /// <summary>
+        /// Finds the closest value relative to the center.
+        /// </summary>
+        /// <param name="center">The relative point to calculate distance on.</param>
+        /// <returns>The closest value.</returns>
 		public T Closest(Vector3<float> center)
 		{
-			return Api.Game.Sync<T>(() =>
+			return Game.Sync<T>(() =>
 			{
 				T closest = default(T);
 				var closestDistance = int.MaxValue;
@@ -62,7 +87,7 @@ namespace Ennui.Api.Builder
 			});
 		}
 
-		public class ExcludeLocationFilter : Filter<T>
+		private class ExcludeLocationFilter : Filter<T>
 		{
 			private Vector3<float>[] locs;
 
@@ -84,7 +109,7 @@ namespace Ennui.Api.Builder
 			}
 		}
 
-		public class ExcludeAreaFilter : Filter<T>
+        private class ExcludeAreaFilter : Filter<T>
 		{
 			private IArea<float>[] areas;
 
@@ -106,11 +131,11 @@ namespace Ennui.Api.Builder
 			}
 		}
 
-		public class AreaFilter: Filter<T>
+        private class ExludeWithoutAreaFilter : Filter<T>
 		{
 			private IArea<float>[] areas;
 
-			public AreaFilter(params IArea<float>[] areas)
+			public ExludeWithoutAreaFilter(params IArea<float>[] areas)
 			{
 				this.areas = areas;
 			}

@@ -1,15 +1,11 @@
 ﻿using Ennui.Api.Direct.Object;
 using Ennui.Api.Direct.Xml;
 using Ennui.Api.Meta;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Ennui.Api.Direct
 {
     /// <summary>
-	/// Represents a spell. Buffs, heals, attacks, etc.
+	/// Represents an abstract respresentation of a game's "spell". Buffs, heals, attacks, etc.
 	/// </summary>
 	public interface ISpell
     {
@@ -17,19 +13,13 @@ namespace Ennui.Api.Direct
         /// Retrieves or puts the local player object that this spell belongs to.
         /// </summary>
         /// <value>The local player object that this spell belongs to.</value>
-        ILocalPlayerObject Parent
-        {
-            get; set;
-        }
+        ILocalPlayerObject Parent { get; set; }
 
         /// <summary>
         /// Retrieves the slot that this spell is in.
         /// </summary>
         /// <value>The slot that this spell is in.</value>
-        CharacterSpellSlot Slot
-        {
-            get; set;
-        }
+        CharacterSpellSlot Slot { get; set; }
 
         /// <summary>
         /// Checks if this spell slot is in use.

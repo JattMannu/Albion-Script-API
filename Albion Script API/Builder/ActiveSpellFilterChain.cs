@@ -21,7 +21,7 @@ namespace Ennui.Api.Builder
 			return Filter(new ExcludeWithNameFilter(names));
 		}
 
-		public override ActiveSpellFilterChain Create(List<IActiveSpell> elements)
+		protected override ActiveSpellFilterChain Create(List<IActiveSpell> elements)
 		{
 			return new ActiveSpellFilterChain(Api, elements);
 		}

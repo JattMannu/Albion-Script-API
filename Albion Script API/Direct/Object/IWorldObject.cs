@@ -11,6 +11,11 @@ namespace Ennui.Api.Direct.Object
 	/// </summary>
 	public interface IWorldObject : ISimulationObject
     {
+        /// <summary>
+        /// This world object's view
+        /// 
+        /// TODO Remove for abstractions
+        /// </summary>
         IWorldObjectView WorldView { get; }
 
         /// <summary>

@@ -7,6 +7,9 @@ namespace Ennui.Api.Direct.Object
     /// </summary>
     public interface ISpellEffectAreaObject : ISimulationObject
     {
-        IXmlSpellConfig GetSpellXmlConfig();
+        /// <summary>
+        /// This spell effect's spell xml config.
+        /// </summary>
+        IXmlSpellConfig SpellXmlConfig { get; }
     }
 }

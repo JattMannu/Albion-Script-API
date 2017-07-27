@@ -1,37 +1,66 @@
-﻿using Ennui.Api.Direct.Object;
-using System;
+﻿using Ennui.Api.Direct;
+using Ennui.Api.Meta;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Ennui.Api.Builder
 {
+    /// <summary>
+    /// Provides filtering for harvestables.
+    /// </summary>
     public class HarvestableDropFilterChain : FilterChain<MobHarvestableDrop, HarvestableDropFilterChain>
     {
         public HarvestableDropFilterChain(IApi api, List<MobHarvestableDrop> list) : base(api, list)
         {
         }
 
+        /// <summary>
+        /// Filters harvestables by their tier.
+        /// </summary>
+        /// <param name="tier">The tier to filter for.</param>
+        /// <returns>The filtered values in a new chain.</returns>
         public HarvestableDropFilterChain FilterByTier(int tier)
         {
             return Filter(new ExactTierFilter(tier));
         }
 
+        /// <summary>
+        /// Filters harvestables by their rarity.
+        /// </summary>
+        /// <param name="min">The min rarity to filter by.</param>
+        /// <param name="max">The max rarity to filter by.</param>
+        /// <returns>The filtered values in a new chain.</returns>
         public HarvestableDropFilterChain FilterByRarity(int min, int max)
         {
             return Filter(new RangeRarityFilter(min, max));
         }
 
+        /// <summary>
+        /// Filters harvestables by their tier.
+        /// </summary>
+        /// <param name="min">The min tier to filter for.</param>
+        /// <param name="max">The max tier to filter for.</param>
+        /// <returns>The filtered values in a new chain.</returns>
         public HarvestableDropFilterChain FilterByTier(int min, int max)
         {
             return Filter(new RangeTierFilter(min, max));
         }
 
+        /// <summary>
+        /// Filters harvestables by their effective tier.
+        /// </summary>
+        /// <param name="min">The min tier to filter for.</param>
+        /// <param name="max">The max tier to filter for.</param>
+        /// <returns>The filtered values in a new chain.</returns>
         public HarvestableDropFilterChain FilterByEffectiveTier(int min, int max)
         {
             return Filter(new RangeEffectiveTierFilter(min, max));
         }
 
+        /// <summary>
+        /// Filters harvestables by their type.
+        /// </summary>
+        /// <param name="types">The types to filter by.</param>
+        /// <returns>The filteres values in a new chain.</returns>
         public HarvestableDropFilterChain FilterByType(params ResourceType[] types)
         {
             return Filter(new ResourceFilter(types));
@@ -39,7 +68,7 @@ namespace Ennui.Api.Builder
 
         public HarvestableDropFilterChain FilterByHighestTier()
         {
-            return Api.Game.Sync<HarvestableDropFilterChain>(() =>
+            return Game.Sync(() =>
             {
                 var highest = 0;
                 foreach (var obj in AsList)
@@ -64,7 +93,12 @@ namespace Ennui.Api.Builder
             return Filter(new EffectiveTypeSetFilter(types));
         }
 
-        public class ExactTierFilter : Filter<MobHarvestableDrop>
+        protected override HarvestableDropFilterChain Create(List<MobHarvestableDrop> elements)
+        {
+            return new HarvestableDropFilterChain(Api, elements);
+        }
+
+        private class ExactTierFilter : Filter<MobHarvestableDrop>
         {
             private int tier;
 
@@ -79,7 +113,7 @@ namespace Ennui.Api.Builder
             }
         }
 
-        public class RangeRarityFilter : Filter<MobHarvestableDrop>
+        private class RangeRarityFilter : Filter<MobHarvestableDrop>
         {
             private int min;
             private int max;
@@ -97,7 +131,7 @@ namespace Ennui.Api.Builder
             }
         }
 
-        public class RangeTierFilter : Filter<MobHarvestableDrop>
+        private class RangeTierFilter : Filter<MobHarvestableDrop>
         {
             private int min;
             private int max;
@@ -115,7 +149,7 @@ namespace Ennui.Api.Builder
             }
         }
 
-        public class RangeEffectiveTierFilter : Filter<MobHarvestableDrop>
+        private class RangeEffectiveTierFilter : Filter<MobHarvestableDrop>
         {
             private int min;
             private int max;
@@ -133,7 +167,7 @@ namespace Ennui.Api.Builder
             }
         }
 
-        public class ResourceFilter : Filter<MobHarvestableDrop>
+        private class ResourceFilter : Filter<MobHarvestableDrop>
         {
             private ResourceType[] types;
 
@@ -156,7 +190,7 @@ namespace Ennui.Api.Builder
             }
         }
 
-        public class TypeSetFilter : Filter<MobHarvestableDrop>
+        private class TypeSetFilter : Filter<MobHarvestableDrop>
         {
             private TypeSet[] types;
 
@@ -203,7 +237,7 @@ namespace Ennui.Api.Builder
             }
         }
 
-        public class EffectiveTypeSetFilter : Filter<MobHarvestableDrop>
+        private class EffectiveTypeSetFilter : Filter<MobHarvestableDrop>
         {
             private TypeSet[] types;
 
@@ -225,11 +259,6 @@ namespace Ennui.Api.Builder
                 }
                 return true;
             }
-        }
-
-        public override HarvestableDropFilterChain Create(List<MobHarvestableDrop> elements)
-        {
-            return new HarvestableDropFilterChain(Api, elements);
         }
     }
 }

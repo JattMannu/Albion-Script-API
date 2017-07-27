@@ -310,7 +310,7 @@ namespace Ennui.Api.Builder
 			}
 		}
 
-		public override HarvestableFilterChain Create(List<IHarvestableObject> elements)
+        protected override HarvestableFilterChain Create(List<IHarvestableObject> elements)
 		{
 			return new HarvestableFilterChain(Api, elements);
 		}

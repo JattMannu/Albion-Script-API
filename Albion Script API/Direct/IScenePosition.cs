@@ -6,7 +6,7 @@ using System.Text;
 namespace Ennui.Api.Direct
 {
     /// <summary>
-    /// Represents a 2-dimensional position within the 3d scene.
+    /// Represents a 2-dimensional (x, z) position within the 3d scene.
     /// </summary>
     public interface IScenePosition
     {

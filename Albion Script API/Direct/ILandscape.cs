@@ -6,7 +6,7 @@ using System.Text;
 namespace Ennui.Api.Direct
 {
     /// <summary>
-	/// Holds information about a landscape.
+	/// Holds information about the landscape.
 	/// </summary>
     public interface ILandscape
     {

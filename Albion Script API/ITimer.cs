@@ -14,10 +14,7 @@ namespace Ennui.Api
         /// Calculates the amount of elapsed milliseconds that have passed.
         /// </summary>
         /// <value>The amount of elapsed milliseconds that have passed.</value>
-        long ElapsedMs
-        {
-            get;
-        }
+        long ElapsedMs { get; }
 
         /// <summary>
         /// Stops counting times.

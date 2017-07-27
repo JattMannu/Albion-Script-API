@@ -10,6 +10,9 @@ namespace Ennui.Api.Direct
     /// </summary>
     public interface IBoundCluster
     {
+        /// <summary>
+        /// The static context of this cluster.
+        /// </summary>
         IMapCluster Unbound { get; }
     }
 }

@@ -14,10 +14,12 @@ namespace Ennui.Api
         /// The starting x coordinate of the rectangle.
         /// </summary>
         public int X;
+
         /// <summary>
         /// The starting y coordinate of the rectangle.
         /// </summary>
         public int Y;
+
         /// <summary>
         /// The width of the rectangle.
         /// </summary>

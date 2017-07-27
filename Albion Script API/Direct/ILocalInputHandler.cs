@@ -16,11 +16,7 @@ namespace Ennui.Api.Direct
         /// Gets or sets the selected object identifier.
         /// </summary>
         /// <value>The selected object identifier.</value>
-        long SelectedObjectId
-        {
-            get;
-            set;
-        }
+        long SelectedObjectId { get; set; }
 
         /// <summary>
         /// Attacks the target that the local player currently has selected.
@@ -66,6 +62,11 @@ namespace Ennui.Api.Direct
         /// <param name="pos">The position to cast the spell at.</param>
         void CastAt(CharacterSpellSlot slot, Vector3<float> pos);
 
+        /// <summary>
+        /// What the fuck is this?
+        /// 
+        /// TODO remove for abstraction
+        /// </summary>
         void UpdateQueuedAction();
     }
 }

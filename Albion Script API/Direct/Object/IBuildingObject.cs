@@ -6,8 +6,16 @@ using System.Text;
 
 namespace Ennui.Api.Direct.Object
 {
+    /// <summary>
+    /// Represents a building within the scene.
+    /// </summary>
     public interface IBuildingObject : IWorldObject
     {
+        /// <summary>
+        /// The internal xml config instance used by the game.
+        /// 
+        /// TODO Remove for muh abstraction
+        /// </summary>
         object XmlConfig { get; }
 
         /// <summary>

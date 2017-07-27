@@ -5,6 +5,9 @@ using System.Text;
 
 namespace Ennui.Api.Direct.Object
 {
+    /// <summary>
+    /// Represents a hell gate within the scene.
+    /// </summary>
     public interface IHellgateObject : IWorldObject
     {
     }

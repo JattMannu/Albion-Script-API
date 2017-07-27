@@ -3,38 +3,46 @@ using Ennui.Api.Direct.Object;
 
 namespace Ennui.Api.Builder
 {
+    /// <summary>
+    /// Provides filtering for remote players.
+    /// </summary>
 	public class RemotePlayerFilterChain : PlayerFilterChain<IRemotePlayerObject, RemotePlayerFilterChain>
-	{
-		public RemotePlayerFilterChain(IApi api, List<IRemotePlayerObject> list) : base(api, list)
-		{
+    {
+        public RemotePlayerFilterChain(IApi api, List<IRemotePlayerObject> list) : base(api, list)
+        {
 
-		}
+        }
 
+        /// <summary>
+        /// Filters players by whether or not they're in the local player's party.
+        /// </summary>
+        /// <param name="inLocalParty">The flag to filter for.</param>
+        /// <returns>The filtered values in a new chain</returns>
 		public RemotePlayerFilterChain FilterByLocalParty(bool inLocalParty)
-		{
-			return Filter(new LocalPartyFilter(inLocalParty));
-		}
+        {
+            return Filter(new LocalPartyFilter(inLocalParty));
+        }
 
-		public class LocalPartyFilter : Filter<IRemotePlayerObject>
-		{
-			private bool inLocalParty;
+        protected override RemotePlayerFilterChain Create(List<IRemotePlayerObject> elements)
+        {
+            return new RemotePlayerFilterChain(Api, elements);
+        }
 
-			public LocalPartyFilter(bool inLocalParty)
-			{
-				this.inLocalParty = inLocalParty;
-			}
+        private class LocalPartyFilter : Filter<IRemotePlayerObject>
+        {
+            private bool inLocalParty;
 
-			public bool Ignore(IRemotePlayerObject t)
-			{
-				return inLocalParty != t.IsInLocalPlayerParty;
-			}
-		}
+            public LocalPartyFilter(bool inLocalParty)
+            {
+                this.inLocalParty = inLocalParty;
+            }
 
-		public override RemotePlayerFilterChain Create(List<IRemotePlayerObject> elements)
-		{
-			return new RemotePlayerFilterChain(Api, elements);
-		}
+            public bool Ignore(IRemotePlayerObject t)
+            {
+                return inLocalParty != t.IsInLocalPlayerParty;
+            }
+        }
 
-	}
+    }
 }
 

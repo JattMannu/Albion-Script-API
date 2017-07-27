@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Ennui.Api
 {
@@ -16,14 +13,14 @@ namespace Ennui.Api
         /// Represents a set of potential characters that we will select from
         /// when generating random strings.
         /// </summary>
-        public const string PotentialChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        private const string PotentialChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
         /// <summary>
-        /// Generates a random string, with a random length between min & max;
+        /// Generates a random string, with a random length between min & max.
         /// </summary>
-        /// <returns>The randomly generated string.</returns>
         /// <param name="min">The minimum number of characters to generate.</param>
         /// <param name="max">The maximum number of characters to generate.</param>
+        /// <returns>The randomly generated string.</returns>
         public static string RandomString(int min, int max)
         {
             var stringChars = new char[random.Next(min, max)];
@@ -35,5 +32,36 @@ namespace Ennui.Api
 
             return new string(stringChars);
         }
+
+        /// <summary>
+        /// Calculates a random number number between 0 and max (exclusive.)
+        /// </summary>
+        /// <param name="max">The maximum value.</param>
+        /// <returns>The calculated number.</returns>
+        public static int NextInt(int max)
+        {
+            return random.Next(max);
+        }
+
+        /// <summary>
+        /// Calculates a random number number between min and max (exclusive.)
+        /// </summary>
+        /// <param name="min">The minimum value.</param>
+        /// <param name="max">The maximum value.</param>
+        /// <returns>The calculated number.</returns>
+        public static int NextInt(int min, int max)
+        {
+            return random.Next(min, max);
+        }
+
+        /// <summary>
+        /// Calculates a double between 0-1.0.
+        /// </summary>
+        /// <returns>The calculated double.</returns>
+        public static double NextDouble()
+        {
+            return random.NextDouble();
+        }
+
     }
 }
