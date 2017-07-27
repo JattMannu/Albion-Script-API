@@ -9,7 +9,7 @@ namespace Ennui.Api.Direct.Object
     /// <summary>
     /// Represents the agent that gives out expedition quests.
     /// </summary>
-    public interface IExpeditionAgentObject
+    public interface IExpeditionAgentObject : IWorldObject
     {
         /// <summary>
         /// The context of this agent.
