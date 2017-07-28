@@ -11,6 +11,7 @@ namespace Ennui.Api.Meta
     /// </summary>
     public enum HarvestableSetupState
     {
+        Owned = 7,
         Invalid = 100,
     }
 }
