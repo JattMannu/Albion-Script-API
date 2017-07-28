@@ -51,7 +51,7 @@ namespace Ennui.Api
         /// <inheritdoc/>
 		public override string ToString()
         {
-            return "[Vector3 - " + X + ", " + Y + "]";
+            return "[Vector3 - " + X + ", " + Y + ", " + Z + "]";
         }
 
         /// <inheritdoc/>
