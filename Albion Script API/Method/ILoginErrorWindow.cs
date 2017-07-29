@@ -7,5 +7,6 @@ namespace Ennui.Api.Method
 {
     public interface ILoginErrorWindow : IApiModule
     {
+        void ClickOk();
     }
 }
