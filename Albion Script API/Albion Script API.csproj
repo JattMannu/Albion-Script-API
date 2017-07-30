@@ -57,6 +57,7 @@
     <Compile Include="MapArea.cs" />
     <Compile Include="Meta\EquipmentStat.cs" />
     <Compile Include="Meta\ExpeditionGroup.cs" />
+    <Compile Include="Meta\GameEvent.cs" />
     <Compile Include="Meta\HarvestableSetupState.cs" />
     <Compile Include="Meta\InternalPlayerAttribute.cs" />
     <Compile Include="Meta\PlayerAttribute.cs" />

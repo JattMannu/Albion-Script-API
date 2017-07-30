@@ -28,18 +28,34 @@ namespace Ennui.Api.Method
 	public interface IGame : IApiModule
     {
         /// <summary>
-        /// Executes the provided task on the game's engine thread, and blocks until it returns.
+        /// Executes the provided task on the game thread, and blocks until it returns.
         /// a value.
         /// </summary>
-        /// <param name="task">Task.</param>
-        /// <typeparam name="T">The task to execute on the engine thread</typeparam>
+        /// <param name="task">The task to run on the game thread.</param>
+        /// <typeparam name="T">The type of value that the task returns.</typeparam>
         T Sync<T>(GenericTask<T> task);
 
         /// <summary>
-        /// Executes the provided task on the game's engine thread, and blocks until it returns.
+        /// Executes the provided task on the game thread, and blocks until it returns.
+        /// a value.
         /// </summary>
-        /// <param name="task">The task to execute on the engine thread.</param>
+        /// <param name="task">The task to run on the game thread.</param>
+        /// <param name="events">The type of events that should catch the task.</param>
+        /// <typeparam name="T">The type of value that the task returns.</typeparam>
+        T Sync<T>(GenericTask<T> task, params GameEvent[] events);
+
+        /// <summary>
+        /// Executes the provided task on the game thread, and blocks until it returns.
+        /// </summary>
+        /// <param name="task">The task to execute on the game thread.</param>
         void Sync(EngineTask task);
+
+        /// <summary>
+        /// Executes the provided task on the game thread, and blocks until it returns.
+        /// </summary>
+        /// <param name="task">The task to execute on the game thread.</param>
+        ///  <param name="events">The type of events that should catch the task.</param>
+        void Sync(EngineTask task, params GameEvent[] events);
 
         /// <summary>
         /// Retrieves the general state of the game.
