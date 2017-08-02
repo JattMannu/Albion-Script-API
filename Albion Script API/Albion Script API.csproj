@@ -51,6 +51,7 @@
     <Compile Include="Direct\Object\ITreasureChestObject.cs" />
     <Compile Include="Direct\Xml\IXmlEquipmentItemConfig.cs" />
     <Compile Include="Direct\Xml\IXmlExpedition.cs" />
+    <Compile Include="FloatExtensions.cs" />
     <Compile Include="GeneralUtils.cs" />
     <Compile Include="IApiExtensions.cs" />
     <Compile Include="LocalScript.cs" />
