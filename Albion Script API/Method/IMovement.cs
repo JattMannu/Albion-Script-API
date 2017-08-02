@@ -47,6 +47,17 @@ namespace Ennui.Api.Method
         /// If the local player's mount will be used.
         /// </summary>
         public bool UseMount = true;
+
+        /// <summary>
+        /// If we should apply random weighting in the internal path finding algorithm.
+        /// </summary>
+        public bool ApplyRandomWeighting = true;
+
+        /// <summary>
+        /// The amount of random weighting (from 0 - RandomWeighting) to apply to each tile, where 1.0 is the default weighting to 2 tiles
+        /// adjacent to one another.
+        /// </summary>
+        public double RandomWeighting = 2.0D;
     }
 
     /// <summary>
