@@ -16,6 +16,10 @@ namespace Ennui.Api
         /// The timer used to track the runtime of this scope.
         /// </summary>
         public ITimer Timer;
+        /// <summary>
+        /// The  runtime captured when profiling last stopped.
+        /// </summary>
+        public long ElapsedMs;
 
         /// <summary>
         /// Begins tracking the runtime for this scope.
@@ -31,9 +35,9 @@ namespace Ennui.Api
         /// <returns>The total runtime.</returns>
         public long End()
         {
-            long elapsed = Timer.ElapsedMs;
+            ElapsedMs = Timer.ElapsedMs;
             Timer = null;
-            return elapsed;
+            return ElapsedMs;
         }
     }
 
