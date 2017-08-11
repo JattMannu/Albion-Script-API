@@ -39,6 +39,7 @@ namespace Ennui.Api.Direct.Object
         /// <summary>
         /// This object's 3d position within the scene.
         /// </summary>
+        [Obsolete("Use Locatable#Location instead")]
         Vector3<float> ThreadSafeLocation { get; }
 
         /// <summary>

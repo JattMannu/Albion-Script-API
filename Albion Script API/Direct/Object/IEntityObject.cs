@@ -74,9 +74,8 @@ namespace Ennui.Api.Direct.Object
         IStateQueue ActionStateQueue { get; }
 
         /// <summary>
-        /// Retrieves this entity's current action state.
+        /// This entity's current action state.
         /// </summary>
-        /// <value>This entity's current action state.</value>
         ActionState CurrentActionState { get; }
 
         /// <summary>
@@ -89,7 +88,9 @@ namespace Ennui.Api.Direct.Object
         /// </summary>
         IStateQueue MovementStateQueue { get; }
 
-        /// <summary>This entity's movement state.</summary>
+        /// <summary>
+        /// This entity's movement state.
+        /// </summary>
         MovementState CurrentMovementState { get; }
 
         /// <summary>
@@ -107,6 +108,9 @@ namespace Ennui.Api.Direct.Object
         /// </summary>
         List<IActiveSpell> Effects { get; }
 
+        /// <summary>
+        /// A chain containing all of this entity's applied effects.
+        /// </summary>
         ActiveSpellFilterChain EffectChain { get; }
 
         /// <summary>
