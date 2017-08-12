@@ -2,6 +2,7 @@
 {
     public interface IGeometryDescriptor
     {
-        IGeometryNode GeometryNode { get; }
+        IGeometryNode Outline { get; }
+        IGeometryNode Fill { get; }
     }
 }

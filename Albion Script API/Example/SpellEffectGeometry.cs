@@ -60,7 +60,7 @@ namespace Ennui.Api.Example
                 var context = seao.Context;
                 var sea = context.SpellEffectArea;
                 var desc = sea.GeometryDescriptor;
-                var node = desc.GeometryNode;
+                var node = desc.Outline;
                 ParseChild(meshes, node);
             }
         }
