@@ -19,8 +19,14 @@ namespace Ennui.Api.Method
         /// <summary>
         /// Creates a new set of mesh data with default values.
         /// </summary>
-        /// <returns>The newly created mesh data</returns>
+        /// <returns>The newly created mesh data.</returns>
         IMeshData CreateMeshData();
+
+        /// <summary>
+        /// Creates a new mesh with default values.
+        /// </summary>
+        /// <returns>The newly created mesh.</returns>
+        IMesh CreateMesh();
 
         /// <summary>
         /// Creates a font.
