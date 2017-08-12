@@ -42,6 +42,7 @@
     <Compile Include="Builder\HarvestableDropFilterChain.cs" />
     <Compile Include="Direct\IBoundCluster.cs" />
     <Compile Include="Direct\IExpeditionContext.cs" />
+    <Compile Include="Direct\IMeshData.cs" />
     <Compile Include="Direct\MobHarvestableDrop.cs" />
     <Compile Include="Direct\Object\IExitObject.cs" />
     <Compile Include="Direct\Object\IExpeditionAgentObject.cs" />
