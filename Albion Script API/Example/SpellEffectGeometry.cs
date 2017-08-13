@@ -1,8 +1,6 @@
 ﻿using Ennui.Api.Direct;
-using System;
+
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Ennui.Api.Example
 {
@@ -52,7 +50,7 @@ namespace Ennui.Api.Example
             }
         }
 
-        public void Test()
+        public List<IMesh> BuildSpellEffectMeshes()
         {
             List<IMesh> meshes = new List<IMesh>();
             foreach (var seao in Objects.SpellEffectAreas)
@@ -60,9 +58,16 @@ namespace Ennui.Api.Example
                 var context = seao.Context;
                 var sea = context.SpellEffectArea;
                 var desc = sea.GeometryDescriptor;
-                var node = desc.Outline;
-                ParseChild(meshes, node);
+
+                var outline = desc.Outline;
+                if (outline != null)
+                    ParseChild(meshes, outline);
+
+                var fill = desc.Fill;
+                if (fill != null)
+                    ParseChild(meshes, fill);
             }
+            return meshes;
         }
     }
 }
