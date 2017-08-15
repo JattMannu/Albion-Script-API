@@ -42,6 +42,15 @@
     <Compile Include="Builder\HarvestableDropFilterChain.cs" />
     <Compile Include="Direct\IBoundCluster.cs" />
     <Compile Include="Direct\IExpeditionContext.cs" />
+    <Compile Include="Direct\IGeometry.cs" />
+    <Compile Include="Direct\IGeometryArc.cs" />
+    <Compile Include="Direct\IGeometryCircle.cs" />
+    <Compile Include="Direct\IGeometryDescriptor.cs" />
+    <Compile Include="Direct\IGeometryNode.cs" />
+    <Compile Include="Direct\IGeometryRectangle.cs" />
+    <Compile Include="Direct\IMeshData.cs" />
+    <Compile Include="Direct\ISpellEffectArea.cs" />
+    <Compile Include="Direct\ISpellEffectAreaObjectContext.cs" />
     <Compile Include="Direct\MobHarvestableDrop.cs" />
     <Compile Include="Direct\Object\IExitObject.cs" />
     <Compile Include="Direct\Object\IExpeditionAgentObject.cs" />
@@ -51,9 +60,11 @@
     <Compile Include="Direct\Object\ITreasureChestObject.cs" />
     <Compile Include="Direct\Xml\IXmlEquipmentItemConfig.cs" />
     <Compile Include="Direct\Xml\IXmlExpedition.cs" />
+    <Compile Include="Example\SpellEffectGeometry.cs" />
     <Compile Include="FloatExtensions.cs" />
     <Compile Include="GeneralUtils.cs" />
     <Compile Include="IApiExtensions.cs" />
+    <Compile Include="IMesh.cs" />
     <Compile Include="LocalScript.cs" />
     <Compile Include="MapArea.cs" />
     <Compile Include="Meta\EquipmentStat.cs" />
@@ -63,6 +74,7 @@
     <Compile Include="Meta\InternalPlayerAttribute.cs" />
     <Compile Include="Meta\PlayerAttribute.cs" />
     <Compile Include="Method\IExpeditionWindow.cs" />
+    <Compile Include="Method\IGeometryUtils.cs" />
     <Compile Include="Method\IGoldMarketWindow.cs" />
     <Compile Include="Method\IGraphs.cs" />
     <Compile Include="MutableApi.cs" />

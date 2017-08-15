@@ -1,9 +1,5 @@
 ﻿using Ennui.Api.Direct;
 using Ennui.Api.Gui;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Ennui.Api.Method
 {
@@ -19,6 +15,18 @@ namespace Ennui.Api.Method
         /// <param name="y">The y coordinate to create the position at.</param>
         /// <returns>The newly creates position.</returns>
         IScenePosition CreateScenePosition(float x, float y);
+
+        /// <summary>
+        /// Creates a new set of mesh data with default values.
+        /// </summary>
+        /// <returns>The newly created mesh data.</returns>
+        IMeshData CreateMeshData();
+
+        /// <summary>
+        /// Creates a new mesh with default values.
+        /// </summary>
+        /// <returns>The newly created mesh.</returns>
+        IMesh CreateMesh();
 
         /// <summary>
         /// Creates a font.

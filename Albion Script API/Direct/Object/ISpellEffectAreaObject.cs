@@ -11,5 +11,12 @@ namespace Ennui.Api.Direct.Object
         /// This spell effect's spell xml config.
         /// </summary>
         IXmlSpellConfig SpellXmlConfig { get; }
+
+        /// <summary>
+        /// This spell's context. Can be used for resolving AOE mesh among other things.
+        /// 
+        /// Go down this rabbit whole at your own risk, it's internal stuff.
+        /// </summary>
+        ISpellEffectAreaObjectContext Context { get; }
     }
 }

@@ -20,6 +20,10 @@ namespace Ennui.Api.Direct
         /// The amount of items in this stack.
         /// </summary>
         int Amount { get; }
+
+        /// <summary>
+        /// The unique id of this item stack.
+        /// </summary>
         long UniqueId { get; }
 
         /// <summary>
