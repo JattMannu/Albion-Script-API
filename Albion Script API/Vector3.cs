@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Ennui.Api
+﻿namespace Ennui.Api
 {
     /// <summary>
     /// Represents a 3d coordinate.
@@ -14,7 +9,7 @@ namespace Ennui.Api
         /// <summary>
         /// The 3d coordinate's z axis.
         /// </summary>
-        public abstract T Z { get; }
+        public abstract T Z { get; set; }
 
         /// <summary>
         /// Creates a new vector3 that's offset by the provided amount.

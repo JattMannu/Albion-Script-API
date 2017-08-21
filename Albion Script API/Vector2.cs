@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Ennui.Api
+﻿namespace Ennui.Api
 {
     /// <summary>
     /// Represents a 2d coordinate.
@@ -14,12 +9,12 @@ namespace Ennui.Api
         /// <summary>
         /// The 2d coordinate's x axis
         /// </summary>
-        public abstract T X { get; }
+        public abstract T X { get; set; }
 
         /// <summary>
         /// The 2d coordinate's y axis
         /// </summary>
-        public abstract T Y { get; }
+        public abstract T Y { get; set; }
 
         /// <summary>
         /// Creates a new vector2 that's offset by the provided amount.

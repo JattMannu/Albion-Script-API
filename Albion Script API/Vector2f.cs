@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Ennui.Api
 {
@@ -10,22 +7,19 @@ namespace Ennui.Api
     /// </summary>
     public class Vector2f : Vector2<float>
     {
-        private float x;
-        private float y;
-
         public Vector2f() : this(0.0f, 0.0f) { }
 
         public Vector2f(float x, float y)
         {
-            this.x = x;
-            this.y = y;
+            X = x;
+            Y = y;
         }
 
         /// <inheritdoc/>
-        public override float X => x;
+        public override float X { get; set; }
 
         /// <inheritdoc/>
-        public override float Y => y;
+        public override float Y { get; set; }
 
         /// <inheritdoc/>
         public override Vector2<float> Translate(float x, float y)

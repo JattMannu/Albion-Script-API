@@ -10,22 +10,19 @@ namespace Ennui.Api
     /// </summary>
     public class Vector2i : Vector2<int>
     {
-        private int x;
-        private int y;
-
         public Vector2i() : this(0, 0) { }
 
         public Vector2i(int x, int y)
         {
-            this.x = x;
-            this.y = y;
+            X = x;
+            Y = y;
         }
 
         /// <inheritdoc/>
-        public override int X => x;
+        public override int X { get; set; }
 
         /// <inheritdoc/>
-        public override int Y => y;
+        public override int Y { get; set; }
 
         /// <inheritdoc/>
         public override Vector2<int> Translate(int x, int y)
