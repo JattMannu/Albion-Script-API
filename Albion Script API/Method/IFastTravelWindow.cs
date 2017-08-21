@@ -1,8 +1,7 @@
-﻿using Ennui.Api.Direct;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
+
+using Ennui.Api.Direct;
+using Ennui.Api.Direct.Xml;
 
 namespace Ennui.Api.Method
 {
@@ -11,6 +10,8 @@ namespace Ennui.Api.Method
         bool IsOpen { get; }
 
         List<IFastTravelData> PossibleDestinations { get; }
+
+        List<IXmlTravelDestination> PossibleDestinationsXml { get; }
 
         bool TravelTo(string islandName);
     }
