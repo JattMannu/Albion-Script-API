@@ -1,11 +1,11 @@
 ﻿using Ennui.Api.Direct.Object;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Ennui.Api.Method
 {
+    public delegate float WeightingModifier(int x, int y);
+
     /// <summary>
     /// Represents a result of a path finding operation.
     /// </summary>
@@ -37,6 +37,11 @@ namespace Ennui.Api.Method
         /// if we should exit early.
         /// </summary>
         public Func<bool> ExitHook;
+
+        /// <summary>
+        /// A list of weighting modifier functions to apply to the weighting value of each tile.
+        /// </summary>
+        public List<WeightingModifier> WeightingModifiers = new List<WeightingModifier>();
 
         /// <summary>
         /// If the web will be used to aid in path finding.
