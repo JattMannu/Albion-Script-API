@@ -79,5 +79,12 @@ namespace Ennui.Api
         {
             return new Area(Translate(-x, -y, -z), Translate(x, y, z));
         }
+
+        /// <inheritdoc/>
+        public override void Set(float x, float y)
+        {
+            X = x;
+            Y = y;
+        }
     }
 }

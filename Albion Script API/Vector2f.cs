@@ -44,5 +44,12 @@ namespace Ennui.Api
             var absY = Math.Abs(s1.Y - s2.Y);
             return new Vector2f(absX, absY);
         }
+
+        /// <inheritdoc/>
+        public override void Set(float x, float y)
+        {
+            X = x;
+            Y = y;
+        }
     }
 }

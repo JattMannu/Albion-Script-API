@@ -1,10 +1,12 @@
-﻿namespace Ennui.Api
+﻿using System;
+
+namespace Ennui.Api
 {
     /// <summary>
     /// Represents a 2d coordinate.
     /// </summary>
     /// <typeparam name="T">The type of number to use internally.</typeparam>
-    public abstract class Vector2<T>
+    public abstract class Vector2<T> : IEquatable<Vector2<T>>
     {
         /// <summary>
         /// The 2d coordinate's x axis
@@ -37,6 +39,13 @@
         /// <param name="other">The vector2 to calculate the distance from.</param>
         /// <returns>The distance from the other vector2.</returns>
         public abstract Vector2<T> Distance(Vector2<T> other);
+
+        /// <summary>
+        /// Sets this vector's values to the provided ones.
+        /// </summary>
+        /// <param name="x">The new x value to set.</param>
+        /// <param name="y">The new y value to set.</param>
+        public abstract void Set(T x, T y);
 
         /// <inheritdoc/>
 		public override string ToString()

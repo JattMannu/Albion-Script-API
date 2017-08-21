@@ -18,7 +18,7 @@
         /// <param name="y">The amount to offset on the y axis.</param>
         /// <param name="z">The amount to offset on the z axis.</param>
         /// <returns>The new, translated vector3.</returns>
-        public abstract Vector3<T> Translate(float x, float y, float z);
+        public abstract Vector3<T> Translate(T x, T y, T z);
 
         /// <summary>
         /// Calculates the total distance from this vector3, and the provided vector3.
