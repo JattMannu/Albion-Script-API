@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Ennui.Api.Direct.Xml;
 
 namespace Ennui.Api.Direct
 {
     public interface IFastTravelData : IApiResource
     {
+        IXmlTravelPoint XmlConfig { get; }
+
         string IslandName { get; }
     }
 }

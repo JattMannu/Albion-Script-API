@@ -60,6 +60,8 @@
     <Compile Include="Direct\Object\ITreasureChestObject.cs" />
     <Compile Include="Direct\Xml\IXmlEquipmentItemConfig.cs" />
     <Compile Include="Direct\Xml\IXmlExpedition.cs" />
+    <Compile Include="Direct\Xml\IXmlTravelDestination.cs" />
+    <Compile Include="Direct\Xml\IXmlTravelPoint.cs" />
     <Compile Include="Example\SpellEffectGeometry.cs" />
     <Compile Include="FloatExtensions.cs" />
     <Compile Include="GeneralUtils.cs" />
