@@ -2,6 +2,6 @@
 {
     public interface IXmlTravelDestination
     {
-        string InternalClusterName { get; set; }
+        string InternalClusterName { get; }
     }
 }
