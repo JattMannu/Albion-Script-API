@@ -53,13 +53,20 @@ namespace Ennui.Api
                 loc.Z >= start.Z && loc.Z <= end.Z;
         }
 
+        public virtual bool ContainsIgnoreHeight(Vector2<float> loc)
+        {
+            return
+                loc.X >= start.X && loc.X <= end.X &&
+                loc.Y >= start.Z && loc.Y <= end.Z;
+        }
+
         public virtual bool ContainsIgnoreHeight(Vector3<float> loc)
         {
             return
                 loc.X >= start.X && loc.X <= end.X &&
                 loc.Z >= start.Z && loc.Z <= end.Z;
         }
-        
+
         /// <inheritdoc/>
         public override string ToString()
         {
