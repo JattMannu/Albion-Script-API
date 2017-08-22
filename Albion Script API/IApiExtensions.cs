@@ -36,6 +36,7 @@ namespace Ennui.Api
             from.Logging = to.Logging;
             from.LoginErrorWindow = to.LoginErrorWindow;
             from.LoginWindow = to.LoginWindow;
+            from.Market = to.Market;
             from.Movement = to.Movement;
             from.Net = to.Net;
             from.Objects = to.Objects;

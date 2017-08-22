@@ -69,6 +69,7 @@
     <Compile Include="IMesh.cs" />
     <Compile Include="LocalScript.cs" />
     <Compile Include="MapArea.cs" />
+    <Compile Include="Meta\FilterType.cs" />
     <Compile Include="Meta\EquipmentStat.cs" />
     <Compile Include="Meta\ExpeditionGroup.cs" />
     <Compile Include="Meta\GameEvent.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Method\IGeometryUtils.cs" />
     <Compile Include="Method\IGoldMarketWindow.cs" />
     <Compile Include="Method\IGraphs.cs" />
+    <Compile Include="Method\IMarket.cs" />
     <Compile Include="MutableApi.cs" />
     <Compile Include="ApiModule.cs" />
     <Compile Include="ApiResource.cs" />

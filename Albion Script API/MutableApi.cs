@@ -37,6 +37,7 @@ namespace Ennui.Api
         public ILogging Logging { get; set; }
         public ILoginErrorWindow LoginErrorWindow { get; set; }
         public ILoginWindow LoginWindow { get; set; }
+        public IMarket Market { get; set; }
         public IMovement Movement { get; set; }
         public INet Net { get; set; }
         public IObjects Objects { get; set; }
