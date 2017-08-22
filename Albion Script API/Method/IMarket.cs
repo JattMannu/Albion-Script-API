@@ -9,6 +9,8 @@ namespace Ennui.Api.Method
 
     public interface IMarket
     {
+        bool IsOpen { get; }
+
         List<string> Categories { get; }
 
         List<string> SubCategories { get; }
