@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 
 using Ennui.Api.Meta;
+using Ennui.Api.Direct;
 
 namespace Ennui.Api.Method
 {
-    public delegate void PriceRequestFinished(IList item);
+    public delegate void PriceRequestFinished(List<IAuctionListing> auctions);
 
     public interface IMarket
     {
