@@ -4,40 +4,40 @@ namespace Ennui.Api.Direct
 {
     public interface IAuctionListing
     {
-         int Amount { get; }
+        int Amount { get; }
 
-         string AuctionType { get; }
+        string AuctionType { get; }
 
-         string BuyerCharacterId { get; }
+        string BuyerCharacterId { get; }
 
-         string BuyerName { get; }
+        string BuyerName { get; }
 
-         int EnchantmentLevel { get; }
+        int EnchantmentLevel { get; }
 
-         DateTime Expires { get; }
+        DateTime Expires { get; }
 
-         bool HasBuyerFetched { get; }
+        bool HasBuyerFetched { get; }
 
-         bool HasSellerFetched { get; }
+        bool HasSellerFetched { get; }
 
-         long Id { get; }
+        long Id { get; }
 
-         bool IsFinished { get; }
+        bool IsFinished { get; }
 
-         string ItemGroupTypeId { get; }
+        string ItemGroupTypeId { get; }
 
-         string ItemTypeId { get; }
+        string ItemTypeId { get; }
 
-         int QualityLevel { get; }
+        int QualityLevel { get; }
 
-         string SellerCharacterId { get; }
+        string SellerCharacterId { get; }
 
-         string SellerName { get; }
+        string SellerName { get; }
 
-         int Tier { get; }
+        int Tier { get; }
 
-         ulong TotalPriceSilver { get; }
+        long TotalPriceSilver { get; }
 
-         ulong UnitPriceSilver { get; }
+        long UnitPriceSilver { get; }
     }
 }
