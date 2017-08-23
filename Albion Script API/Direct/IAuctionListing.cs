@@ -2,7 +2,9 @@
 {
     public interface IAuctionListing
     {
-        int UniqueName { get; }
+        string ItemTypeId { get; }
+
+        int Amount { get; }
 
         int Tier { get; }
 
