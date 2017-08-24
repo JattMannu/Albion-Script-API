@@ -11,15 +11,18 @@ namespace Ennui.Api.Direct.Xml
 	public interface IXmlItemConfig
     {
         /// <summary>
-        /// Retrieves the unique name of the item.
+        /// This config's unique id.
         /// </summary>
-        /// <value>The unique name of the item.</value>
+        int UniqueId { get; }
+
+        /// <summary>
+        /// The unique name of the item.
+        /// </summary>
         string UniqueName { get; }
 
         /// <summary>
-        /// Retrieves the weight of the item.
+        /// The weight of the item.
         /// </summary>
-        /// <value>The weight of the item.</value>
         float Weight { get; }
 
         /// <summary>
