@@ -44,6 +44,7 @@ namespace Ennui.Api
         IPlayers Players { get; set; }
         IRendering Rendering { get; set; }
         IRepairWindow RepairWindow { get; set; }
+        IResourceRepository ResourceRepository { get; set; }
         ISerialization Serialization { get; set; }
         IUI UI { get; set; }
         IViews Views { get; set; }

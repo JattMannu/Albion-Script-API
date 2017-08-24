@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-
 namespace Ennui.Api
 {
     public static class IApiExtensions
@@ -44,6 +42,7 @@ namespace Ennui.Api
             from.Players = to.Players;
             from.Rendering = to.Rendering;
             from.RepairWindow = to.RepairWindow;
+            from.ResourceRepository = to.ResourceRepository;
             from.Serialization = to.Serialization;
             from.UI = to.UI;
             from.Views = to.Views;

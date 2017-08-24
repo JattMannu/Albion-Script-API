@@ -81,7 +81,9 @@
     <Compile Include="Method\IGeometryUtils.cs" />
     <Compile Include="Method\IGoldMarketWindow.cs" />
     <Compile Include="Method\IGraphs.cs" />
+    <Compile Include="Method\IItemRepository.cs" />
     <Compile Include="Method\IMarket.cs" />
+    <Compile Include="Method\IResourceRepository.cs" />
     <Compile Include="MutableApi.cs" />
     <Compile Include="ApiModule.cs" />
     <Compile Include="ApiResource.cs" />
@@ -160,7 +162,7 @@
     <Compile Include="Direct\Xml\IXmlItemProxy.cs" />
     <Compile Include="Direct\Xml\IXmlMob.cs" />
     <Compile Include="Direct\Xml\IXmlSpellConfig.cs" />
-    <Compile Include="Direct\Xml\XmlUiSpellConfig.cs" />
+    <Compile Include="Direct\Xml\IXmlUiSpellConfig.cs" />
     <Compile Include="Font.cs" />
     <Compile Include="GraphicContext.cs" />
     <Compile Include="Gui\IButton.cs" />
