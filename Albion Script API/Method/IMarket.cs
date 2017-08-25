@@ -50,6 +50,8 @@ namespace Ennui.Api.Method
 
         int SubCategoryIndex { get; set; }
 
-        void RequestItems(string category, string subCategory, string enchantmentLevel, FilterType enchantmentFilterType, string quality, FilterType qualityFilterType, string tier, short[] itemTypes, bool ascending, PriceRequestFinished finished);
+        void DemandRequests(string category, string subCategory, string enchantmentLevel, FilterType enchantmentFilterType, string quality, FilterType qualityFilterType, string tier, short[] itemTypes, bool ascending, PriceRequestFinished finished);
+
+        void DemandOffers(string category, string subCategory, string enchantmentLevel, FilterType enchantmentFilterType, string quality, FilterType qualityFilterType, string tier, short[] itemTypes, bool ascending, PriceRequestFinished finished);
     }
 }
