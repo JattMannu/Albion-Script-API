@@ -8,5 +8,6 @@ namespace Ennui.Api.Method
     {
         List<IXmlItemConfig> AllXmlItemConfigs { get; }
         IXmlItemConfig ItemConfigById(int uniqueId);
+        IXmlItemConfig ItemConfigByUniqueName(string uniqueName);
     }
 }
