@@ -1,6 +1,6 @@
-﻿using Ennui.Api.Direct;
+﻿using System.Collections.Generic;
 
-using System.Collections.Generic;
+using Ennui.Api.Util;
 
 namespace Ennui.Api.Example
 {

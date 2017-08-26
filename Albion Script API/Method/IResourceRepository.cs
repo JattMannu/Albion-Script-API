@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-using Ennui.Api.Direct.Xml;
+using Ennui.Api.Xml;
 
 namespace Ennui.Api.Method
 {

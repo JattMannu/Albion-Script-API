@@ -1,6 +1,8 @@
-﻿using Ennui.Api.Direct.Object;
-using System;
+﻿using System;
 using System.Collections.Generic;
+
+using Ennui.Api.Object;
+using Ennui.Api.Util;
 
 namespace Ennui.Api.Method
 {

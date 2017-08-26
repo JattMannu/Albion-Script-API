@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-namespace Ennui.Api
+﻿namespace Ennui.Api
 {
     public static class IApiExtensions
     {

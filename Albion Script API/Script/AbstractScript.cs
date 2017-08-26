@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Ennui.Api.Method;
+using Ennui.Api.Util;
 
 namespace Ennui.Api.Script
 {
