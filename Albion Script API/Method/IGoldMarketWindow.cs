@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Ennui.Api.Method
+﻿namespace Ennui.Api.Method
 {
     /// <summary>
 	/// Provides a set of utilities for interfacing with the gold market window in game.
