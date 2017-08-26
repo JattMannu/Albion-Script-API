@@ -3,10 +3,33 @@ using System.Collections.Generic;
 
 using Ennui.Api.Object;
 using Ennui.Api.Util;
+using Ennui.Api.Vert;
 
 namespace Ennui.Api.Method
 {
+    /// <summary>
+    /// Applies an extra weighting value to a specific tile's weight.
+    /// </summary>
+    /// <param name="x">The x coordinate of the tile.</param>
+    /// <param name="y">The y coordinate of the value.</param>
+    /// <returns>The offset to apply to the tile's weighting.</returns>
     public delegate float WeightingModifier(int x, int y);
+
+    /// <summary>
+    /// Changes the clipping value of a tile.
+    /// </summary>
+    /// <param name="original">The original tile clipping value.</param>
+    /// <param name="x">The x coordinate of the tile.</param>
+    /// <param name="y">The y coordinate of the value.</param>
+    /// <returns>If the tile is walkable or not.</returns>
+    public delegate bool ClippingModifier(bool original, int x, int y);
+
+    /// <summary>
+    /// Applies an extra weighting value to a specific cluster.
+    /// </summary>
+    /// <param name="graph">The  graph being considered.</param>
+    /// <returns>The offset to apply to the cluster's weighting.</returns>
+    public delegate float ClusterModifier(IGraph graph);
 
     /// <summary>
     /// Represents a result of a path finding operation.
@@ -44,6 +67,16 @@ namespace Ennui.Api.Method
         /// A list of weighting modifier functions to apply to the weighting value of each tile.
         /// </summary>
         public List<WeightingModifier> WeightingModifiers = new List<WeightingModifier>();
+
+        /// <summary>
+        /// A list of clipping modifier functions to apply to the clipping vlaue of each tile.
+        /// </summary>
+        public List<ClippingModifier> ClippingModifiers = new List<ClippingModifier>();
+
+        /// <summary>
+        /// A list of weighting modifier functions to apply to each cluster we're considering path finding across.
+        /// </summary>
+        public List<ClusterModifier> ClusterModifiers = new List<ClusterModifier>();
 
         /// <summary>
         /// If the web will be used to aid in path finding.
