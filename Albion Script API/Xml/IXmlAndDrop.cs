@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Ennui.Api.Xml
 {
-    public delegate T Wrapper<T>(object o);
+    public delegate T DropConverter<T>(object o);
 
     /// <summary>
 	/// Represents a config for a mob drop that does nothing except
@@ -24,6 +24,6 @@ namespace Ennui.Api.Xml
         /// <param name="type">The name of the type to search for.</param>
         /// <param name="wrapper">The function that will handle wrapping of the drops.</param>
         /// <typeparam name="T">The wrapped type.</typeparam>
-        List<T> Find<T>(string type, Wrapper<T> wrapper) where T : IXmlDrop;
+        List<T> Find<T>(string type, DropConverter<T> wrapper) where T : IXmlDrop;
     }
 }
