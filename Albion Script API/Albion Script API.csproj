@@ -194,7 +194,7 @@
     <Compile Include="Util\Vector2f.cs" />
     <Compile Include="Util\Vector2i.cs" />
     <Compile Include="Util\Vector3f.cs" />
-    <Compile Include="Locatable.cs" />
+    <Compile Include="Util\Locatable.cs" />
     <Compile Include="Util\LogLevel.cs" />
     <Compile Include="Meta\ActionState.cs" />
     <Compile Include="Meta\Channel.cs" />

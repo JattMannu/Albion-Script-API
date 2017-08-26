@@ -1,6 +1,6 @@
 ﻿using Ennui.Api.Util;
 
-namespace Ennui.Api
+namespace Ennui.Api.Util
 {
     /// <summary>
 	/// Represents something that has a location within the 3d world.
