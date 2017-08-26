@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Ennui.Api
+﻿namespace Ennui.Api
 {
     /// <summary>
 	/// Holds a value, and the time when the value was last updated.

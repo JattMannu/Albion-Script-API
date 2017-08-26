@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Ennui
+﻿namespace Ennui.Api.Meta
 {
 	public enum GuildRole
 	{

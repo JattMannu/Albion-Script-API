@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Ennui.Api.Meta
+﻿namespace Ennui.Api.Meta
 {
     /// <summary>
     /// Whenever the local player tries to harvest a resource, it does a handful of checks, and returns

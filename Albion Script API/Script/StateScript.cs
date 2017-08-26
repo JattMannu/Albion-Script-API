@@ -2,7 +2,6 @@
 
 using Ennui.Api.Util;
 
-
 namespace Ennui.Api.Script
 {
     /// <summary>

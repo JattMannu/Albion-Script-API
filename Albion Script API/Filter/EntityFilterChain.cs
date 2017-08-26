@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+
 using Ennui.Api.Object;
 
 namespace Ennui.Api.Filter

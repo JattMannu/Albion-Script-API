@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Ennui.Api.Xml
+﻿namespace Ennui.Api.Xml
 {
     /// <summary>
 	/// Contains configuration information about an item.
