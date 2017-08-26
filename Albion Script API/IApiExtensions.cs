@@ -27,7 +27,6 @@
             from.Hotkeys = to.Hotkeys;
             from.Input = to.Input;
             from.Inventory = to.Inventory;
-            from.ItemContainerUtils = to.ItemContainerUtils;
             from.Logging = to.Logging;
             from.LoginErrorWindow = to.LoginErrorWindow;
             from.LoginWindow = to.LoginWindow;

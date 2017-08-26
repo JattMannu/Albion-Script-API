@@ -32,7 +32,6 @@ namespace Ennui.Api
         IHotkeys Hotkeys { get; set; }
         IInput Input { get; set; }
         IInventory Inventory { get; set; }
-        IItemContainerUtils ItemContainerUtils { get; set; }
         ILogging Logging { get; set; }
         ILoginErrorWindow LoginErrorWindow { get; set; }
         ILoginWindow LoginWindow { get; set; }

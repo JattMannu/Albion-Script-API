@@ -29,7 +29,6 @@ namespace Ennui.Api
         public IHotkeys Hotkeys { get; set; }
         public IInput Input { get; set; }
         public IInventory Inventory { get; set; }
-        public IItemContainerUtils ItemContainerUtils { get; set; }
         public ILogging Logging { get; set; }
         public ILoginErrorWindow LoginErrorWindow { get; set; }
         public ILoginWindow LoginWindow { get; set; }

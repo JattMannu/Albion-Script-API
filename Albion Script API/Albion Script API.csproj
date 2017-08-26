@@ -230,7 +230,6 @@
     <Compile Include="Method\IHotkeys.cs" />
     <Compile Include="Method\IInput.cs" />
     <Compile Include="Method\IInventory.cs" />
-    <Compile Include="Method\IItemContainerUtils.cs" />
     <Compile Include="Method\ILogging.cs" />
     <Compile Include="Method\ILoginErrorWindow.cs" />
     <Compile Include="Method\ILoginWindow.cs" />
