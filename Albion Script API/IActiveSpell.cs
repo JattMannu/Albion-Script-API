@@ -3,7 +3,7 @@
 namespace Ennui.Api
 {
     /// <summary>
-    /// Represents a spell that has beenactivated.
+    /// Represents a spell that has been activated.
     /// </summary>
     public interface IActiveSpell
     {
