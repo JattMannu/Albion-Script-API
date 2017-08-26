@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 
 using Ennui.Api.Meta;
+using Ennui.Api.Util;
 
 namespace Ennui.Api.Filter
 {

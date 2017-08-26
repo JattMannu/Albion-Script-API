@@ -1,8 +1,6 @@
-﻿using System;
+﻿using Ennui.Api.Meta;
 
-using Ennui.Api.Meta;
-
-namespace Ennui.Api.Filter
+namespace Ennui.Api.Util
 {
 	public struct TypeSet
 	{

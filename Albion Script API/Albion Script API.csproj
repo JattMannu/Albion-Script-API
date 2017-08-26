@@ -102,7 +102,7 @@
     <Compile Include="Filter\SimulationFilterChain.cs" />
     <Compile Include="Filter\SpellFilterChain.cs" />
     <Compile Include="Filter\TravelPointFilterChain.cs" />
-    <Compile Include="Filter\TypeSet.cs" />
+    <Compile Include="Util\TypeSet.cs" />
     <Compile Include="Util\Color.cs" />
     <Compile Include="IFastTravelData.cs" />
     <Compile Include="IActiveSpell.cs" />
