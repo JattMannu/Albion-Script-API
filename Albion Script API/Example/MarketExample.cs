@@ -31,5 +31,22 @@ namespace Ennui.Api.Example
                 }
             });
         }
+
+        public void BuyCheapest(string uniqueName)
+        {
+            var item = ResourceRepository.ItemConfigByUniqueName(uniqueName);
+            Market.DemandRequests("", "", "", FilterType.One, "", FilterType.One, "", new short[] { (short)item.UniqueId }, false, (auctions) =>
+            {
+                IAuctionListing cheapest = null;
+                foreach (var auction in auctions)
+                {
+                    if (cheapest == null || auction.UnitPriceSilver <= cheapest.UnitPriceSilver)
+                    {
+                        cheapest = auction;
+                    }
+                }
+                Market.BuyOffer(cheapest.Id, cheapest.Amount);
+            });
+        }
     }
 }
