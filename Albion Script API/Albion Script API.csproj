@@ -53,6 +53,7 @@
     <Compile Include="IMeshData.cs" />
     <Compile Include="ISpellEffectArea.cs" />
     <Compile Include="ISpellEffectAreaObjectContext.cs" />
+    <Compile Include="Meta\AuctionHouseCategory.cs" />
     <Compile Include="MobHarvestableDrop.cs" />
     <Compile Include="Object\IExitObject.cs" />
     <Compile Include="Object\IExpeditionAgentObject.cs" />
