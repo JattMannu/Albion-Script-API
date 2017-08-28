@@ -53,5 +53,7 @@ namespace Ennui.Api.Method
         void DemandOffers(string category, string subCategory, string enchantmentLevel, FilterType enchantmentFilterType, string quality, FilterType qualityFilterType, string tier, short[] itemTypes, bool ascending, PriceRequestFinished finished);
 
         bool OpenCategory(AuctionHouseCategory category);
+
+        bool BuyOffer(long id, int amount);
     }
 }
