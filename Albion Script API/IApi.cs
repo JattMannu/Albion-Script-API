@@ -32,10 +32,10 @@ namespace Ennui.Api
         IHotkeys Hotkeys { get; set; }
         IInput Input { get; set; }
         IInventory Inventory { get; set; }
-        IItemContainerUtils ItemContainerUtils { get; set; }
         ILogging Logging { get; set; }
         ILoginErrorWindow LoginErrorWindow { get; set; }
         ILoginWindow LoginWindow { get; set; }
+        IMarket Market { get; set; }
         IMovement Movement { get; set; }
         INet Net { get; set; }
         IObjects Objects { get; set; }
@@ -43,6 +43,7 @@ namespace Ennui.Api
         IPlayers Players { get; set; }
         IRendering Rendering { get; set; }
         IRepairWindow RepairWindow { get; set; }
+        IResourceRepository ResourceRepository { get; set; }
         ISerialization Serialization { get; set; }
         IUI UI { get; set; }
         IViews Views { get; set; }

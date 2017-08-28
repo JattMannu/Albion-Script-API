@@ -14,37 +14,24 @@ namespace Ennui.Api.Vert
         /// The x coordinate of where the transition begins to the next graph.
         /// </summary>
         /// <value>The x coordinate of where the transition begins to the next graph.</value>
-        float X
-        {
-            get; set;
-        }
+        float X { get; set; }
 
         /// <summary>
         /// The y coordinate of where the transition begins to the next graph.
         /// </summary>
         /// <value>The y coordinate of where the transition begins to the next graph.</value>
-        float Y
-        {
-            get; set;
-        }
+        float Y { get; set; }
 
         /// <summary>
         /// The z coordinate of where the transition begins to the next graph.
         /// </summary>
         /// <value>The z coordinate of where the transition begins to the next graph.</value>
-        float Z
-        {
-            get; set;
-        }
+        float Z { get; set; }
 
         /// <summary>
         /// The Graph that this edge links to.
         /// </summary>
         /// <value>The Graph that this edge links to.</value>
-        IGraph To
-        {
-            get; set;
-        }
-
+        IGraph To { get; set; }
     }
 }

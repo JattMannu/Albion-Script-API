@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Ennui.Api.Meta
+﻿namespace Ennui.Api.Meta
 {
 	/// <summary>
 	/// Represents all possible movement states.

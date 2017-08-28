@@ -1,10 +1,4 @@
-﻿using Ennui.Api.Direct;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Ennui.Api.Method
+﻿namespace Ennui.Api.Method
 {
     /// <summary>
 	/// Provies a set of utility methods for interacting with a vault object in game.

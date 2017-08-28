@@ -1,9 +1,8 @@
-﻿using Ennui.Api.Builder;
-using Ennui.Api.Direct.Object;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
+
+using Ennui.Api.Filter;
+using Ennui.Api.Object;
+using Ennui.Api.Util;
 
 namespace Ennui.Api.Method
 {
@@ -13,23 +12,23 @@ namespace Ennui.Api.Method
     public interface IPlayers : IApiModule
     {
         /// <summary>
-        /// Gets the local player.
+        /// The local player.
         /// </summary>
-        /// <value>The local player.</value>
         ILocalPlayerObject LocalPlayer { get; }
 
         /// <summary>
-        /// Gets the local player's location.
+        /// The local player's location.
         /// </summary>
-        /// <value>The local player's location.</value>
         Vector3<float> LocalLocation { get; }
 
         /// <summary>
-        /// Gets all of the remote players in the currently loaded map region.
+        /// The remote players in the currently loaded map region.
         /// </summary>
-        /// <value>The remote players in the currently loaded map region.</value>
         List<IRemotePlayerObject> RemotePlayers { get; }
 
+        /// <summary>
+        /// A filter chain containing all remote players.
+        /// </summary>
         RemotePlayerFilterChain RemotePlayerChain { get; }
     }
 }

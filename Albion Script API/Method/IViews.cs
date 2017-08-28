@@ -1,9 +1,5 @@
-﻿using Ennui.Api.Direct.Object;
-using Ennui.Api.Direct.View;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Ennui.Api.Object;
+using Ennui.Api.View;
 
 namespace Ennui.Api.Method
 {

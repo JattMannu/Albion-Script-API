@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Ennui.Api
+﻿namespace Ennui.Api
 {
-    public abstract class ApiModule : IApiModule
+    public abstract class ApiModule : ApiResource, IApiModule
     {
-        public IApi Api { get; set; }
-
-        public ApiModule(IApi api)
+        public ApiModule(IApi api) : base(api)
         {
             this.Api = api;
         }

@@ -1,4 +1,4 @@
-﻿using Ennui.Api.Direct;
+﻿using Ennui.Api.Util;
 
 namespace Ennui.Api.Method
 {

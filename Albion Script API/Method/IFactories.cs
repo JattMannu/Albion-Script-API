@@ -1,5 +1,5 @@
-﻿using Ennui.Api.Direct;
-using Ennui.Api.Gui;
+﻿using Ennui.Api.Gui;
+using Ennui.Api.Util;
 
 namespace Ennui.Api.Method
 {

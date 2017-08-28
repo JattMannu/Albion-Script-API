@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Ennui.Api.Method;
+﻿using Ennui.Api.Method;
 using Ennui.Api.Script;
 using Ennui.Api.Gui;
 
@@ -33,10 +29,10 @@ namespace Ennui.Api
         public IHotkeys Hotkeys { get; set; }
         public IInput Input { get; set; }
         public IInventory Inventory { get; set; }
-        public IItemContainerUtils ItemContainerUtils { get; set; }
         public ILogging Logging { get; set; }
         public ILoginErrorWindow LoginErrorWindow { get; set; }
         public ILoginWindow LoginWindow { get; set; }
+        public IMarket Market { get; set; }
         public IMovement Movement { get; set; }
         public INet Net { get; set; }
         public IObjects Objects { get; set; }
@@ -44,6 +40,7 @@ namespace Ennui.Api
         public IPlayers Players { get; set; }
         public IRendering Rendering { get; set; }
         public IRepairWindow RepairWindow { get; set; }
+        public IResourceRepository ResourceRepository { get; set; }
         public ISerialization Serialization { get; set; }
         public IUI UI { get; set; }
         public IViews Views { get; set; }

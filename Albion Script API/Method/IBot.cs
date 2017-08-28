@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Ennui.Api.Method
+﻿namespace Ennui.Api.Method
 {
     /// <summary>
 	/// Provides utilities for interfacing with the internals of the bot.

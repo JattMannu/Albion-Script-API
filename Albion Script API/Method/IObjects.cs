@@ -1,10 +1,8 @@
-﻿using Ennui.Api.Builder;
-using Ennui.Api.Direct.Object;
-using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+
+using Ennui.Api.Object;
+using Ennui.Api.Filter;
 
 namespace Ennui.Api.Method
 {

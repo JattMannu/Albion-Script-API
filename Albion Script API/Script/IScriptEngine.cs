@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Ennui.Api.Script
+﻿namespace Ennui.Api.Script
 {
     /// <summary>
     /// Represents something that handles the execution of scripts.
@@ -14,11 +9,7 @@ namespace Ennui.Api.Script
         /// <summary>
         /// The API that will be provided to scripts.
         /// </summary>
-        IApi Api
-        {
-            get;
-            set;
-        }
+        IApi Api { get; set; }
 
         /// <summary>
         /// Runs the provided script.

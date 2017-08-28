@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Ennui.Api.Gui
+﻿namespace Ennui.Api.Gui
 {
     /// <summary>
     /// Fired when the state of a check box is changed.
