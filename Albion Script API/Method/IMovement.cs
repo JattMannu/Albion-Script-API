@@ -75,9 +75,7 @@ namespace Ennui.Api.Method
         /// </summary>
         public List<ClusterModifier> ClusterModifiers = new List<ClusterModifier>();
 
-        /// <summary>
-        /// If the web will be used to aid in path finding.
-        /// </summary>
+        [Obsolete("Path finding is fast enough without a vertex graph, there's no need anymore")]
         public bool UseWeb = true;
 
         /// <summary>
@@ -85,15 +83,10 @@ namespace Ennui.Api.Method
         /// </summary>
         public bool UseMount = true;
 
-        /// <summary>
-        /// If we should apply random weighting in the internal path finding algorithm.
-        /// </summary>
+        [Obsolete("Use WeightingModifiers to modify the tile weights yourself instad")]
         public bool ApplyRandomWeighting = true;
 
-        /// <summary>
-        /// The amount of random weighting (from 0 - RandomWeighting) to apply to each tile, where 1.0 is the default weighting to 2 tiles
-        /// adjacent to one another.
-        /// </summary>
+        [Obsolete("Use WeightingModifiers to modify the tile weights yourself instad")]
         public double RandomWeighting = 2.0D;
     }
 
