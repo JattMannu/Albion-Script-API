@@ -169,5 +169,15 @@ namespace Ennui.Api.Method
         /// A chain containing all expedition agents within the scene.
         /// </summary>
         ExpeditionAgentFilterChain ExpeditionAgentChain { get; }
+
+        /// <summary>
+        /// All expedition exits within the scene.
+        /// </summary>
+        List<IExpeditionExit> ExpeditionExits { get; }
+
+        /// <summary>
+        /// A chain containing all expedition exits within the scene.
+        /// </summary>
+        ExpeditionExitFilterChain ExpeditionExitChain { get; }
     }
 }

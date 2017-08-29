@@ -43,6 +43,7 @@
     <Compile Include="Example\ExpeditionsExample.cs" />
     <Compile Include="Example\MarketExample.cs" />
     <Compile Include="Filter\ExpeditionAgentFilterChain.cs" />
+    <Compile Include="Filter\ExpeditionExitFilterChain.cs" />
     <Compile Include="Filter\FarmableFilterChain.cs" />
     <Compile Include="Filter\HarvestableDropFilterChain.cs" />
     <Compile Include="Filter\ExitFilterChain.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="MobHarvestableDrop.cs" />
     <Compile Include="Object\IExitObject.cs" />
     <Compile Include="Object\IExpeditionAgentObject.cs" />
+    <Compile Include="Object\IExpeditionExit.cs" />
     <Compile Include="Object\IHellgateObject.cs" />
     <Compile Include="Object\ISpellEffectAreaObject.cs" />
     <Compile Include="Object\ITeleportStoneObject.cs" />
