@@ -59,8 +59,10 @@
     <Compile Include="IGeometryNode.cs" />
     <Compile Include="IGeometryRectangle.cs" />
     <Compile Include="IMeshData.cs" />
+    <Compile Include="IPreciseNumber.cs" />
     <Compile Include="ISpellEffectArea.cs" />
     <Compile Include="ISpellEffectAreaObjectContext.cs" />
+    <Compile Include="Meta\AttackType.cs" />
     <Compile Include="Meta\AuctionHouseCategory.cs" />
     <Compile Include="Method\IWidget.cs" />
     <Compile Include="MobHarvestableDrop.cs" />
