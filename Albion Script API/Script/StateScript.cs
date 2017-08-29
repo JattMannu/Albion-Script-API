@@ -71,7 +71,6 @@ namespace Ennui.Api.Script
         public void AddState(string key, StateScript script)
         {
             script.Api = Api;
-            script.Set(Api);
             script.parent = this;
             states.Add(key, script);
         }
@@ -172,7 +171,7 @@ namespace Ennui.Api.Script
             {
                 if (hook())
                 {
-                    Api.Logging.Log("[StateScript#OnLoop] Hooked");
+                    Logging.Log("[StateScript#OnLoop] Hooked");
                     return 100;
                 }
             }

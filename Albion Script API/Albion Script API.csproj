@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompositeApi.cs" />
     <Compile Include="Example\ExpeditionsExample.cs" />
     <Compile Include="Example\MarketExample.cs" />
     <Compile Include="Filter\ExpeditionAgentFilterChain.cs" />
@@ -81,7 +82,6 @@
     <Compile Include="Example\SpellEffectGeometry.cs" />
     <Compile Include="Util\FloatExtensions.cs" />
     <Compile Include="Util\DirectionUtils.cs" />
-    <Compile Include="IApiExtensions.cs" />
     <Compile Include="Util\IMesh.cs" />
     <Compile Include="Script\LocalScript.cs" />
     <Compile Include="MapArea.cs" />

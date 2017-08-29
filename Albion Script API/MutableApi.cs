@@ -51,9 +51,5 @@ namespace Ennui.Api
         public IScriptEngine ScriptEngine { get; set; }
 
         public MutableApi() { }
-        public MutableApi(IApi api)
-        {
-            this.Set(api);
-        }
     }
 }

@@ -1,16 +1,9 @@
 ﻿namespace Ennui.Api
 {
-    public class ApiResource : MutableApi, IApiResource
+    public class ApiResource : CompositeApi, IApiResource
     {
-        public IApi Api { get; set; }
-
-        public ApiResource(IApi api)
+        public ApiResource(IApi api) : base(api)
         {
-            this.Api = api;
-            if (api != null)
-            {
-                this.Set(api);
-            }
         }
     }
 }

@@ -49,5 +49,15 @@ namespace Ennui.Api.Util
             }
             return false;
         }
+
+        /// <summary>
+        /// If this list is empty.
+        /// </summary>
+        /// <param name="list">The list to check if empty.</param>
+        /// <returns>If the list is empty.</returns>
+        public static bool IsEmpty(this IList list)
+        {
+            return list.Count == 0;
+        }
     }
 }
