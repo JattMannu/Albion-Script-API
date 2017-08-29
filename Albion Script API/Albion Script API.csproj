@@ -65,6 +65,8 @@
     <Compile Include="ISpellEffectAreaObjectContext.cs" />
     <Compile Include="Meta\AttackType.cs" />
     <Compile Include="Meta\AuctionHouseCategory.cs" />
+    <Compile Include="Meta\ExpeditionHudState.cs" />
+    <Compile Include="Method\IExpeditionHud.cs" />
     <Compile Include="Method\IWidget.cs" />
     <Compile Include="MobHarvestableDrop.cs" />
     <Compile Include="Object\IExitObject.cs" />

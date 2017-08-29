@@ -8,10 +8,7 @@ namespace Ennui.Api
     {
         public IApi Api { get; set; }
 
-        public CompositeApi()
-        {
-
-        }
+        public CompositeApi() {}
 
         public CompositeApi(IApi api)
         {
@@ -29,6 +26,7 @@ namespace Ennui.Api
         public ICraftingWindow CraftingWindow { get => Api.CraftingWindow; set => Api.CraftingWindow = value; }
         public IEntities Entities { get => Api.Entities; set => Api.Entities = value; }
         public IEquipment Equipment { get => Api.Equipment; set => Api.Equipment = value; }
+        public IExpeditionHud ExpeditionHud { get => Api.ExpeditionHud; set => Api.ExpeditionHud = value; }
         public IExpeditionWindow ExpeditionWindow { get => Api.ExpeditionWindow; set => Api.ExpeditionWindow = value; }
         public IFactories Factories { get => Api.Factories; set => Api.Factories = value; }
         public IFarmableWindow FarmableWindow { get => Api.FarmableWindow; set => Api.FarmableWindow = value; }
