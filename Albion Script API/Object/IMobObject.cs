@@ -2,6 +2,7 @@
 
 using Ennui.Api.Filter;
 using Ennui.Api.Xml;
+using Ennui.Api.Meta;
 
 namespace Ennui.Api.Object
 {
@@ -10,31 +11,32 @@ namespace Ennui.Api.Object
     /// </summary>
     public interface IMobObject : IEntityObject
     {
-        
         /// <summary>
         /// Retrieves this mob's rare state.
         /// </summary>
         /// <value>This mob's rare state.</value>
-         int RareState { get; }
-
-        /// <summary>
-        /// Retrieves this mob's xml config.
-        /// </summary>
-        /// <value>This mob's xml config.</value>
-         IXmlMob MobXmlConfig { get; }
+        int RareState { get; }
 
         /// <summary>
         /// Retrieves a list of harvestables that this mob drops.
         /// </summary>
         /// <value>A list of harvestables that this mob drops.</value>
-         List<MobHarvestableDrop> HarvestableDrops { get; }
+        List<MobHarvestableDrop> HarvestableDrops { get; }
 
         /// <summary>
         /// Retrieves a list of items that this mob drops.
         /// </summary>
         /// <value>A list of items that this mob drops.</value>
-         List<IXmlItemDrop> ItemDrops { get; }
+        List<IXmlItemDrop> ItemDrops { get; }
 
-         HarvestableDropFilterChain HarvestableDropChain { get; }
+        /// <summary>
+        /// All of this mob's drops in a chain.
+        /// </summary>
+        HarvestableDropFilterChain HarvestableDropChain { get; }
+
+        /// <summary>
+        /// This mob's attack type.
+        /// </summary>
+        AttackType AttackType { get; }
     }
 }
