@@ -136,9 +136,19 @@ namespace Ennui.Api.Method
         List<ITeleportStoneObject> TeleportStones { get; }
 
         /// <summary>
+        /// A chain containing all teleport stones within the scene.
+        /// </summary>
+        TeleportStoneFilterChain TeleportStoneChain { get; }
+
+        /// <summary>
         /// All spell effect areas within the scene.
         /// </summary>
         List<ISpellEffectAreaObject> SpellEffectAreas { get; }
+
+        /// <summary>
+        /// A chain containing all spell effect areas within the scene.
+        /// </summary>
+        SpellEffectAreaFilterChain SpellEffectAreaChain { get; }
 
         /// <summary>
         /// All exits within the scene.

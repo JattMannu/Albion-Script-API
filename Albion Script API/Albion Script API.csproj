@@ -46,6 +46,8 @@
     <Compile Include="Filter\ExitFilterChain.cs" />
     <Compile Include="Filter\HellgateFilterChain.cs" />
     <Compile Include="Filter\SilverFilterChain.cs" />
+    <Compile Include="Filter\SpellEffectAreaFilterChain.cs" />
+    <Compile Include="Filter\TeleportStoneFilterChain.cs" />
     <Compile Include="IAuctionListing.cs" />
     <Compile Include="IBoundCluster.cs" />
     <Compile Include="IExpeditionContext.cs" />
