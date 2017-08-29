@@ -4,9 +4,9 @@ using Ennui.Api.Util;
 
 namespace Ennui.Api.Example
 {
-    public class SpellEffectGeometry : ApiResource
+    public class SpellEffectAreaExamples : ApiResource
     {
-        public SpellEffectGeometry(IApi api) : base(api)
+        public SpellEffectAreaExamples(IApi api) : base(api)
         {
         }
 
