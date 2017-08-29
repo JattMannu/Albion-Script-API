@@ -16,13 +16,10 @@ namespace Ennui.Api.Method
     public delegate float WeightingModifier(int x, int y);
 
     /// <summary>
-    /// Changes the clipping value of a tile.
+    /// Changes the values of clipping flags.
     /// </summary>
-    /// <param name="original">The original tile clipping value.</param>
-    /// <param name="x">The x coordinate of the tile.</param>
-    /// <param name="y">The y coordinate of the value.</param>
-    /// <returns>If the tile is walkable or not.</returns>
-    public delegate bool ClippingModifier(bool original, int x, int y);
+    /// <param name="flags">The clipping flags reference.</param>
+    public delegate void ClippingModifier(bool[,] flags);
 
     /// <summary>
     /// Applies an extra weighting value to a specific cluster.

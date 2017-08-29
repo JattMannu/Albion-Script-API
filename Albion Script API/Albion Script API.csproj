@@ -42,6 +42,7 @@
     <Compile Include="CompositeApi.cs" />
     <Compile Include="Example\ExpeditionsExample.cs" />
     <Compile Include="Example\MarketExample.cs" />
+    <Compile Include="Example\MovementExamples.cs" />
     <Compile Include="Filter\ExpeditionAgentFilterChain.cs" />
     <Compile Include="Filter\ExpeditionExitFilterChain.cs" />
     <Compile Include="Filter\FarmableFilterChain.cs" />
