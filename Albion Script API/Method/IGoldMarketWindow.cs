@@ -3,13 +3,8 @@
     /// <summary>
 	/// Provides a set of utilities for interfacing with the gold market window in game.
 	/// </summary>
-    public interface IGoldMarketWindow : IApiModule
+    public interface IGoldMarketWindow : IApiModule, IWidget
     {
-        /// <summary>
-        /// <c>true</c> if the gold market window is currently open; otherwise, <c>false</c>.
-        /// </summary>
-        bool IsOpen { get; }
-
         /// <summary>
         /// Forces this window open.
         /// </summary>

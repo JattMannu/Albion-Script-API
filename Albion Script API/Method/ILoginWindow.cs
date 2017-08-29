@@ -3,14 +3,8 @@
     /// <summary>
 	/// Provides a set of static utilities for interfacing with the login window in game.
 	/// </summary>
-    public interface ILoginWindow : IApiModule
+    public interface ILoginWindow : IApiModule, IWidget
     {
-        /// <summary>
-        /// Checks if the login window is currently open
-        /// </summary>
-        /// <value><c>true</c> if the login window is currently open; otherwise, <c>false</c>.</value>
-        bool IsOpen { get; }
-
         /// <summary>
         /// Sets the email in the email input form on the login window.
         /// </summary>

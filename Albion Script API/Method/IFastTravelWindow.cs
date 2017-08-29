@@ -4,7 +4,7 @@ using Ennui.Api.Xml;
 
 namespace Ennui.Api.Method
 {
-    public interface IFastTravelWindow : IApiModule
+    public interface IFastTravelWindow : IApiModule, IWidget
     {
         bool IsOpen { get; }
 

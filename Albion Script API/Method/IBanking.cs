@@ -3,14 +3,8 @@
     /// <summary>
 	/// Provies a set of utility methods for interacting with a vault object in game.
 	/// </summary>
-    public interface IBanking : IApiModule
+    public interface IBanking : IApiModule, IWidget
     {
-        /// <summary>
-		/// Checks if the banking gui is currently open
-		/// </summary>
-		/// <value><c>true</c> if the banking gui is currently open; otherwise, <c>false</c>.</value>
-        bool IsOpen { get; }
-
         /// <summary>
         /// Deposit the specified items into the bank.
         /// </summary>

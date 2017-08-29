@@ -5,14 +5,8 @@ namespace Ennui.Api.Method
     /// <summary>
 	/// Provides a set of static utilities for interfacing with the character selection in game.
 	/// </summary>
-    public interface ICharacterSelectWindow : IApiModule
+    public interface ICharacterSelectWindow : IApiModule, IWidget
     {
-        /// <summary>
-		/// Checks if the character select gui is currently open
-		/// </summary>
-		/// <value><c>true</c> if the character select gui is currently open; otherwise, <c>false</c>.</value>
-		 bool IsOpen { get; }
-
         /// <summary>
         /// Attempts to login to the character in the provided record.
         /// </summary>

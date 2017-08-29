@@ -4,13 +4,8 @@ using Ennui.Api.Xml;
 
 namespace Ennui.Api.Method
 {
-    public interface IExpeditionWindow
+    public interface IExpeditionWindow : IApiModule, IWidget
     {
-        /// <summary>
-        /// If the expedition window is open in game.
-        /// </summary>
-        bool IsOpen { get; }
-
         /// <summary>
         /// The configs of all expeditions provided by this agent.
         /// </summary>
