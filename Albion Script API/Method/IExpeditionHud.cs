@@ -13,6 +13,11 @@ namespace Ennui.Api.Method
         ExpeditionHudState State { get; }
 
         /// <summary>
+        /// If the progress popup is open.
+        /// </summary>
+        bool IsProgressPopupOpen { get; }
+
+        /// <summary>
         /// The additional info progress text.
         /// </summary>
         string ProgressAdditionalInfo { get; }
@@ -21,5 +26,20 @@ namespace Ennui.Api.Method
         /// The progress label text.
         /// </summary>
         string ProgressLabel { get; }
+
+        /// <summary>
+        /// If the reward popup is open.
+        /// </summary>
+        bool IsRewardPopupOpen { get; }
+
+        /// <summary>
+        /// The first line of reward text.
+        /// </summary>
+        string RewardText1 { get; }
+
+        /// <summary>
+        /// The second line of reward text.
+        /// </summary>
+        string RewardText2 { get; }
     }
 }
