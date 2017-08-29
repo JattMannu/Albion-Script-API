@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Example\ExpeditionsExample.cs" />
     <Compile Include="Example\MarketExample.cs" />
     <Compile Include="Filter\ExpeditionAgentFilterChain.cs" />
     <Compile Include="Filter\FarmableFilterChain.cs" />
