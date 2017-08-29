@@ -72,13 +72,15 @@
     <Compile Include="Object\ISpellEffectAreaObject.cs" />
     <Compile Include="Object\ITeleportStoneObject.cs" />
     <Compile Include="Object\ITreasureChestObject.cs" />
+    <Compile Include="Util\DataSetUtils.cs" />
+    <Compile Include="Util\StringUtils.cs" />
     <Compile Include="Xml\IXmlEquipmentItemConfig.cs" />
     <Compile Include="Xml\IXmlExpedition.cs" />
     <Compile Include="Xml\IXmlTravelDestination.cs" />
     <Compile Include="Xml\IXmlTravelPoint.cs" />
     <Compile Include="Example\SpellEffectGeometry.cs" />
     <Compile Include="Util\FloatExtensions.cs" />
-    <Compile Include="Util\GeneralUtils.cs" />
+    <Compile Include="Util\DirectionUtils.cs" />
     <Compile Include="IApiExtensions.cs" />
     <Compile Include="Util\IMesh.cs" />
     <Compile Include="Script\LocalScript.cs" />

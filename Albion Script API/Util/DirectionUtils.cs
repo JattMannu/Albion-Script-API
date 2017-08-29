@@ -6,7 +6,7 @@ namespace Ennui.Api.Util
     /// <summary>
 	/// Provides a set of static utilities that are too inspecific for their own utility classes.
 	/// </summary>
-    public class GeneralUtils
+    public class DirectionUtils
     {
         /// <summary>
         /// Represents a direction.
@@ -50,56 +50,11 @@ namespace Ennui.Api.Util
             /// </summary>
             None,
         }
-
-        /// <summary>
-        /// Casts the provided dictionary to a generic dictionary with the provided types.
-        /// </summary>
-        /// <param name="dictionary">The dictionary to cast from.</param>
-        /// <typeparam name="K">The dictionary key type.</typeparam>
-        /// <typeparam name="V">The dictionary value type.</typeparam>
-        public static Dictionary<K, V> Cast<K, V>(IDictionary dictionary)
-        {
-            var casted = new Dictionary<K, V>();
-            foreach (DictionaryEntry entry in dictionary)
-            {
-                casted.Add((K)entry.Key, (V)entry.Value);
-            }
-            return casted;
-        }
-
-        /// <summary>
-        /// Casts the provided list to a generic list with the provided type.
-        /// </summary>
-        /// <param name="list">The list to cast from.</param>
-        /// <typeparam name="K">The element type.</typeparam>
-        public static List<K> Cast<K>(IList list)
-        {
-            var casted = new List<K>();
-            foreach (var obj in list)
-            {
-                casted.Add((K)obj);
-            }
-            return casted;
-        }
-
-        /// <summary>
-        /// Checks if any of the provided objects are null.
-        /// </summary>
-        /// <returns><c>true</c> if any of the provided objects are null; otherwise, <c>false</c>.</returns>
-        /// <param name="Objects">The objects to check for null.</param>
-        public static bool IsAnyNull(params object[] Objects)
-        {
-            foreach (var o in Objects)
-            {
-                if (o == null) return true;
-            }
-            return false;
-        }
-
+        
         /// <summary>
         /// Calculates the direction between the first coordinates, and the second ones.
         /// </summary>
-        /// <returns>The <see cref="GeneralUtils"/> between the two points.</returns>
+        /// <returns>The <see cref="DirectionUtils"/> between the two points.</returns>
         /// <param name="x0">The x coordinate of the first point.</param>
         /// <param name="y0">The y coordinate of the first point.</param>
         /// <param name="x1">The x coordinate of the second point.</param>
@@ -133,7 +88,7 @@ namespace Ennui.Api.Util
         /// <summary>
         /// Calculates the direction between the first coordinates, and the second ones.
         /// </summary>
-        /// <returns>The <see cref="GeneralUtils"/> between the two points.</returns>
+        /// <returns>The <see cref="DirectionUtils"/> between the two points.</returns>
         /// <param name="x0">The x coordinate of the first point.</param>
         /// <param name="y0">The y coordinate of the first point.</param>
         /// <param name="x1">The x coordinate of the second point.</param>

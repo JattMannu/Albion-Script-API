@@ -33,26 +33,7 @@ namespace Ennui.Api.Util
             }
             return false;
         }
-
-        private static void Append(StringBuilder sb, string pfx, int dgt, long val)
-        {
-            sb.Append(pfx);
-            if (dgt > 1)
-            {
-                int pad = (dgt - 1);
-                for (long xa = val; xa > 9 && pad > 0; xa /= 10)
-                {
-                    pad--;
-                }
-
-                for (int xa = 0; xa < pad; xa++)
-                {
-                    sb.Append('0');
-                }
-            }
-            sb.Append(val);
-        }
-
+        
         /// <summary>
         /// Formats an elapsed amount of milliseconds into a user friendly string.
         /// </summary>
@@ -68,9 +49,9 @@ namespace Ennui.Api.Util
             }
 
             var sb = new StringBuilder();
-            Append(sb, sgn, 0, (ms / 3600000));
-            Append(sb, ":", 2, ((ms % 3600000) / 60000));
-            Append(sb, ":", 2, ((ms % 60000) / 1000));
+            StringUtils.AppendWithPadding(sb, sgn, 0, (ms / 3600000));
+            StringUtils.AppendWithPadding(sb, ":", 2, ((ms % 3600000) / 60000));
+            StringUtils.AppendWithPadding(sb, ":", 2, ((ms % 60000) / 1000));
             return sb.ToString();
         }
 
