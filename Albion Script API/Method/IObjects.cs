@@ -173,7 +173,7 @@ namespace Ennui.Api.Method
         /// <summary>
         /// All expedition exits within the scene.
         /// </summary>
-        List<IExpeditionExit> ExpeditionExits { get; }
+        List<IExpeditionExitObject> ExpeditionExits { get; }
 
         /// <summary>
         /// A chain containing all expedition exits within the scene.

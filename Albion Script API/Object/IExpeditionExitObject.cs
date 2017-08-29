@@ -3,7 +3,7 @@
     /// <summary>
     /// Represents an expedition exit within the game scene.
     /// </summary>
-    public interface IExpeditionExit : IWorldObject
+    public interface IExpeditionExitObject : IWorldObject
     {
         
     }

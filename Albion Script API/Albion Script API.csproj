@@ -72,7 +72,7 @@
     <Compile Include="MobHarvestableDrop.cs" />
     <Compile Include="Object\IExitObject.cs" />
     <Compile Include="Object\IExpeditionAgentObject.cs" />
-    <Compile Include="Object\IExpeditionExit.cs" />
+    <Compile Include="Object\IExpeditionExitObject.cs" />
     <Compile Include="Object\IHellgateObject.cs" />
     <Compile Include="Object\ISpellEffectAreaObject.cs" />
     <Compile Include="Object\ITeleportStoneObject.cs" />
