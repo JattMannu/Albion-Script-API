@@ -118,7 +118,7 @@ namespace Ennui.Api.Method
         /// <summary>
         /// A chain containing all silver within the scene.
         /// </summary>
-        SilverFilterChain SilverFilterChain { get; }
+        SilverFilterChain SilverChain { get; }
 
         /// <summary>
         /// All hellgates within the scene.
