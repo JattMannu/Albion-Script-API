@@ -40,7 +40,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Example\MarketExample.cs" />
+    <Compile Include="Filter\ExpeditionAgentFilterChain.cs" />
+    <Compile Include="Filter\FarmableFilterChain.cs" />
     <Compile Include="Filter\HarvestableDropFilterChain.cs" />
+    <Compile Include="Filter\ExitFilterChain.cs" />
+    <Compile Include="Filter\HellgateFilterChain.cs" />
+    <Compile Include="Filter\SilverFilterChain.cs" />
     <Compile Include="IAuctionListing.cs" />
     <Compile Include="IBoundCluster.cs" />
     <Compile Include="IExpeditionContext.cs" />
