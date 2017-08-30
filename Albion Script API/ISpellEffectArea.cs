@@ -12,5 +12,11 @@ namespace Ennui.Api
         /// </summary>
         /// <returns>A list of built meshes.</returns>
         List<IMesh> BuildMeshes();
+
+        /// <summary>
+        /// The tiles that are within this spell effect area.
+        /// </summary>
+        /// <returns>A list of all tiles within this effect area.</returns>
+        List<Vector2i> TilesConsumed();
     }
 }
