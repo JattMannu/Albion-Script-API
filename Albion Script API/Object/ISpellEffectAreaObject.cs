@@ -1,4 +1,6 @@
-﻿using Ennui.Api.Xml;
+﻿using Ennui.Api.Util;
+using Ennui.Api.Xml;
+using System.Collections.Generic;
 
 namespace Ennui.Api.Object
 {

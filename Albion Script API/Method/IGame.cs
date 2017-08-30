@@ -1,5 +1,6 @@
 ﻿using Ennui.Api.Meta;
 using Ennui.Api.Util;
+using System.Collections.Generic;
 
 namespace Ennui.Api.Method
 {
@@ -137,5 +138,10 @@ namespace Ennui.Api.Method
         /// <param name="pos">The 3d coordinate to project.</param>
         /// <returns><c>null</c> If the 3d point isn't visible, otherwise the projected point.</returns>
         Vector2<float> ProjectToScreen(Vector3<float> pos);
+
+        /// <summary>
+        /// All spell effect areas within the scene.
+        /// </summary>
+        List<ISpellEffectArea> SpellEffectAreas { get; }
     }
 }

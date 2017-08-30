@@ -79,6 +79,7 @@
     <Compile Include="Object\ITeleportStoneObject.cs" />
     <Compile Include="Object\ITreasureChestObject.cs" />
     <Compile Include="Util\DataSetUtils.cs" />
+    <Compile Include="Util\MathUtils.cs" />
     <Compile Include="Util\StringUtils.cs" />
     <Compile Include="Xml\IXmlEquipmentItemConfig.cs" />
     <Compile Include="Xml\IXmlExpedition.cs" />

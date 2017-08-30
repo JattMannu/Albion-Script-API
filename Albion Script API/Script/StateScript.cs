@@ -13,7 +13,7 @@ namespace Ennui.Api.Script
         {
         }
 
-        public StateScript() : base(null)
+        public StateScript() : base()
         {
 
         }
