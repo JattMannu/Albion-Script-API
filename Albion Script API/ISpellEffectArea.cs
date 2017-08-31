@@ -7,16 +7,6 @@ namespace Ennui.Api
     public interface ISpellEffectArea
     {
         /// <summary>
-        /// This effect area's geometry descriptor.
-        /// </summary>
-        IGeometryDescriptor GeometryDescriptor { get; }
-
-        /// <summary>
-        /// This spell area's spell assessment.
-        /// </summary>
-        SpellAssessment SpellAssessment { get; }
-
-        /// <summary>
         /// Builds meshes based on this spell effect area's geometry.
         /// </summary>
         /// <param name="meshScale">The scale to use when building the meshes.</param>
