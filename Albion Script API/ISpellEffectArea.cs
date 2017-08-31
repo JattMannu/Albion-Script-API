@@ -1,11 +1,20 @@
-﻿using Ennui.Api.Util;
+﻿using Ennui.Api.Meta;
+using Ennui.Api.Util;
 using System.Collections.Generic;
 
 namespace Ennui.Api
 {
     public interface ISpellEffectArea
     {
+        /// <summary>
+        /// This effect area's geometry descriptor.
+        /// </summary>
         IGeometryDescriptor GeometryDescriptor { get; }
+
+        /// <summary>
+        /// This spell area's spell assessment.
+        /// </summary>
+        SpellAssessment SpellAssessment { get; }
 
         /// <summary>
         /// Builds meshes based on this spell effect area's geometry.
