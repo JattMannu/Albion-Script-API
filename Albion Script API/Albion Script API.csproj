@@ -86,7 +86,6 @@
     <Compile Include="Xml\IXmlExpedition.cs" />
     <Compile Include="Xml\IXmlTravelDestination.cs" />
     <Compile Include="Xml\IXmlTravelPoint.cs" />
-    <Compile Include="Example\SpellEffectAreaExamples.cs" />
     <Compile Include="Util\FloatExtensions.cs" />
     <Compile Include="Util\DirectionUtils.cs" />
     <Compile Include="Util\IMesh.cs" />
