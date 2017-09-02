@@ -42,6 +42,7 @@ namespace Ennui.Api
         public IRendering Rendering { get; set; }
         public IRepairWindow RepairWindow { get; set; }
         public IResourceRepository ResourceRepository { get; set; }
+        public IRespawnWindow RespawnWindow { get; set; }
         public ISerialization Serialization { get; set; }
         public IUI UI { get; set; }
         public IViews Views { get; set; }

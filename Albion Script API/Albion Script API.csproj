@@ -70,6 +70,7 @@
     <Compile Include="Meta\ExpeditionHudState.cs" />
     <Compile Include="Meta\SpellAssessment.cs" />
     <Compile Include="Method\IExpeditionHud.cs" />
+    <Compile Include="Method\IRespawnWindow.cs" />
     <Compile Include="Method\IWidget.cs" />
     <Compile Include="MobHarvestableDrop.cs" />
     <Compile Include="Object\IExitObject.cs" />
