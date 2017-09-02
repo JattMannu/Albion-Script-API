@@ -59,6 +59,11 @@ namespace Ennui.Api.Object
         float MaxEnergy { get; }
         
         /// <summary>
+        /// This entity's energy percentage.
+        /// </summary>
+        float EnergyPercentage { get; }
+
+        /// <summary>
         /// This entity's max load.
         /// </summary>
         float MaxCarryWeight { get; }
