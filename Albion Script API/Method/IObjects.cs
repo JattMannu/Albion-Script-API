@@ -179,5 +179,15 @@ namespace Ennui.Api.Method
         /// A chain containing all expedition exits within the scene.
         /// </summary>
         ExpeditionExitFilterChain ExpeditionExitChain { get; }
+
+        /// <summary>
+        /// All loot objects within the scene.
+        /// </summary>
+        List<ILootObject> LootObjects { get; }
+
+        /// <summary>
+        /// A chain containing all loot objects within the scene.
+        /// </summary>
+        LootObjectFilterChain LootObjectChain { get; }
     }
 }

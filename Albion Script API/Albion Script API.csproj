@@ -49,6 +49,8 @@
     <Compile Include="Filter\HarvestableDropFilterChain.cs" />
     <Compile Include="Filter\ExitFilterChain.cs" />
     <Compile Include="Filter\HellgateFilterChain.cs" />
+    <Compile Include="Filter\LambdaFilter.cs" />
+    <Compile Include="Filter\LootObjectFilterChain.cs" />
     <Compile Include="Filter\SilverFilterChain.cs" />
     <Compile Include="Filter\SpellEffectAreaFilterChain.cs" />
     <Compile Include="Filter\TeleportStoneFilterChain.cs" />
@@ -70,6 +72,7 @@
     <Compile Include="Meta\ExpeditionHudState.cs" />
     <Compile Include="Meta\SpellAssessment.cs" />
     <Compile Include="Method\IExpeditionHud.cs" />
+    <Compile Include="Method\ILootWindow.cs" />
     <Compile Include="Method\IRespawnWindow.cs" />
     <Compile Include="Method\IWidget.cs" />
     <Compile Include="MobHarvestableDrop.cs" />
@@ -77,9 +80,11 @@
     <Compile Include="Object\IExpeditionAgentObject.cs" />
     <Compile Include="Object\IExpeditionExitObject.cs" />
     <Compile Include="Object\IHellgateObject.cs" />
+    <Compile Include="Object\ILootObject.cs" />
     <Compile Include="Object\ISpellEffectAreaObject.cs" />
     <Compile Include="Object\ITeleportStoneObject.cs" />
     <Compile Include="Object\ITreasureChestObject.cs" />
+    <Compile Include="Object\IWorldItemContainer.cs" />
     <Compile Include="Util\DataSetUtils.cs" />
     <Compile Include="Util\MathUtils.cs" />
     <Compile Include="Util\StringUtils.cs" />
