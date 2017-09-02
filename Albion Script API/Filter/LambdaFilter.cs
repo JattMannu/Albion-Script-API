@@ -4,7 +4,8 @@ namespace Ennui.Api.Filter
 {
     public class LambdaFilter<T> : Filter<T>
     {
-        Func<T, bool> action;
+        private readonly Func<T, bool> action;
+
         public LambdaFilter(Func<T, bool> action)
         {
             this.action = action;
