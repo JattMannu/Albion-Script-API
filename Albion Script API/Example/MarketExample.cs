@@ -32,10 +32,29 @@ namespace Ennui.Api.Example
             });
         }
 
-        public void BuyCheapest(string uniqueName)
+        private string IndexToSearchString(int index)
+        {
+            if (index <= 0)
+            {
+                return string.Empty;
+            }
+            return "" + (index + 1);
+        }
+
+        public void BuyCheapest(int categoryIndex, int subCategoryIndex, int echantmentLevelIndex, int qualityIndex, int tierIndex, string uniqueName)
         {
             var item = ResourceRepository.ItemConfigByUniqueName(uniqueName);
-            Market.DemandRequests("", "", "", FilterType.One, "", FilterType.One, "", new short[] { (short)item.UniqueId }, false, (auctions) =>
+            Market.DemandRequests(
+                IndexToSearchString(categoryIndex), 
+                IndexToSearchString(subCategoryIndex), 
+                IndexToSearchString(echantmentLevelIndex), 
+                FilterType.One, 
+                IndexToSearchString(qualityIndex), 
+                FilterType.One, 
+                IndexToSearchString(tierIndex), 
+                new short[] { (short)item.UniqueId }, 
+                false, 
+                (auctions) =>
             {
                 IAuctionListing cheapest = null;
                 foreach (var auction in auctions)
@@ -48,5 +67,6 @@ namespace Ennui.Api.Example
                 Market.BuyOffer(cheapest.Id, cheapest.Amount);
             });
         }
+        
     }
 }
