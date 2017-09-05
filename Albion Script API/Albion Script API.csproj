@@ -88,6 +88,7 @@
     <Compile Include="Util\DataSetUtils.cs" />
     <Compile Include="Util\MathUtils.cs" />
     <Compile Include="Util\StringUtils.cs" />
+    <Compile Include="Vert\ITravelGraphEdge.cs" />
     <Compile Include="Xml\IXmlEquipmentItemConfig.cs" />
     <Compile Include="Xml\IXmlExpedition.cs" />
     <Compile Include="Xml\IXmlTravelDestination.cs" />
