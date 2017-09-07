@@ -108,11 +108,6 @@ namespace Ennui.Api.Object
         List<IEntityObject> UnderAttackBy { get; }
 
         /// <summary>
-        /// The event handler that handles item placement for this entity.
-        /// </summary>
-        IPlaceItemEventHandler PlaceItemEventHandler { get; }
-
-        /// <summary>
         /// Checks if this entity can cast the spell in the provided slot.
         /// </summary>
         /// <returns><c>true</c>, if the spell is ready to cast, <c>false</c> otherwise.</returns>

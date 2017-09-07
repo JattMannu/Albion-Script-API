@@ -128,8 +128,6 @@
     <Compile Include="ICharacterRecord.cs" />
     <Compile Include="ICropState.cs" />
     <Compile Include="IFieldCodec.cs" />
-    <Compile Include="ILocalInputHandler.cs" />
-    <Compile Include="IPlacementGhost.cs" />
     <Compile Include="Object\IBankBuildingObject.cs" />
     <Compile Include="Object\IBuildingObject.cs" />
     <Compile Include="ICollisionGrid.cs" />
@@ -137,7 +135,6 @@
     <Compile Include="IItemContainerProxy.cs" />
     <Compile Include="IItemStack.cs" />
     <Compile Include="IMapCluster.cs" />
-    <Compile Include="IPlaceItemEventHandler.cs" />
     <Compile Include="IScenePosition.cs" />
     <Compile Include="ISpell.cs" />
     <Compile Include="INanoTime.cs" />
