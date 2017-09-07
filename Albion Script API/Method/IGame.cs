@@ -144,5 +144,10 @@ namespace Ennui.Api.Method
         /// <returns>The height of the tile at the provided coordinates.</returns>
         /// <param name="pos">The coordinates to get the height at.</param>
         float GetTileHeight(Vector2<float> pos);
+
+        /// <summary>
+        /// Whether or not input is enabled.
+        /// </summary>
+        bool InputEnabled { set; }
     }
 }
