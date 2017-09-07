@@ -10,15 +10,13 @@ namespace Ennui.Api.Object
     public interface ISpellEffectAreaObject : ISimulationObject
     {
         /// <summary>
-        /// This spell effect's spell xml config.
+        /// This spell effect area object's area.
         /// </summary>
-        IXmlSpellConfig SpellXmlConfig { get; }
+        ISpellEffectArea SpellEffectArea { get; }
 
         /// <summary>
-        /// This spell's context. Can be used for resolving AOE mesh among other things.
-        /// 
-        /// Go down this rabbit whole at your own risk, it's internal stuff.
+        /// This spell effect's spell config.
         /// </summary>
-        ISpellEffectAreaObjectContext Context { get; }
+        ISpellConfig SpellConfig { get; }
     }
 }

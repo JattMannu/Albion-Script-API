@@ -1,7 +1,7 @@
 ﻿using Ennui.Api.Meta;
 namespace Ennui.Api.Xml
 {
-    public interface IXmlSpellConfig : IXmlUiSpellConfig
+    public interface ISpellConfig : IVisualSpellConfig
     {
         /// <summary>
         /// The type that this spell can target.

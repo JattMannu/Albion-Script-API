@@ -10,7 +10,7 @@ namespace Ennui.Api.Method
 
         List<IFastTravelData> PossibleDestinations { get; }
 
-        List<IXmlTravelDestination> PossibleDestinationsXml { get; }
+        List<ITravelDestinationConfig> PossibleDestinationsXml { get; }
 
         bool TravelTo(string islandName);
     }

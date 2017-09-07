@@ -1,6 +1,5 @@
 ﻿using System;
 
-using Ennui.Api.View;
 using Ennui.Api.Util;
 
 namespace Ennui.Api.Object
@@ -10,10 +9,6 @@ namespace Ennui.Api.Object
 	/// </summary>
 	public interface ISimulationObject : IApiResource, Locatable
     {
-        /// <summary>
-        /// This simulation object's view.
-        /// </summary>
-        ISimulationObjectView SimulationView { get; }
 
         /// <summary>
         /// This simulation object's unique id within the scene.

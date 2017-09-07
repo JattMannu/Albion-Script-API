@@ -9,7 +9,7 @@ namespace Ennui.Api.Xml
 	/// Represents a config for a mob drop that does nothing except
 	/// hold configs for other mob drops.
 	/// </summary>
-	public interface IXmlAndDrop : IXmlDrop
+	public interface IAndDropConfig : IDropConfig
     {
         /// <summary>
         /// Retrieves a list of internal drop objects that this drop contains.
@@ -24,6 +24,6 @@ namespace Ennui.Api.Xml
         /// <param name="type">The name of the type to search for.</param>
         /// <param name="wrapper">The function that will handle wrapping of the drops.</param>
         /// <typeparam name="T">The wrapped type.</typeparam>
-        List<T> Find<T>(string type, DropConverter<T> wrapper) where T : IXmlDrop;
+        List<T> Find<T>(string type, DropConverter<T> wrapper) where T : IDropConfig;
     }
 }

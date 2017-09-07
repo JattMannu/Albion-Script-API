@@ -1,5 +1,4 @@
 ﻿using Ennui.Api.Filter;
-using Ennui.Api.View;
 using Ennui.Api.Meta;
 using Ennui.Api.Util;
 
@@ -10,12 +9,6 @@ namespace Ennui.Api.Object
 	/// </summary>
 	public interface ILocalPlayerObject : IPlayerObject
     {
-        /// <summary>
-        /// Retrieves this local player's view.
-        /// </summary>
-        /// <value>This local player's view.</value>
-        ILocalPlayerCharacterView LocalView { get; }
-
         /// <summary>
         /// Attempts to attack the target that we have selected.
         /// </summary>
@@ -53,8 +46,6 @@ namespace Ennui.Api.Object
         /// <value>A chain containing all Spells belonging to the local player.</value>
         SpellFilterChain SpellChain { get; }
 
-        ITimestampProperty CraftingFocusContainer { get; }
-
         /// <summary>
         /// Gets this player's current crafting focus.
         /// </summary>
@@ -84,14 +75,6 @@ namespace Ennui.Api.Object
         /// </summary>
         /// <value>The item container for this player's equipment.</value>
         IItemContainerProxy EquipmentContainer { get; }
-
-        /// <summary>
-        /// Gets this player's item tracker. 
-        /// 
-        /// This is used for item updates (e.g. moving items, dropping them, etc.)
-        /// </summary>
-        /// <value>This player's item tracker. </value>
-        IItemContainerTracker ItemContainerTracker { get; }
 
         /// <summary>
         /// Attempts to cast a spell on this local player.

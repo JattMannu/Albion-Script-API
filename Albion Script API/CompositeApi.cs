@@ -54,7 +54,6 @@ namespace Ennui.Api
         public IRespawnWindow RespawnWindow { get => Api.RespawnWindow; set => Api.RespawnWindow = value; }
         public ISerialization Serialization { get => Api.Serialization; set => Api.Serialization = value; }
         public IUI UI { get => Api.UI; set => Api.UI = value; }
-        public IViews Views { get => Api.Views; set => Api.Views = value; }
         public IGuiScene GuiScene { get => Api.GuiScene; set => Api.GuiScene = value; }
         public IScriptLoader ScriptLoader { get => Api.ScriptLoader; set => Api.ScriptLoader = value; }
         public IScriptEngine ScriptEngine { get => Api.ScriptEngine; set => Api.ScriptEngine = value; }

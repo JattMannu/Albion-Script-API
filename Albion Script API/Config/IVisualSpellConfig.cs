@@ -4,7 +4,7 @@
 	/// Holds configuration information about displaying
 	/// a spell on the game's ui.
 	/// </summary>
-	public interface IXmlUiSpellConfig
+	public interface IVisualSpellConfig
     {
         /// <summary>
         /// Retrieves the unique name of the spell.

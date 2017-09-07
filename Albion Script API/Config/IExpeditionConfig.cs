@@ -2,7 +2,7 @@
 
 namespace Ennui.Api.Xml
 {
-    public interface IXmlExpedition
+    public interface IExpeditionConfig
     {
         string UniqueName { get; }
 

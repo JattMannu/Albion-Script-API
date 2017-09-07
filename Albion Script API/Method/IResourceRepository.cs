@@ -6,8 +6,8 @@ namespace Ennui.Api.Method
 {
     public interface IResourceRepository
     {
-        List<IXmlItemConfig> AllXmlItemConfigs { get; }
-        IXmlItemConfig ItemConfigById(int uniqueId);
-        IXmlItemConfig ItemConfigByUniqueName(string uniqueName);
+        List<IItemConfig> AllXmlItemConfigs { get; }
+        IItemConfig ItemConfigById(int uniqueId);
+        IItemConfig ItemConfigByUniqueName(string uniqueName);
     }
 }

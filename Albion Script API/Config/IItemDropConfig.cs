@@ -4,7 +4,7 @@
 	/// Contains configuration information about a drop from a mob
 	/// that drops a resource node.
 	/// </summary>
-	public interface IXmlItemDrop : IXmlDrop
+	public interface IItemDropConfig : IDropConfig
     {
         /// <summary>
         /// Retrieves the type of resource node that is dropped.

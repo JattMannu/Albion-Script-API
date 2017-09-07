@@ -9,12 +9,12 @@ namespace Ennui.Api.Method
         /// <summary>
         /// The configs of all expeditions provided by this agent.
         /// </summary>
-        List<IXmlExpedition> ExpeditionConfigs { get; }
+        List<IExpeditionConfig> ExpeditionConfigs { get; }
 
         /// <summary>
         /// Enters the expedition with the provided config.
         /// </summary>
         /// <param name="expedition">The config of the expedition to enter.</param>
-        void Enter(IXmlExpedition expedition);
+        void Enter(IExpeditionConfig expedition);
     }
 }

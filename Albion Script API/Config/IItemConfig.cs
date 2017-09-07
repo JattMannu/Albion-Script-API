@@ -3,7 +3,7 @@
     /// <summary>
 	/// Contains configuration information about an item.
 	/// </summary>
-	public interface IXmlItemConfig
+	public interface IItemConfig
     {
         /// <summary>
         /// This config's unique id.
@@ -28,6 +28,6 @@
         /// <summary>
         /// The config containing information about this item when worn as equipment.
         /// </summary>
-        IXmlEquipmentItemConfig EquipmentConfig { get; }
+        IEquipmentItemConfig EquipmentConfig { get; }
     }
 }

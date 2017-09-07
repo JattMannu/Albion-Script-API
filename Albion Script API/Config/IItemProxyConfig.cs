@@ -7,12 +7,12 @@
 	/// actually a more specific type of configuration, that is then
 	/// downcasted, and stored for use later.
 	/// </summary>
-    public interface IXmlItemProxy
+    public interface IItemProxyConfig
     {
         /// <summary>
 		/// Retrieves the loaded item config.
 		/// </summary>
 		/// <value>The loaded item config.</value>
-        IXmlItemConfig XmlItemConfig { get; }
+        IItemConfig XmlItemConfig { get; }
     }
 }

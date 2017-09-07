@@ -3,7 +3,7 @@
     /// <summary>
 	/// Contains configuration information about a mob drop.
 	/// </summary>
-    public interface IXmlDrop
+    public interface IDropConfig
     {
         /// <summary>
         /// Gets the chance of this drop happening.

@@ -1,6 +1,6 @@
 ﻿namespace Ennui.Api.Xml
 {
-    public interface IXmlAbstractBuilding
+    public interface IAbstractBuildingConfig
     {
         string UniqueName { get; }
     }

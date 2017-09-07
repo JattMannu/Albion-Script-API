@@ -11,12 +11,12 @@ namespace Ennui.Api.Object
         /// <summary>
         /// A list of spell configurations that this player has equiobjd.
         /// </summobj>
-        IXmlSpellConfig[] SpellConfigs { get; }
+        ISpellConfig[] SpellConfigs { get; }
 
         /// <summary>
         /// A list of item configurations that this player has equipped.
         /// <objmmary>
-        IXmlItemConfig[] EquipmentConfigs { get; }
+        IItemConfig[] EquipmentConfigs { get; }
 
         /// <summary>
         /// If this player is in the local player's party.

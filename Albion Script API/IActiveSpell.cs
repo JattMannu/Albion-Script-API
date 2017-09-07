@@ -10,7 +10,7 @@ namespace Ennui.Api
         /// <value>
         /// The config for the spell.
         /// </value>
-        IXmlSpellConfig Config { get; }
+        ISpellConfig Config { get; }
 
         /// <value>
         /// The name of this spell.

@@ -9,11 +9,6 @@ namespace Ennui.Api
     public interface IItemContainerProxy
     {
         /// <summary>
-        /// The actual item container.
-        /// </summary>
-        IItemContainer ItemContainer { get; }
-
-        /// <summary>
         /// The maximum amount of weight that this container can hold.
         /// </summary>
         float MaximumHoldWeight { get; }
@@ -84,5 +79,10 @@ namespace Ennui.Api
         /// <param name="weight">The amount of weight.</param>
         /// <returns>If the weight can be added.</returns>
         bool CanHoldWeight(float weight);
+
+        /// <summary>
+        /// This container's guid.
+        /// </summary>
+        Guid Guid { get; }
     }
 }

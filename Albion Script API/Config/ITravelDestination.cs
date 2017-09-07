@@ -1,6 +1,6 @@
 ﻿namespace Ennui.Api.Xml
 {
-    public interface IXmlTravelDestination
+    public interface ITravelDestinationConfig
     {
         string InternalClusterName { get; }
     }

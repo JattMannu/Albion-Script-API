@@ -45,7 +45,6 @@ namespace Ennui.Api
         public IRespawnWindow RespawnWindow { get; set; }
         public ISerialization Serialization { get; set; }
         public IUI UI { get; set; }
-        public IViews Views { get; set; }
 
         public IGuiScene GuiScene { get; set; }
 

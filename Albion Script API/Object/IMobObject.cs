@@ -27,7 +27,7 @@ namespace Ennui.Api.Object
         /// Retrieves a list of items that this mob drops.
         /// </summary>
         /// <value>A list of items that this mob drops.</value>
-        List<IXmlItemDrop> ItemDrops { get; }
+        List<IItemDropConfig> ItemDrops { get; }
 
         /// <summary>
         /// All of this mob's drops in a chain.

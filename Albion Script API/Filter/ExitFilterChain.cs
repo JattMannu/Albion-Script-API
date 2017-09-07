@@ -30,11 +30,7 @@ namespace Ennui.Api.Filter
 
             public bool Ignore(IExitObject t)
             {
-                var bound = t.BoundCluster;
-                if (bound == null)
-                    return true;
-
-                var cluster = bound.Unbound;
+                var cluster = t.Cluster;
                 if (cluster == null)
                     return true;
 

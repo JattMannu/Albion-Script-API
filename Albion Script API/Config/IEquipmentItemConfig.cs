@@ -2,7 +2,7 @@
 
 namespace Ennui.Api.Xml
 {
-    public interface IXmlEquipmentItemConfig : IXmlItemConfig
+    public interface IEquipmentItemConfig : IItemConfig
     {
         float GetStat(PlayerAttribute attribute);
     }

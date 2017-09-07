@@ -13,7 +13,7 @@ namespace Ennui.Api.Object
         /// <summary>
         /// This farmable object's xml config
         /// </summary>
-        IXmlAbstractBuilding XmlDynamicFarmable { get; }
+        IAbstractBuildingConfig XmlDynamicFarmable { get; }
 
         /// <summary>
         /// The raw states of this farmable. 
