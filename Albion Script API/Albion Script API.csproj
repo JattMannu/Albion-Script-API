@@ -55,6 +55,7 @@
     <Compile Include="Filter\SpellEffectAreaFilterChain.cs" />
     <Compile Include="Filter\TeleportStoneFilterChain.cs" />
     <Compile Include="IAuctionListing.cs" />
+    <Compile Include="ICraftingItem.cs" />
     <Compile Include="IExpeditionContext.cs" />
     <Compile Include="IMeshData.cs" />
     <Compile Include="IPreciseNumber.cs" />
