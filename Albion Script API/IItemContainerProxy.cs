@@ -54,11 +54,6 @@ namespace Ennui.Api
         bool IsEmpty { get; }
 
         /// <summary>
-        /// This item container's tracker guid.
-        /// </summary>
-        Guid TrackerGuid { get; }
-
-        /// <summary>
         /// Finds all items with the specified unique names.
         /// </summary>
         /// <param name="uniqueNames">The names of the items to search for.</param>
