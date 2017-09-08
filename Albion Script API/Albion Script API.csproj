@@ -40,6 +40,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CompositeApi.cs" />
+    <Compile Include="Config\IItemRecipeConfig.cs" />
+    <Compile Include="Config\IItemRecipeResourceConfig.cs" />
     <Compile Include="Example\ExpeditionsExample.cs" />
     <Compile Include="Example\MarketExample.cs" />
     <Compile Include="Example\MovementExamples.cs" />

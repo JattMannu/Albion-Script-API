@@ -1,4 +1,6 @@
-﻿namespace Ennui.Api.Xml
+﻿using Ennui.Api.Config;
+
+namespace Ennui.Api.Xml
 {
     /// <summary>
 	/// Contains configuration information about an item.
@@ -29,5 +31,10 @@
         /// The config containing information about this item when worn as equipment.
         /// </summary>
         IEquipmentItemConfig EquipmentConfig { get; }
+
+        /// <summary>
+        /// The recipes for crafting this item.
+        /// </summary>
+        IItemRecipeConfig[] Recipes { get; }
     }
 }
