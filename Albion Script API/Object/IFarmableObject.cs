@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 using Ennui.Api.Xml;
 
@@ -10,11 +9,6 @@ namespace Ennui.Api.Object
     /// </summary>
     public interface IFarmableObject : IBuildingObject
     {
-        /// <summary>
-        /// This farmable object's xml config.
-        /// </summary>
-        IBuildingConfig BuildingConfig { get; }
-
         /// <summary>
         /// The states of everything planted in this farmabel.
         /// </summary>
