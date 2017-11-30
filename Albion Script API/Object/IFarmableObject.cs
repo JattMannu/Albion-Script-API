@@ -41,5 +41,19 @@ namespace Ennui.Api.Object
         /// The percentage that everything is doen growing.
         /// </summary>
         float PercentageDone { get; }
+
+        /// <summary>
+        /// If this object can eat an item with the provided config.
+        /// </summary>
+        /// <param name="config">The config to check the validity of.</param>
+        /// <returns>If this object can eat the item.</returns>
+        bool CanEat(IItemConfig config);
+
+        /// <summary>
+        /// Determines if this object can eat the provided stack.
+        /// </summary>
+        /// <param name="stack">The stack to check against.</param>
+        /// <returns>If this object can eat the stack.</returns>
+        bool CanEat(IItemStack stack);
     }
 }
