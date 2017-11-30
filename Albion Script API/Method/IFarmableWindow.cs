@@ -34,6 +34,12 @@ namespace Ennui.Api.Method
         IFarmableObject FarmableObject { get; }
 
         /// <summary>
+        /// Picks the focused harvestable up off the ground.
+        /// </summary>
+        /// <returns>If the object was picked up.</returns>
+        bool Pickup();
+
+        /// <summary>
         /// Takes the grown items out of the farmable object.
         /// </summary>
         void TakeGrown();
