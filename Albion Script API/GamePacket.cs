@@ -1,5 +1,8 @@
 ﻿namespace Ennui.Api
 {
+    /// <summary>
+    /// Represents a packet being used by the game.
+    /// </summary>
     public struct GamePacket
     {
         /// <summary>
