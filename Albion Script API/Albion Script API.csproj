@@ -159,7 +159,7 @@
     <Compile Include="Object\ISimulationObject.cs" />
     <Compile Include="Object\ITravelPointObject.cs" />
     <Compile Include="Object\IWorldObject.cs" />
-    <Compile Include="Config\IAbstractBuildingConfig.cs" />
+    <Compile Include="Config\IBuildingConfig.cs" />
     <Compile Include="Config\IAndDropConfig.cs" />
     <Compile Include="Config\IDropConfig.cs" />
     <Compile Include="Config\IExtendedSpellConfig.cs" />

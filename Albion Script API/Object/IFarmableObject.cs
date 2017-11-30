@@ -11,16 +11,9 @@ namespace Ennui.Api.Object
     public interface IFarmableObject : IBuildingObject
     {
         /// <summary>
-        /// This farmable object's xml config
+        /// This farmable object's xml config.
         /// </summary>
-        IAbstractBuildingConfig XmlDynamicFarmable { get; }
-
-        /// <summary>
-        /// The raw states of this farmable. 
-        /// 
-        /// TODO Remove for muh abstraction
-        /// </summary>
-        IList RawStates { get; }
+        IBuildingConfig BuildingConfig { get; }
 
         /// <summary>
         /// The states of everything planted in this farmabel.
