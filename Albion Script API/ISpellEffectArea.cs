@@ -4,6 +4,9 @@ using System.Collections.Generic;
 
 namespace Ennui.Api
 {
+    /// <summary>
+    /// Represents a spell effect area within the scene.
+    /// </summary>
     public interface ISpellEffectArea
     {
         /// <summary>

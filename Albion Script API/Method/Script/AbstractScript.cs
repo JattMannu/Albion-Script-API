@@ -56,8 +56,8 @@ namespace Ennui.Api.Script
         /// Called when the game attempts to write a packet to the game server.
         /// </summary>
         /// <param name="se">The script engine executing this script.</param>
-        /// <param name="wrapper">The wrapper of the packet.</param>
-        public virtual void OnPacketWrite(IScriptEngine se, PacketWrapper wrapper)
+        /// <param name="packet">The packet being written.</param>
+        public virtual void OnPacketWrite(IScriptEngine se, GamePacket packet)
         {
 
         }

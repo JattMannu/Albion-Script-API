@@ -4,8 +4,13 @@ using Ennui.Api.Gui;
 
 namespace Ennui.Api
 {
+    /// <summary>
+    /// An API implementation where each module can be redefined.
+    /// </summary>
     public class MutableApi : IApi
     {
+        public MutableApi() { }
+
         public IBanking Banking { get; set; }
         public IBot Bot { get; set; }
         public IBotResources BotResources { get; set; }
@@ -44,12 +49,8 @@ namespace Ennui.Api
         public IResourceRepository ResourceRepository { get; set; }
         public IRespawnWindow RespawnWindow { get; set; }
         public ISerialization Serialization { get; set; }
-
         public IGuiScene GuiScene { get; set; }
-
         public IScriptLoader ScriptLoader { get; set; }
         public IScriptEngine ScriptEngine { get; set; }
-
-        public MutableApi() { }
     }
 }

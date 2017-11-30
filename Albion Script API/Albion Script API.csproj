@@ -167,7 +167,6 @@
     <Compile Include="Config\IHarvestableDropConfig.cs" />
     <Compile Include="Config\IItemConfig.cs" />
     <Compile Include="Config\IItemDropConfig.cs" />
-    <Compile Include="Config\IItemProxyConfig.cs" />
     <Compile Include="Config\IMobConfig.cs" />
     <Compile Include="Config\ISpellConfig.cs" />
     <Compile Include="Config\IVisualSpellConfig.cs" />
@@ -189,7 +188,6 @@
     <Compile Include="IApiResource.cs" />
     <Compile Include="Util\IArea.cs" />
     <Compile Include="Util\Image.cs" />
-    <Compile Include="IPacketListener.cs" />
     <Compile Include="Method\ICodecs.cs" />
     <Compile Include="Util\Profiler.cs" />
     <Compile Include="Util\RandomUtils.cs" />
@@ -248,7 +246,7 @@
     <Compile Include="Method\IRendering.cs" />
     <Compile Include="Method\IRepairWindow.cs" />
     <Compile Include="Method\ISerialization.cs" />
-    <Compile Include="PacketWrapper.cs" />
+    <Compile Include="GamePacket.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Method\Script\AbstractScript.cs" />
     <Compile Include="Method\Script\IScriptEngine.cs" />

@@ -5,18 +5,18 @@ using Ennui.Api.Method;
 namespace Ennui.Api
 {
     /// <summary>
-    /// Handles the conversion to and from Albion Online's packet structure.
+    /// Handles the conversion to and from the game's packet structure.
     /// 
     /// Serialization of objects is undefined (i.e. handled by the game), but only primitive IL types are transferred over raw packets. We
     /// use the game's functionality to serialize & deserialize the primitive types.
     /// </summary>
-    public class SerializationWrapper
+    public class LiveGamePacketCodec
     {
         public object Object;
         private Dictionary<byte, object> @params;
         private ISerialization serialization;
 
-        public SerializationWrapper(object obj, ISerialization serialization)
+        public LiveGamePacketCodec(object obj, ISerialization serialization)
         {
             this.Object = obj;
             this.serialization = serialization;
