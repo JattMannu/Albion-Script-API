@@ -24,6 +24,10 @@ namespace Ennui.Api.Method
         /// Represents a drop where the storage of the object was already full.
         /// </summary>
         FULL,
+        /// <summary>
+        /// Represents a general purpose failure.
+        /// </summary>
+        FAILED,
     }
 
     public interface IFarmableWindow : IWidget
