@@ -55,5 +55,11 @@ namespace Ennui.Api.Object
         /// <param name="stack">The stack to check against.</param>
         /// <returns>If this object can eat the stack.</returns>
         bool CanEat(IItemStack stack);
+        
+        /// <summary>
+        /// Determines if this object has any empty slots for dropping items.
+        /// </summary>
+        /// <returns>If this object has any empty slots for dropping items.</returns>
+        bool HasEmptySlot();
     }
 }
