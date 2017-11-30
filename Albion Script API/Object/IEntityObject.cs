@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Ennui.Api.Filter;
 using Ennui.Api.Meta;
 using Ennui.Api.Util;
+using Ennui.Api.Config;
 
 namespace Ennui.Api.Object
 {
@@ -120,8 +121,8 @@ namespace Ennui.Api.Object
         Vector3<float> LastKnownPosition { get; }
 
         /// <summary>
-        /// This entity's internal xml config object.
+        /// This entity's config.
         /// </summary>
-        object XmlConfig { get; }
+        IEntityConfig EntityConfig { get; }
     }
 }
