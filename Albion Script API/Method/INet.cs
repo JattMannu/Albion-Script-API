@@ -34,7 +34,7 @@ namespace Ennui.Api.Method
         /// Sends a packet to the server.
         /// </summary>
         /// <param name="wrapper">The internal packet object as used by the game.</param>
-        void SendPacket(SerializationWrapper wrapper);
+        void SendPacket(LiveGamePacketCodec wrapper);
 
         /// <summary>
         /// Finds the packet type for the outgoing packet with the provided opcode.
@@ -48,6 +48,6 @@ namespace Ennui.Api.Method
         /// </summary>
         /// <returns>The packet instance.</returns>
         /// <param name="opcode">The opcode of the packet to create.</param>
-        SerializationWrapper OutgoingPacketInstance(byte opcode);
+        LiveGamePacketCodec OutgoingPacketInstance(byte opcode);
     }
 }

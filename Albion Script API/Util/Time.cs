@@ -49,9 +49,9 @@ namespace Ennui.Api.Util
             }
 
             var sb = new StringBuilder();
-            StringUtils.AppendWithPadding(sb, sgn, 0, (ms / 3600000));
-            StringUtils.AppendWithPadding(sb, ":", 2, ((ms % 3600000) / 60000));
-            StringUtils.AppendWithPadding(sb, ":", 2, ((ms % 60000) / 1000));
+            StringUtils.NumberToStringPad(sb, sgn, 0, (ms / 3600000));
+            StringUtils.NumberToStringPad(sb, ":", 2, ((ms % 3600000) / 60000));
+            StringUtils.NumberToStringPad(sb, ":", 2, ((ms % 60000) / 1000));
             return sb.ToString();
         }
 

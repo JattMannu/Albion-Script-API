@@ -4,21 +4,31 @@ using Ennui.Api.Script;
 
 namespace Ennui.Api
 {
+    /// <summary>
+    /// An API implementation that delegates to another API.
+    /// </summary>
     public class CompositeApi : IApi
     {
+        /// <summary>
+        /// The API to delegate to.
+        /// </summary>
         public IApi Api { get; set; }
 
+        /// <summary>
+        /// Creates a new composite API that has no functionality.
+        /// </summary>
         public CompositeApi() { }
 
+        /// <summary>
+        /// Creates a new composite API that delegates to the provided API.
+        /// </summary>
+        /// <param name="api"></param>
         public CompositeApi(IApi api)
         {
             Api = api;
         }
 
-        public IBanking Banking {
-            get { return Api.Banking; }
-            set { Api.Banking = value; }
-        }
+        public IBanking Banking { get { return Api.Banking; } set { Api.Banking = value; } }
         public IBot Bot { get { return Api.Bot; } set { Api.Bot = value; } }
         public IBotResources BotResources { get { return Api.BotResources; } set { Api.BotResources = value; } }
         public ICharacterInfoWindow CharacterInfoWindow { get { return Api.CharacterInfoWindow; } set { Api.CharacterInfoWindow = value; } }

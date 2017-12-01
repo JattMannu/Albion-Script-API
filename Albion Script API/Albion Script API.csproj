@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CompositeApi.cs" />
+    <Compile Include="Config\IEntityConfig.cs" />
     <Compile Include="Config\IItemRecipeConfig.cs" />
     <Compile Include="Config\IItemRecipeResourceConfig.cs" />
     <Compile Include="Example\ExpeditionsExample.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="Meta\AuctionHouseCategory.cs" />
     <Compile Include="Meta\ExpeditionHudState.cs" />
     <Compile Include="Meta\SpellAssessment.cs" />
+    <Compile Include="Method\IDisposableWidget.cs" />
     <Compile Include="Method\IExpeditionHud.cs" />
     <Compile Include="Method\ILootWindow.cs" />
     <Compile Include="Method\IRespawnWindow.cs" />
@@ -159,14 +161,13 @@
     <Compile Include="Object\ISimulationObject.cs" />
     <Compile Include="Object\ITravelPointObject.cs" />
     <Compile Include="Object\IWorldObject.cs" />
-    <Compile Include="Config\IAbstractBuildingConfig.cs" />
+    <Compile Include="Config\IBuildingConfig.cs" />
     <Compile Include="Config\IAndDropConfig.cs" />
     <Compile Include="Config\IDropConfig.cs" />
     <Compile Include="Config\IExtendedSpellConfig.cs" />
     <Compile Include="Config\IHarvestableDropConfig.cs" />
     <Compile Include="Config\IItemConfig.cs" />
     <Compile Include="Config\IItemDropConfig.cs" />
-    <Compile Include="Config\IItemProxyConfig.cs" />
     <Compile Include="Config\IMobConfig.cs" />
     <Compile Include="Config\ISpellConfig.cs" />
     <Compile Include="Config\IVisualSpellConfig.cs" />
@@ -188,7 +189,6 @@
     <Compile Include="IApiResource.cs" />
     <Compile Include="Util\IArea.cs" />
     <Compile Include="Util\Image.cs" />
-    <Compile Include="IPacketListener.cs" />
     <Compile Include="Method\ICodecs.cs" />
     <Compile Include="Util\Profiler.cs" />
     <Compile Include="Util\RandomUtils.cs" />
@@ -247,7 +247,7 @@
     <Compile Include="Method\IRendering.cs" />
     <Compile Include="Method\IRepairWindow.cs" />
     <Compile Include="Method\ISerialization.cs" />
-    <Compile Include="PacketWrapper.cs" />
+    <Compile Include="GamePacket.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Method\Script\AbstractScript.cs" />
     <Compile Include="Method\Script\IScriptEngine.cs" />

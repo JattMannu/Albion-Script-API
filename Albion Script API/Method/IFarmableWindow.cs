@@ -24,14 +24,24 @@ namespace Ennui.Api.Method
         /// Represents a drop where the storage of the object was already full.
         /// </summary>
         FULL,
+        /// <summary>
+        /// Represents a general purpose failure.
+        /// </summary>
+        FAILED,
     }
 
-    public interface IFarmableWindow : IWidget
+    public interface IFarmableWindow : IDisposableWidget
     {
         /// <summary>
         /// The farmable object that the ui is open for.
         /// </summary>
         IFarmableObject FarmableObject { get; }
+
+        /// <summary>
+        /// Picks the focused harvestable up off the ground.
+        /// </summary>
+        /// <returns>If the object was picked up.</returns>
+        bool Pickup();
 
         /// <summary>
         /// Takes the grown items out of the farmable object.

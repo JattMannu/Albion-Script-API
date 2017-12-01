@@ -7,7 +7,7 @@ namespace Ennui.Api
 	/// </summary>
 	public class MapArea : Area, IApiResource
     {
-        private string clusterName;
+        private string internalName;
         public IApi Api { get; set; }
 
         /// <summary>
@@ -20,7 +20,7 @@ namespace Ennui.Api
         public MapArea(IApi api, string internalName, Vector3<float> start, Vector3<float> end) : base(start, end)
         {
             this.Api = api;
-            this.clusterName = internalName;
+            this.internalName = internalName;
         }
 
         /// <summary>
@@ -38,7 +38,7 @@ namespace Ennui.Api
             : base(x0, y0, z0, x1, y1, z1)
         {
             this.Api = api;
-            this.clusterName = internalName;
+            this.internalName = internalName;
         }
 
         /// <inheritdoc/>
@@ -46,7 +46,7 @@ namespace Ennui.Api
         {
             var cluster = Api.Game.Cluster;
             if (cluster == null) return false;
-            if (!clusterName.Equals(cluster.InternalName)) return false;
+            if (!internalName.Equals(cluster.InternalName)) return false;
             return base.Contains(loc);
         }
 
@@ -55,7 +55,7 @@ namespace Ennui.Api
         {
             var cluster = Api.Game.Cluster;
             if (cluster == null) return false;
-            if (!clusterName.Equals(cluster.InternalName)) return false;
+            if (!internalName.Equals(cluster.InternalName)) return false;
             return base.ContainsIgnoreHeight(loc);
         }
 

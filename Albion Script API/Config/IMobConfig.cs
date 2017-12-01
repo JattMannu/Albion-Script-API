@@ -1,7 +1,7 @@
 ﻿namespace Ennui.Api.Xml
 {
     /// <summary>
-	/// Holds configuration information about a mob.
+	/// Contains configuration information about a mob.
 	/// </summary>
 	public interface IMobConfig
     {

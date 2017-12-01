@@ -5,6 +5,9 @@
     /// </summary>
 	public interface ICharacterRecord
     {
+        /// <summary>
+        /// The index of this record.
+        /// </summary>
         int Index { get; }
         
         /// <value>

@@ -1,6 +1,9 @@
 ﻿using Ennui.Api.Meta;
 namespace Ennui.Api.Xml
 {
+    /// <summary>
+    /// Contains configuration information about a spell.
+    /// </summary>
     public interface ISpellConfig : IVisualSpellConfig
     {
         /// <summary>

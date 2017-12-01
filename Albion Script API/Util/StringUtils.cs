@@ -2,16 +2,19 @@
 
 namespace Ennui.Api.Util
 {
+    /// <summary>
+    /// Provides a set of utilities relating to strings.
+    /// </summary>
     public static class StringUtils
     {
         /// <summary>
-        /// 
+        /// Converts a number to a string with a padding prefix.
         /// </summary>
         /// <param name="sb">The builder to append to.</param>
         /// <param name="pfx">The prefix to append.</param>
         /// <param name="dgt">What the size of the digit should be.</param>
         /// <param name="val">The numerical value to append.</param>
-        public static void AppendWithPadding(StringBuilder sb, string pfx, int dgt, long val)
+        public static void NumberToStringPad(StringBuilder sb, string pfx, int dgt, long val)
         {
             sb.Append(pfx);
             if (dgt > 1)
