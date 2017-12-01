@@ -71,6 +71,7 @@
     <Compile Include="Meta\AuctionHouseCategory.cs" />
     <Compile Include="Meta\ExpeditionHudState.cs" />
     <Compile Include="Meta\SpellAssessment.cs" />
+    <Compile Include="Method\IDisposableWidget.cs" />
     <Compile Include="Method\IExpeditionHud.cs" />
     <Compile Include="Method\ILootWindow.cs" />
     <Compile Include="Method\IRespawnWindow.cs" />
