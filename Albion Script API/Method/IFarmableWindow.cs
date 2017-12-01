@@ -30,7 +30,7 @@ namespace Ennui.Api.Method
         FAILED,
     }
 
-    public interface IFarmableWindow : IWidget
+    public interface IFarmableWindow : IDisposableWidget
     {
         /// <summary>
         /// The farmable object that the ui is open for.
