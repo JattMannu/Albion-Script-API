@@ -8,6 +8,6 @@
         /// <summary>
         /// The cluster that this exit object links to.
         /// </summary>
-        IBoundCluster BoundCluster { get; }
+        IMapCluster Cluster { get; }
     }
 }

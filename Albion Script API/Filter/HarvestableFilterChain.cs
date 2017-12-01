@@ -6,10 +6,9 @@ using Ennui.Api.Util;
 
 namespace Ennui.Api.Filter
 {
-	/// <summary>
-	/// Handles filtering of HarvestableObjects.
-	/// <see cref="HarvestableObject"/>
-	/// </summary>
+    /// <summary>
+    /// Provides filtering for harvesatble object types.
+    /// </summary>
     public class HarvestableFilterChain : SimulationFilterChain<IHarvestableObject, HarvestableFilterChain>
     {
         public HarvestableFilterChain(IApi api, List<IHarvestableObject> list) : base(api, list)
@@ -37,54 +36,95 @@ namespace Ennui.Api.Filter
 			return null;
 		}
 
+        /// <summary>
+        /// Filters out harvestables with the provided setup state.
+        /// </summary>
+        /// <param name="state">The state to filter for.</param>
+        /// <returns>A chain containing the newly filtered elements.</returns>
         public HarvestableFilterChain FilterWithSetupState(HarvestableSetupState state)
         {
             return Filter(new WithSetupStateFilter(state));
         }
 
+        /// <summary>
+        /// Filters out harvestables without the provided setup state.
+        /// </summary>
+        /// <param name="state">The state to filter for.</param>
+        /// <returns>A chain containing the newly filtered elements.</returns>
         public HarvestableFilterChain FilterWithoutSetupState(HarvestableSetupState state)
         {
             return Filter(new WithoutSetupStateFilter(state));
         }
 
-		/// <summary>
-		/// Filters by resource tier.
-		/// </summary>
-		/// <returns>A new filter chain containing only resources with the provided tier.</returns>
-		/// <param name="tier">The tier to filter by.</param>
+        /// <summary>
+        /// Filters by resource tier.
+        /// </summary>
+        /// <param name="tier">The tier to filter by.</param>
+        /// <returns>A chain containing the newly filtered elements.</returns>
         public HarvestableFilterChain FilterByTier(int tier)
         {
 			return Filter(new ExactTierFilter(tier));
         }
 
+        /// <summary>
+        /// Filters out harvestables by their rarity.
+        /// </summary>
+        /// <param name="min">The minimum rarity to include.</param>
+        /// <param name="max">The maximum rarity to include.</param>
+        /// <returns>A chain containing the newly filtered elements.</returns>
 		public HarvestableFilterChain FilterByRarity(int min, int max)
 		{
 			return Filter(new RangeRarityFilter(min, max));
 		}
 
+        /// <summary>
+        /// Filters out harvestables by their tier.
+        /// </summary>
+        /// <param name="min">The minimum tier to include.</param>
+        /// <param name="max">The maximum tier to include.</param>
+        /// <returns>A chain containing the newly filtered elements.</returns>
 		public HarvestableFilterChain FilterByTier(int min, int max)
 		{
 			return Filter(new RangeTierFilter(min, max));
 		}
 
+        /// <summary>
+        /// Filters out harvestables by their effective tier.
+        /// </summary>
+        /// <param name="min">The minimum effective tier to include.</param>
+        /// <param name="max">The maximum effective tier to include.</param>
+        /// <returns>A chain containing the newly filtered elements.</returns>
 		public HarvestableFilterChain FilterByEffectiveTier(int min, int max)
 		{
 			return Filter(new RangeEffectiveTierFilter(min, max));
 		}
 
+        /// <summary>
+        /// Filters out harvestables by their types.
+        /// </summary>
+        /// <param name="types">The resource types to include.</param>
+        /// <returns>A chain containing the newly filtered elements.</returns>
 		public HarvestableFilterChain FilterByType(params ResourceType[] types)
         {
             return Filter(new ResourceFilter(types));
         }
 
+        /// <summary>
+        /// Filters out depleted harvestables.
+        /// </summary>
+        /// <returns>A chain containing the newly filtered elements.</returns>
         public HarvestableFilterChain FilterDepleted()
         {
 			return Filter(new DepletedFilter());
         }
 
+        /// <summary>
+        /// Filters out harvestables by the tier of the highest tier harvestable.
+        /// </summary>
+        /// <returns>A chain containing the newly filtered elements.</returns>
 		public HarvestableFilterChain FilterByHighestTier()
 		{
-			return Api.Game.Sync<HarvestableFilterChain>(() =>
+			return Game.Sync(() =>
 			{
 				var highest = 0;
 				foreach (var obj in AsList)
@@ -99,17 +139,27 @@ namespace Ennui.Api.Filter
 			});
 		}
 
-		public HarvestableFilterChain FilterByTypeSet(params TypeSet[] types)
+        /// <summary>
+        /// Filters out harvestables using typesets.
+        /// </summary>
+        /// <param name="types">The typesets to filter with.</param>
+        /// <returns>A chain containing the newly filtered elements.</returns>
+        public HarvestableFilterChain FilterByTypeSet(params TypeSet[] types)
 		{
 			return Filter(new TypeSetFilter(types));
 		}
 
-		public HarvestableFilterChain FilterByEffectiveTypeSet(params TypeSet[] types)
+        /// <summary>
+        /// Filters out harvestables using typesets, with effective tiers.
+        /// </summary>
+        /// <param name="types">The typesets to filter with.</param>
+        /// <returns>A chain containing the newly filtered elements.</returns>
+        public HarvestableFilterChain FilterByEffectiveTypeSet(params TypeSet[] types)
 		{
 			return Filter(new EffectiveTypeSetFilter(types));
 		}
 
-        public class WithSetupStateFilter : Filter<IHarvestableObject>
+        private class WithSetupStateFilter : Filter<IHarvestableObject>
         {
             private HarvestableSetupState state;
 
@@ -124,7 +174,7 @@ namespace Ennui.Api.Filter
             }
         }
 
-        public class WithoutSetupStateFilter : Filter<IHarvestableObject>
+        private class WithoutSetupStateFilter : Filter<IHarvestableObject>
         {
             private HarvestableSetupState state;
 
@@ -139,7 +189,7 @@ namespace Ennui.Api.Filter
             }
         }
 
-        public class ExactTierFilter : Filter<IHarvestableObject>
+        private class ExactTierFilter : Filter<IHarvestableObject>
         {
             private int tier;
 
@@ -154,7 +204,7 @@ namespace Ennui.Api.Filter
             }
         }
 
-		public class RangeRarityFilter : Filter<IHarvestableObject>
+        private class RangeRarityFilter : Filter<IHarvestableObject>
 		{
 			private int min;
 			private int max;
@@ -172,7 +222,7 @@ namespace Ennui.Api.Filter
 			}
 		}
 
-		public class RangeTierFilter : Filter<IHarvestableObject>
+        private class RangeTierFilter : Filter<IHarvestableObject>
 		{
 			private int min;
 			private int max;
@@ -190,7 +240,7 @@ namespace Ennui.Api.Filter
 			}
 		}
 
-		public class RangeEffectiveTierFilter : Filter<IHarvestableObject>
+        private class RangeEffectiveTierFilter : Filter<IHarvestableObject>
 		{
 			private int min;
 			private int max;
@@ -208,7 +258,7 @@ namespace Ennui.Api.Filter
 			}
 		}
 
-        public class ResourceFilter : Filter<IHarvestableObject>
+        private class ResourceFilter : Filter<IHarvestableObject>
         {
 			private ResourceType[] types;
 
@@ -231,7 +281,7 @@ namespace Ennui.Api.Filter
             }
         }
 
-        public class DepletedFilter : Filter<IHarvestableObject>
+        private class DepletedFilter : Filter<IHarvestableObject>
         {
             public bool Ignore(IHarvestableObject t)
             {
@@ -239,7 +289,7 @@ namespace Ennui.Api.Filter
             }
         }
 
-		public class TypeSetFilter: Filter<IHarvestableObject>
+        private class TypeSetFilter: Filter<IHarvestableObject>
 		{
 			private TypeSet[] types;
 
@@ -286,7 +336,7 @@ namespace Ennui.Api.Filter
 			}
 		}
 
-		public class EffectiveTypeSetFilter: Filter<IHarvestableObject>
+        private class EffectiveTypeSetFilter: Filter<IHarvestableObject>
 		{
 			private TypeSet[] types;
 

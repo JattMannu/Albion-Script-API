@@ -30,7 +30,7 @@ namespace Ennui.Api
         /// This spell's config file. It's read from an internal xml file by the game.
         /// </summary>
         /// <value>The spell's config file.</value>
-        IXmlExtendedSpellConfig Config { get; }
+        IExtendedSpellConfig Config { get; }
 
         /// <summary>
         /// Retrieves the name of this spell.

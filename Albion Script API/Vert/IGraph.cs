@@ -35,6 +35,11 @@ namespace Ennui.Api.Vert
         List<IGraphEdge> WebEdges { get; set; }
 
         /// <summary>
+        /// a list of edges to other graphs via complex means of travel.
+        /// </summary>
+        List<ITravelGraphEdge> TravelWebEdges { get; set; }
+
+        /// <summary>
         /// A list of terrirories within the map.
         /// </summary>
         List<ITerritory> Territories { get; set; }

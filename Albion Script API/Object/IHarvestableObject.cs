@@ -1,5 +1,4 @@
-﻿using Ennui.Api.View;
-using Ennui.Api.Meta;
+﻿using Ennui.Api.Meta;
 using Ennui.Api.Util;
 
 namespace Ennui.Api.Object
@@ -10,13 +9,6 @@ namespace Ennui.Api.Object
 	/// </summary>
     public interface IHarvestableObject : IWorldObject
     {
-        IObjectConfig ObjectConfig { get; }
-
-        /// <summary>
-        /// The view for this harvestable object.
-        /// </summary>
-        IHarvestableObjectView HarvestableObjectView { get; }
-
         /// <summary>
         /// The bounds that a player needs to be inside of to gather resources from this object.
         /// </summary>

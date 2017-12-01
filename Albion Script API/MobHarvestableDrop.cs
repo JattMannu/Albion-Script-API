@@ -12,14 +12,14 @@ namespace Ennui.Api
     {
         private IApi api;
         private IMobObject parent;
-        private IXmlHarvestableDrop dropConfig;
+        private IHarvestableDropConfig dropConfig;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Ennui.Api.Direct.Object.MobObject+MobHarvestableDrop"/> class.
         /// </summary>
         /// <param name="parent">The mob that has this drop.</param>
         /// <param name="drop">The drop config.</param>
-        public MobHarvestableDrop(IApi api, IMobObject parent, IXmlHarvestableDrop dropConfig)
+        public MobHarvestableDrop(IApi api, IMobObject parent, IHarvestableDropConfig dropConfig)
         {
             this.api = api;
             this.parent = parent;

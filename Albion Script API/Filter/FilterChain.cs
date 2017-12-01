@@ -26,7 +26,7 @@ namespace Ennui.Api.Filter
         /// <returns>The new chain, containing the new items.</returns>
 		public R Filter(Filter<T> filter)
 		{
-			return Api.Game.Sync<R>(() =>
+			return Game.Sync<R>(() =>
 			{
 				var tmp = new List<T>();
 				foreach (T t in list)
@@ -36,7 +36,7 @@ namespace Ennui.Api.Filter
 						tmp.Add(t);
 					}
 				}
-				list = tmp;
+                list = tmp;
 				return Create(tmp);
 			});
 		}

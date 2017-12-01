@@ -8,11 +8,6 @@ namespace Ennui.Api
     public interface IItemStack
     {
         /// <summary>
-        /// The config for this item.
-        /// </summary>
-        IXmlItemConfig ItemXmlConfig { get; }
-
-        /// <summary>
         /// The amount of items in this stack.
         /// </summary>
         int Amount { get; }
@@ -62,11 +57,6 @@ namespace Ennui.Api
         /// </summary>
         /// <returns>If the item was dropped successfully.</returns>
         bool Drop();
-
-        /// <summary>
-        /// The placement ghost for this item.
-        /// </summary>
-        IPlaceableObject AsPlaceableObject { get; }
 
         /// <summary>
         /// If this item is a placement ghost.

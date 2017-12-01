@@ -1,13 +1,7 @@
 ﻿namespace Ennui.Api.Method
 {
-    public interface IRepairWindow : IApiModule
+    public interface IRepairWindow : IApiModule, IWidget
     {
-        /// <summary>
-        /// Checks if the repair item screen is currently open.
-        /// </summary>
-        /// <value><c>true</c> if is open; otherwise, <c>false</c>.</value>
-        bool IsOpen { get; }
-
         /// <summary>
         /// Attempts to repair all of the items on the local player.
         /// </summary>

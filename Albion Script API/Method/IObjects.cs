@@ -96,6 +96,11 @@ namespace Ennui.Api.Method
         List<IFarmableObject> Farmables { get; }
 
         /// <summary>
+        /// A chain containing all farmables within the scene.
+        /// </summary>
+        FarmableFilterChain FarmableChain { get; }
+
+        /// <summary>
         /// All travel points within the scene.
         /// </summary>
         List<ITravelPointObject> TravelPoints { get; }
@@ -111,9 +116,19 @@ namespace Ennui.Api.Method
         List<ISilverObject> AllSilver { get; }
 
         /// <summary>
+        /// A chain containing all silver within the scene.
+        /// </summary>
+        SilverFilterChain SilverChain { get; }
+
+        /// <summary>
         /// All hellgates within the scene.
         /// </summary>
         List<IHellgateObject> Hellgates { get; }
+
+        /// <summary>
+        /// A chain containing all hellgates within the scene.
+        /// </summary>
+        HellgateFilterChain HellgateChain { get; }
 
         /// <summary>
         /// All teleport stones within the scene.
@@ -121,9 +136,19 @@ namespace Ennui.Api.Method
         List<ITeleportStoneObject> TeleportStones { get; }
 
         /// <summary>
+        /// A chain containing all teleport stones within the scene.
+        /// </summary>
+        TeleportStoneFilterChain TeleportStoneChain { get; }
+
+        /// <summary>
         /// All spell effect areas within the scene.
         /// </summary>
         List<ISpellEffectAreaObject> SpellEffectAreas { get; }
+
+        /// <summary>
+        /// A chain containing all spell effect areas within the scene.
+        /// </summary>
+        SpellEffectAreaFilterChain SpellEffectAreaChain { get; }
 
         /// <summary>
         /// All exits within the scene.
@@ -131,8 +156,38 @@ namespace Ennui.Api.Method
         List<IExitObject> Exits { get; }
 
         /// <summary>
+        /// A chain containing all exits within the scene.
+        /// </summary>
+        ExitFilterChain ExitChain { get; }
+
+        /// <summary>
         /// All expedition agents within the scene.
         /// </summary>
         List<IExpeditionAgentObject> ExpeditionAgents { get; }
+
+        /// <summary>
+        /// A chain containing all expedition agents within the scene.
+        /// </summary>
+        ExpeditionAgentFilterChain ExpeditionAgentChain { get; }
+
+        /// <summary>
+        /// All expedition exits within the scene.
+        /// </summary>
+        List<IExpeditionExitObject> ExpeditionExits { get; }
+
+        /// <summary>
+        /// A chain containing all expedition exits within the scene.
+        /// </summary>
+        ExpeditionExitFilterChain ExpeditionExitChain { get; }
+
+        /// <summary>
+        /// All loot objects within the scene.
+        /// </summary>
+        List<ILootObject> LootObjects { get; }
+
+        /// <summary>
+        /// A chain containing all loot objects within the scene.
+        /// </summary>
+        LootObjectFilterChain LootObjectChain { get; }
     }
 }

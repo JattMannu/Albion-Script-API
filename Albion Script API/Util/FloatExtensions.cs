@@ -4,7 +4,7 @@ namespace Ennui.Api.Util
 {
     public static class FloatExtensions
     {
-        public static bool NearlyEquals(this float a, float b, float epsilon = 0.001f)
+        public static bool NearlyEquals(this float a, float b, float epsilon = 0.01f)
         {
             if (a != b)
             {

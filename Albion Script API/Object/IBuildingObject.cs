@@ -1,4 +1,4 @@
-﻿using Ennui.Api.View;
+﻿using Ennui.Api.Xml;
 
 namespace Ennui.Api.Object
 {
@@ -8,17 +8,9 @@ namespace Ennui.Api.Object
     public interface IBuildingObject : IWorldObject
     {
         /// <summary>
-        /// The internal xml config instance used by the game.
-        /// 
-        /// TODO Remove for muh abstraction
+        /// This farmable object's xml config.
         /// </summary>
-        object XmlConfig { get; }
-
-        /// <summary>
-        /// Retrieves this building's view.
-        /// </summary>
-        /// <value>This building's view.</value>
-        IBuildingView BuildingView { get; }
+        IBuildingConfig BuildingConfig { get; }
 
         /// <summary>
         /// Attempts to open the interface for this building.

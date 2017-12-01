@@ -20,6 +20,7 @@ namespace Ennui.Api
         ICraftingWindow CraftingWindow { get; set; }
         IEntities Entities { get; set; }
         IEquipment Equipment { get; set; }
+        IExpeditionHud ExpeditionHud { get; set; }
         IExpeditionWindow ExpeditionWindow { get; set; }
         IFactories Factories { get; set; }
         IFarmableWindow FarmableWindow { get; set; }
@@ -44,9 +45,8 @@ namespace Ennui.Api
         IRendering Rendering { get; set; }
         IRepairWindow RepairWindow { get; set; }
         IResourceRepository ResourceRepository { get; set; }
+        IRespawnWindow RespawnWindow { get; set; }
         ISerialization Serialization { get; set; }
-        IUI UI { get; set; }
-        IViews Views { get; set; }
 
         IGuiScene GuiScene { get; set; }
 

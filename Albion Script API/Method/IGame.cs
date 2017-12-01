@@ -1,5 +1,6 @@
 ﻿using Ennui.Api.Meta;
 using Ennui.Api.Util;
+using System.Collections.Generic;
 
 namespace Ennui.Api.Method
 {
@@ -114,12 +115,6 @@ namespace Ennui.Api.Method
         string InternalClusterName { get; }
 
         /// <summary>
-        /// Retrieves the game's landscape. This holds various information about the currently loaded map.
-        /// </summary>
-        /// <value>The game's landscape.</value>
-        ILandscape Landscape { get; }
-
-        /// <summary>
         /// The size of the game screen.
         /// </summary>
         /// <value>The size of the game screen.</value>
@@ -137,5 +132,22 @@ namespace Ennui.Api.Method
         /// <param name="pos">The 3d coordinate to project.</param>
         /// <returns><c>null</c> If the 3d point isn't visible, otherwise the projected point.</returns>
         Vector2<float> ProjectToScreen(Vector3<float> pos);
+
+        /// <summary>
+        /// All spell effect areas within the scene.
+        /// </summary>
+        List<ISpellEffectArea> SpellEffectAreas { get; }
+
+        /// <summary>
+        /// Calculates the height of the tile at the provided coordinates.
+        /// </summary>
+        /// <returns>The height of the tile at the provided coordinates.</returns>
+        /// <param name="pos">The coordinates to get the height at.</param>
+        float GetTileHeight(Vector2<float> pos);
+
+        /// <summary>
+        /// Whether or not input is enabled.
+        /// </summary>
+        bool InputEnabled { set; }
     }
 }

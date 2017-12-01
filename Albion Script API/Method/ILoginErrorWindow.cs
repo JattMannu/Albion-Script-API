@@ -4,13 +4,8 @@
     /// Provides a set of utilities for interacting with the interface that's shown
     /// when a failed login happens.
     /// </summary>
-    public interface ILoginErrorWindow : IApiModule
+    public interface ILoginErrorWindow : IApiModule, IWidget
     {
-        /// <summary>
-        /// If this window is open.
-        /// </summary>
-        bool IsOpen { get; }
-
         /// <summary>
         /// The error message being shown.
         /// </summary>

@@ -49,10 +49,10 @@
 		/// Represents an entity placing a placeable object.
 		/// </summary>
 		PlacingPlaceable = 15,
-		/// <summary>
-		/// Represents an entity that is knocked down.
-		/// </summary>
-		KnockedDown = 19,
+        /// <summary>
+        /// Represents an entity that's knocked down on the ground.
+        /// </summary>
+        KnockedDown = 17,
 		/// <summary>
 		/// Represents an entity using a mount.
 		/// </summary>

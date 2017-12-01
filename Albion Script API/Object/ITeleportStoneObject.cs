@@ -5,5 +5,9 @@
     /// </summary>
     public interface ITeleportStoneObject : IWorldObject
     {
+        /// <summary>
+        /// The internal cluster name of the destination.
+        /// </summary>
+        string DestinationCluster { get; }
     }
 }

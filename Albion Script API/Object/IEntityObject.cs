@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 
 using Ennui.Api.Filter;
-using Ennui.Api.View;
 using Ennui.Api.Meta;
 using Ennui.Api.Util;
+using Ennui.Api.Config;
 
 namespace Ennui.Api.Object
 {
@@ -14,19 +14,9 @@ namespace Ennui.Api.Object
 	public interface IEntityObject : IMovingObject
     {
         /// <summary>
-        /// This entity's view.
-        /// </summary>
-        IEntityObjectView EntityView { get; }
-
-        /// <summary>
         /// This entity's name.
         /// </summary>
         string Name { get; }
-
-        /// <summary>
-        /// This entity's health property.
-        /// </summary>
-        ITimestampProperty HealthProperty { get; }
         
         /// <summary>
         /// This entity's current health.
@@ -44,11 +34,6 @@ namespace Ennui.Api.Object
         float HealthPercentage { get; }
 
         /// <summary>
-        /// This entity's energy property.
-        /// </summary>
-        ITimestampProperty EnergyProperty { get; }
-
-        /// <summary>
         /// This entity's current energy.
         /// </summary>
         float CurrentEnergy { get; }
@@ -59,6 +44,11 @@ namespace Ennui.Api.Object
         float MaxEnergy { get; }
         
         /// <summary>
+        /// This entity's energy percentage.
+        /// </summary>
+        float EnergyPercentage { get; }
+
+        /// <summary>
         /// This entity's max load.
         /// </summary>
         float MaxCarryWeight { get; }
@@ -67,11 +57,6 @@ namespace Ennui.Api.Object
         /// This entity's movement speed.
         /// </summary>
         float MovementSpeed { get; }
-
-        /// <summary>
-        /// This entity's action state queue.
-        /// </summary>
-        IStateQueue ActionStateQueue { get; }
 
         /// <summary>
         /// This entity's current action state.
@@ -84,11 +69,6 @@ namespace Ennui.Api.Object
         bool IsHarvesting { get; }
 
         /// <summary>
-        /// This entity's movement state queue.
-        /// </summary>
-        IStateQueue MovementStateQueue { get; }
-
-        /// <summary>
         /// This entity's movement state.
         /// </summary>
         MovementState CurrentMovementState { get; }
@@ -97,11 +77,6 @@ namespace Ennui.Api.Object
         /// <c>true</c> if this entity is moving; otherwise, <c>false</c>.
         /// </summary>
         bool IsMoving { get; }
-
-        /// <summary>
-        /// This entity's effect applicator.
-        /// </summary>
-        IEffectApplicator EffectApplicator { get; }
         
         /// <summary>
         /// The list of effects currently applied to this entity.
@@ -134,23 +109,6 @@ namespace Ennui.Api.Object
         List<IEntityObject> UnderAttackBy { get; }
 
         /// <summary>
-        /// Retrieves the event handler of the provided type.
-        /// </summary>
-        /// <returns>The event handler of the provided type.</returns>
-        /// <param name="t">The type of the event handler to grab.</param>
-        object GetEventHandler(Type t);
-        
-        /// <summary>
-        /// The event handler that handles spell casting for this entity.
-        /// </summary>
-        ICastSpellEventHandler CastSpellEventHandler { get; }
-
-        /// <summary>
-        /// The event handler that handles item placement for this entity.
-        /// </summary>
-        IPlaceItemEventHandler PlaceItemEventHandler { get; }
-
-        /// <summary>
         /// Checks if this entity can cast the spell in the provided slot.
         /// </summary>
         /// <returns><c>true</c>, if the spell is ready to cast, <c>false</c> otherwise.</returns>
@@ -163,8 +121,8 @@ namespace Ennui.Api.Object
         Vector3<float> LastKnownPosition { get; }
 
         /// <summary>
-        /// This entity's internal xml config object.
+        /// This entity's config.
         /// </summary>
-        object XmlConfig { get; }
+        IEntityConfig EntityConfig { get; }
     }
 }

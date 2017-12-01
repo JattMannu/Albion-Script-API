@@ -12,6 +12,6 @@ namespace Ennui.Api
         /// <summary>
         /// The configs of all available expeditions.
         /// </summary>
-        List<IXmlExpedition> ExpeditionConfigs { get; }
+        List<IExpeditionConfig> ExpeditionConfigs { get; }
     }
 }
