@@ -146,8 +146,10 @@ namespace Ennui.Api.Method
         float GetTileHeight(Vector2<float> pos);
 
         /// <summary>
-        /// Whether or not input is enabled.
+        /// Determines if a tile on the grid is a fishing spot or not.
         /// </summary>
-        bool InputEnabled { set; }
+        /// <param name="gridPos">The position on the grid to check.</param>
+        /// <returns>If the position on the grid is a fishing spot.</returns>
+        bool IsTileFishingSpot(Vector2<int> gridPos);
     }
 }

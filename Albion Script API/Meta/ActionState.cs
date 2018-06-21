@@ -61,6 +61,10 @@
 		/// Represents an entity using a treasure chest.
 		/// </summary>
 		UsingTreasureChest = 24,
+        /// <summary>
+        /// Represents an entity fishing.
+        /// </summary>
+        Fishing = 30,
 	}
 }
 

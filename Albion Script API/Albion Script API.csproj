@@ -70,6 +70,8 @@
     <Compile Include="Meta\AttackType.cs" />
     <Compile Include="Meta\AuctionHouseCategory.cs" />
     <Compile Include="Meta\ExpeditionHudState.cs" />
+    <Compile Include="Meta\FishingState.cs" />
+    <Compile Include="Meta\InputMask.cs" />
     <Compile Include="Meta\SpellAssessment.cs" />
     <Compile Include="Method\IDisposableWidget.cs" />
     <Compile Include="Method\IExpeditionHud.cs" />
@@ -89,6 +91,7 @@
     <Compile Include="Util\DataSetUtils.cs" />
     <Compile Include="Util\MathUtils.cs" />
     <Compile Include="Util\StringUtils.cs" />
+    <Compile Include="Util\WindowsUtils.cs" />
     <Compile Include="Vert\ITravelGraphEdge.cs" />
     <Compile Include="Config\IEquipmentItemConfig.cs" />
     <Compile Include="Config\IExpeditionConfig.cs" />

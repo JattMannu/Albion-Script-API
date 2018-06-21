@@ -28,9 +28,13 @@ namespace Ennui.Api.Script
 
         /// <summary>
         /// Called every time the script handler running this script ticks.
+        /// 
+        /// Returning anything less than 0 suggests to the executing script engine to stop
+        /// executing the script. This is no guarantee though, and depends on the script engine 
+        /// being used.
         /// </summary>
         /// <param name="se">The script engine executing this script.</param>
-        /// <returns>The amount of time to wait before calling this function again</returns>
+        /// <returns>The amount of time to wait before calling this function again.</returns>
         public abstract int OnLoop(IScriptEngine se);
 
         /// <summary>

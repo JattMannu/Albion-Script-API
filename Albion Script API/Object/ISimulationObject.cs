@@ -26,6 +26,11 @@ namespace Ennui.Api.Object
         bool IsValid { get; }
 
         /// <summary>
+        /// This object's engine name.
+        /// </summary>
+        string EngineName { get; }
+
+        /// <summary>
         /// The location that this object is on within the game's collision grid.
         /// </summary>
         Vector2<int> GridLocation { get; }

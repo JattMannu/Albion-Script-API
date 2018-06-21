@@ -137,5 +137,27 @@ namespace Ennui.Api.Object
         /// </summary>
         /// <value>This local player's current move destination.</value>
         Vector3<float> MoveDestination { get; set; }
+
+        /// <summary>
+        /// The location of the bobber when fishing.
+        /// </summary>
+        Vector2<float> BobberLocation { get; }
+
+        /// <summary>
+        /// The local player's current fishing state.
+        /// </summary>
+        FishingState FishingState { get; }
+
+        /// <summary>
+        /// Begins fishing at the provided coordinates.
+        /// </summary>
+        /// <param name="scenePos">The scene position to start fishing at.</param>
+        void BeginFishing(Vector2<float> scenePos);
+
+        /// <summary>
+        /// Reels in the fish immediately if a fishing minigame is occuring.
+        /// </summary>
+        /// <param name="success">If the reel was a success or not.</param>
+        void ReelIn(bool success);
     }
 }
